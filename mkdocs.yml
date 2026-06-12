@@ -1,0 +1,71 @@
+site_name: DPM 2.0 — Metamodel Documentation
+site_description: >-
+  Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation
+  (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - 1. Introduction: introduction.md
+  - 2. DPM Refit project: dpm-refit-project.md
+  - 3. Metamodel overview: metamodel-overview.md
+  - 4. Metamodel, ownership and supportive documentation: ownership-documentation.md
+  - 5. Metamodel components:
+      - Overview: components/index.md
+      - 5.1 Glossary: components/glossary.md
+      - 5.2 Grouping, rendering and packaging: components/rendering-packaging.md
+      - 5.3 Identification and description of reported values: components/variables.md
+      - 5.4 Operations on data: components/operations.md
+  - Proposals:
+      - Extensibility and cross-owner reuse: proposals/extensibility.md

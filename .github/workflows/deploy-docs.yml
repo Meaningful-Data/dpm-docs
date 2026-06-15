@@ -51,4 +51,12 @@ jobs:
 
       - name: Deploy development version (master)
         if: github.ref == 'refs/heads/master'
-        run: mike deploy --push dev
+        run: |
+          mike deploy --push dev
+          # Make the site root (…/dpm-docs/) redirect somewhere: prefer a
+          # released 'latest' if one exists, otherwise fall back to 'dev'.
+          if mike list 2>/dev/null | grep -q '\[latest\]'; then
+            mike set-default --push latest
+          else
+            mike set-default --push dev
+          fi

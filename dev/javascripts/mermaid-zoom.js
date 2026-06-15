@@ -110,9 +110,15 @@
     }, 250);
   }
 
+  // Material re-emits document$ on every instant-navigation page change, so
+  // subscribe to handle navigations. But a late subscriber can miss the
+  // initial emission on a fresh page load, so also run once directly now.
   if (typeof document$ !== "undefined") {
-    document$.subscribe(watch); // Material: runs on every page navigation
-  } else {
+    document$.subscribe(watch);
+  }
+  if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", watch);
+  } else {
+    watch();
   }
 })();

@@ -2,6 +2,7 @@ site_name: DPM 2.0 — Metamodel Documentation
 site_description: >-
   Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation
   (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).
+site_url: https://meaningful-data.github.io/dpm-docs/
 docs_dir: docs
 
 theme:
@@ -54,6 +55,10 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  version:
+    provider: mike
 
 nav:
   - Home: index.md

@@ -72,5 +72,3 @@ nav:
       - 5.2 Grouping, rendering and packaging: components/rendering-packaging.md
       - 5.3 Identification and description of reported values: components/variables.md
       - 5.4 Operations on data: components/operations.md
-  - Proposals:
-      - Extensibility and cross-owner reuse: proposals/extensibility.md

@@ -4,8 +4,8 @@
 
     This document is a working proposal, not part of the published DPM 2.0 metamodel
     documentation. It builds on the ownership model described in
-    [Chapter 4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/), in particular
-    [Concept and Ownership (4.1.2)](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#412-concept-and-ownership).
+    [Chapter 4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/), in particular
+    [Concept and Ownership (4.1.2)](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#412-concept-and-ownership).
 
 ## 1 Purpose and scope
 
@@ -50,7 +50,7 @@ The recommended approach is deliberately conservative: it generalises mechanisms
 metamodel already contains, rather than inventing new ones.
 
 1. **Single ownership with inheritance**
-   ([4.1.2](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#412-concept-and-ownership)). Every Concept has exactly
+   ([4.1.2](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#412-concept-and-ownership)). Every Concept has exactly
    one Owner. Table 1 of Chapter 4 specifies which classes *inherit* their Owner from a parent
    class (e.g. TableVersion from Table, Module from Framework, Cell from Table). This inheritance
    immediately rules out certain extensions: an object whose Owner is inherited from a parent
@@ -58,31 +58,31 @@ metamodel already contains, rather than inventing new ones.
    model (B cannot add a Cell to A's Table, because that Cell would be owned by A).
 
 2. **Owner-prefixed identifiers**
-   ([4.1.2](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#412-concept-and-ownership)). The first digits of every
+   ([4.1.2](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#412-concept-and-ownership)). The first digits of every
    ID identify the Owner (`Organisation.IDPrefix`), explicitly to "simplify the process of merging
    models from various databases maintained individually by different Organisations". Cross-owner
    referencing is therefore a design goal of the identification scheme itself.
 
 3. **Code uniqueness is per Owner, not global**
-   ([4.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#44-naming-convention)): "one Category must not have two or
+   ([4.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#44-naming-convention)): "one Category must not have two or
    more Items with the same Code, *unless these Items are defined by different Owners*". The
    naming convention already anticipates Items from several Owners coexisting **inside one
    Category** — i.e. Category extension.
 
 4. **Translations are already a cross-owner extension**
-   ([4.1.3.1](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#4131-translations)). Any Organisation can attach a
+   ([4.1.3.1](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#4131-translations)). Any Organisation can attach a
    Translation to any Concept's translatable attributes; `Translation.TranslatorID` records who
    asserted it, and one attribute may carry competing translations from different Organisations.
    This is exactly the pattern proposed here: *additive, separately-attributed assertions that
    never alter the host Concept*.
 
 5. **ConceptRelation works across Owners by design**
-   ([4.1.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#414-concept-relation)): it "enables linking Concepts
+   ([4.1.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#414-concept-relation)): it "enables linking Concepts
    within and across Owners", supports `equivalent_concept` for duplicates defined by different
    Owners, and `table_variant` for tables derived from other tables. Its `Type` list is explicitly
    extensible by Modellers.
 
-6. **Releases and application dates** ([4.2](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#42-historisation))
+6. **Releases and application dates** ([4.2](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#42-historisation))
    provide the time dimension: every reuse or extension link carries StartRelease/EndRelease, so
    cross-owner composition is always resolvable *as of* a point in time.
 
@@ -134,8 +134,8 @@ Any Concept may be referenced from another Owner's artefacts, provided that (a) 
 ModuleVersion declares a dependency on the providing Owner's model (with Release pinning), and
 (b) the referenced Concept is usable at that Release (not deactivated, within its
 StartRelease/EndRelease window — see
-[4.2.3](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#423-deactivations) and
-[4.2.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#424-dependencies)).
+[4.2.3](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#423-deactivations) and
+[4.2.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#424-dependencies)).
 
 **P3 — Versions are immutable; versioning is reserved to the Owner.**
 No `*Version` class is ever extensible, and no Owner may add a Version to another Owner's
@@ -184,29 +184,29 @@ exists but is reserved to the owning Organisation.
 
 | Entity | Reuse | Extend | Justification |
 |---|---|---|---|
-| DPMClass, DPMAttribute | Yes (implicit) | No | Fixed by the DPM metamodel authors (Owner: DPMM); Modellers must not edit ([4.1.1](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#411-metamodel-metadata-entities)). Changes go through metamodel governance, not through model-level extension. |
+| DPMClass, DPMAttribute | Yes (implicit) | No | Fixed by the DPM metamodel authors (Owner: DPMM); Modellers must not edit ([4.1.1](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#411-metamodel-metadata-entities)). Changes go through metamodel governance, not through model-level extension. |
 | DataType | Yes | No | Shared type system; uncontrolled additions would fragment interoperability of Property/Operation typing. Derivation-by-restriction exists but is metamodel-governed. |
 | Operator, OperatorArgument | Yes | No | The operator inventory defines the executable semantics of Operations across all implementations. An Owner-specific operator would make foreign Operations non-evaluatable by other consumers. New operators require metamodel governance. |
 | Language | Yes | No (governed) | Populated from ISO 639-1 plus registered expression syntaxes. Additions (e.g. a new Operation syntax) are administrative registrations, not model extensions. |
 | SubdivisionType | Yes | No | Closed typology for structuring document references; stability is what makes references comparable across Owners. |
-| ConceptRelation.Type | Yes | **Yes** | Explicitly extensible per [4.1.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#414-concept-relation): "Modellers can extend ConceptRelation.Type with other options". Free-text typed; collisions are tolerable because relations are annotations, not executable semantics. |
+| ConceptRelation.Type | Yes | **Yes** | Explicitly extensible per [4.1.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#414-concept-relation): "Modellers can extend ConceptRelation.Type with other options". Free-text typed; collisions are tolerable because relations are annotations, not executable semantics. |
 
 ### 6.2 Administration and documentation
 
 | Entity | Reuse | Extend | Justification |
 |---|---|---|---|
 | Organisation | Yes (as Owner, Translator, …) | No | Self-describing registry entries; each Organisation maintains its own record. Nothing to extend. |
-| Translation | n/a | **Yes — existing precedent** | Any Organisation may attach Translations to any Concept's translatable attributes; `TranslatorID` attributes the assertion ([4.1.3.1](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#4131-translations)). The model even allows competing translations of one attribute in one language. This is the template for all extension in this proposal. |
+| Translation | n/a | **Yes — existing precedent** | Any Organisation may attach Translations to any Concept's translatable attributes; `TranslatorID` attributes the assertion ([4.1.3.1](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#4131-translations)). The model even allows competing translations of one attribute in one language. This is the template for all extension in this proposal. |
 | Document / DocumentVersion / Subdivision | Yes | No | Subdivision and DocumentVersion inherit Owner from Document (P7). Another Owner needing a different subdivision structure of the same legal act registers its own Document and links the two via `equivalent_concept`. Legal texts are external objects; duplication of the *registration* is cheap and conflict-free. |
 | Reference (Concept ↔ Subdivision) | n/a | **Yes** | Any Owner may attach references to any Concept whose class has `HasReferences = TRUE` — annotating a foreign Concept with the legal basis *as B reads it* alters nothing for A. Requires the asserting Owner to be recorded on the Reference link (see §8). |
-| ConceptRelation | n/a | **Yes — cross-owner by design** | Stated purpose includes "linking Concepts … across Owners" ([4.1.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#414-concept-relation)). The relation itself is owned by whoever asserts it. |
+| ConceptRelation | n/a | **Yes — cross-owner by design** | Stated purpose includes "linking Concepts … across Owners" ([4.1.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#414-concept-relation)). The relation itself is owned by whoever asserts it. |
 | Release | Yes (pinning) | No | A Release is one Owner's act of publication; its content list is closed by definition (P4, P6). Other Owners reference foreign Releases when pinning dependencies, never contribute to them. |
 
 ### 6.3 Glossary
 
 | Entity | Reuse | Extend | Justification |
 |---|---|---|---|
-| **Category** | Yes (as glossary root, SubCategory parent, …) | **Yes — items, properties and hierarchy links** | The flagship extension case. A Category is an open vocabulary (P4): B adding national Items to A's "Instrument type" Category adds terms without changing any existing term. The naming convention already legislates for it (per-Owner code uniqueness *within* a Category, [4.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#44-naming-convention)). Mechanism: B-owned Items + B-owned ItemCategory links; B may also place its Items under A's Items in the hierarchy (the ParentItem link lives in B's ItemCategory row). Scoped resolution (§4.1) guarantees A's open Cells, domains and aggregations are unaffected in A's own modules. |
+| **Category** | Yes (as glossary root, SubCategory parent, …) | **Yes — items, properties and hierarchy links** | The flagship extension case. A Category is an open vocabulary (P4): B adding national Items to A's "Instrument type" Category adds terms without changing any existing term. The naming convention already legislates for it (per-Owner code uniqueness *within* a Category, [4.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#44-naming-convention)). Mechanism: B-owned Items + B-owned ItemCategory links; B may also place its Items under A's Items in the hierarchy (the ParentItem link lives in B's ItemCategory row). Scoped resolution (§4.1) guarantees A's open Cells, domains and aggregations are unaffected in A's own modules. |
 | **Item** | Yes — the most reused object in DPM (Cells, SubCategories, CompoundItems, Operation scopes, multiple Categories) | Hierarchy children only, via Category extension | An Item itself has no owned member collection; "extending an Item" reduces to attaching child Items beneath it inside some Category, which is governed by the Category rule above. Item attributes (Name, Code, …) follow P1: owner-only. |
 | **Property** | **Yes — primary semantic reuse** (shared dimensions: Currency, Country, Sector used by all Owners) | Domain only (= Category extension); definition no | Reusing A's Property in B's dimensions/headers is what makes data comparable across frameworks — it should be the *preferred* practice over redefining. The Property's enumerated domain extends via the Category mechanism. Its `DataType` and meaning are its identity: owner-only (P1). |
 | PropertyCategory (link) | n/a | **Yes (scoped)** | B asserting that A's Category uses B's Property (e.g. attaching a national classification aspect to a shared Category) is an overlay assertion: visible only in B's scope, harmless to A. Requires Owner on the link (§8). |
@@ -242,7 +242,7 @@ exists but is reserved to the owning Organisation.
 | Entity | Reuse | Extend | Justification |
 |---|---|---|---|
 | **Operation / OperationVersion** | **Yes — reference and re-scope** | No | The expression tree (OperationNodes) is the rule: a closed definition (P4); versions are owner-only (P3). But *application* of a rule is separable from its definition: B should be able to apply A's OperationVersion to B's own modules (see OperationScope below) and to reference A's OperationVersions as preconditions. This realises "common EBA validation applied to a national collection" without copying rules. |
-| **OperationScope** | — | **Yes, with a metamodel change** | The scope says *where* a rule applies — asserting "A's rule applies to B's module" modifies nothing of A's. Today OperationScope inherits Owner from Operation (Table 1), which blocks this. Recommendation: make OperationScope independently ownable (Owner = the Organisation asserting applicability), keeping A's own scopes untouched. The existing re-activation semantics of OperationScope (`IsActive`, [4.2.3](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#423-deactivations)) then work per-asserting-owner. Fallback without the change: B wraps A's rule in a B-owned Operation — works, but pollutes the rule inventory and obscures provenance. |
+| **OperationScope** | — | **Yes, with a metamodel change** | The scope says *where* a rule applies — asserting "A's rule applies to B's module" modifies nothing of A's. Today OperationScope inherits Owner from Operation (Table 1), which blocks this. Recommendation: make OperationScope independently ownable (Owner = the Organisation asserting applicability), keeping A's own scopes untouched. The existing re-activation semantics of OperationScope (`IsActive`, [4.2.3](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#423-deactivations)) then work per-asserting-owner. Fallback without the change: B wraps A's rule in a B-owned Operation — works, but pollutes the rule inventory and obscures provenance. |
 | OperationScopeComposition | — | Follows its OperationScope | Owned with the scope row; B's compositions target B's ModuleVersions and may filter on any Items visible in B's scope. |
 | VariableCalculation | Yes | No | A calculation binding is part of the defining Owner's derivation semantics for its Variables; B derives its own Variables with its own calculations, which may *read* A's Variables (P2). |
 | OperationNode | — | No | Internal structure of an OperationVersion (P7; part of a closed definition). |
@@ -307,7 +307,7 @@ The recommended approach needs four targeted changes, all additive:
 4. **Dependency pinning made explicit.** Cross-owner references and extensions are only valid if
    the consuming ModuleVersion declares a dependency on the providing Owner's ModuleVersion or
    Release; the lifecycle rules of
-   [4.2.4](https://meaningful-data.github.io/dpm-docs/ownership-documentation/#424-dependencies) (no new use of ended/deactivated
+   [4.2.4](https://meaningful-data.github.io/dpm-docs/latest/ownership-documentation/#424-dependencies) (no new use of ended/deactivated
    Concepts) apply across Owners exactly as within one Owner.
 
 ## 9 Open questions

@@ -60,6 +60,13 @@ extra:
   version:
     provider: mike
 
+extra_javascript:
+  - https://unpkg.com/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js
+  - javascripts/mermaid-zoom.js
+
+extra_css:
+  - stylesheets/mermaid-zoom.css
+
 nav:
   - Home: index.md
   - 1. Introduction: introduction.md

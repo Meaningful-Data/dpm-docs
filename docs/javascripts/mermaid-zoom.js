@@ -239,6 +239,88 @@
     document.addEventListener("keydown", onKey);
   }
 
+  // --- Self-loop compaction -------------------------------------------------
+  // In erDiagrams a self-referential relationship (e.g. a parent/owner FK,
+  // `DPMClass ||--o{ DPMClass`) is routed by Mermaid's dagre layout through
+  // tall virtual ranks, so it balloons into a huge arc sprawling far from its
+  // entity — it neither reads as "points back to itself" nor stays near the
+  // box. Mermaid exposes no config for this, so we reshape it after render:
+  // each self-loop is three <path> segments with ids ending
+  // `-cyclic-special-{1,mid,2}`. We replace them with a small tidy loop hugging
+  // the entity's right edge and move the relationship label beside it.
+  var LOOP_BULGE = 60;  // how far the loop extends past the entity's right edge
+  var LOOP_GAP = 26;    // vertical half-distance between the two anchor points
+
+  function parseTranslate(el) {
+    var t = el && el.getAttribute("transform");
+    var m = t && /translate\(\s*([-\d.]+)[ ,]+([-\d.]+)/.exec(t);
+    return m ? { x: parseFloat(m[1]), y: parseFloat(m[2]) } : null;
+  }
+
+  // Centre point of a path, sampled before we overwrite it (used to match the
+  // loop to its far-flung relationship label).
+  function pathMidpoint(p) {
+    try {
+      var len = p.getTotalLength();
+      var pt = p.getPointAtLength(len / 2);
+      return { x: pt.x, y: pt.y };
+    } catch (e) { return null; }
+  }
+
+  function compactSelfLoops(svg) {
+    if (svg.hasAttribute("data-loops-fixed")) return;
+    svg.setAttribute("data-loops-fixed", "true");
+
+    // Group the three segments of each loop by their shared id prefix.
+    var groups = {};
+    svg.querySelectorAll('path[id*="-cyclic-special-"]').forEach(function (p) {
+      var m = /^(.*)-cyclic-special-(1|mid|2)$/.exec(p.id);
+      if (!m) return;
+      (groups[m[1]] || (groups[m[1]] = {}))[m[2]] = p;
+    });
+
+    var labels = Array.prototype.slice.call(svg.querySelectorAll("g.edgeLabel"));
+
+    Object.keys(groups).forEach(function (prefix) {
+      var g = groups[prefix];
+      if (!g["1"] || !g.mid || !g["2"]) return;
+
+      // The entity node shares the prefix (minus the `-cyclic-special` tail).
+      var node = svg.querySelector('[id="' + prefix.replace(/-cyclic-special$/, "") + '"]');
+      if (!node) return;
+      var pos = parseTranslate(node);
+      if (!pos) return;
+      var bb = node.getBBox();
+      var rx = pos.x + bb.x + bb.width;        // right edge, in path/label space
+      var cy = pos.y + bb.y + bb.height / 2;   // vertical centre
+
+      // Capture the old apex BEFORE rewriting, to find this loop's label.
+      var apex = pathMidpoint(g.mid);
+
+      var top = cy - LOOP_GAP, bot = cy + LOOP_GAP, ox = rx + LOOP_BULGE;
+      // Upper half carries the start marker; lower half the end marker.
+      g["1"].setAttribute("d",
+        "M" + rx + "," + top + " C" + ox + "," + top + " " + ox + "," + cy + " " + ox + "," + cy);
+      g["2"].setAttribute("d",
+        "M" + ox + "," + cy + " C" + ox + "," + bot + " " + ox + "," + bot + " " + rx + "," + bot);
+      g.mid.setAttribute("d", "M" + ox + "," + cy + " L" + ox + "," + cy); // hidden
+
+      // Move the relationship label (the one nearest the old apex) beside the loop.
+      if (!apex) return;
+      var best = null, bestD = Infinity;
+      labels.forEach(function (lab) {
+        var lp = parseTranslate(lab);
+        if (!lp) return;
+        var d = Math.pow(lp.x - apex.x, 2) + Math.pow(lp.y - apex.y, 2);
+        if (d < bestD) { bestD = d; best = lab; }
+      });
+      if (best) {
+        var lw = best.getBBox().width;
+        best.setAttribute("transform", "translate(" + (ox + 10 + lw / 2) + "," + cy + ")");
+      }
+    });
+  }
+
   // The <svg> may live in the container's shadow root (Material) or directly
   // in the light DOM (other setups); support both.
   function getSvg(container) {
@@ -249,8 +331,10 @@
   function bind() {
     document.querySelectorAll(".mermaid").forEach(function (container) {
       if (container.hasAttribute(BOUND)) return;
-      if (!getSvg(container)) return; // not rendered yet; retry on next mutation
+      var svg = getSvg(container);
+      if (!svg) return; // not rendered yet; retry on next mutation
       container.setAttribute(BOUND, "true");
+      compactSelfLoops(svg);
       container.classList.add("mermaid-zoomable");
       container.addEventListener("click", function () {
         var svg = getSvg(container);

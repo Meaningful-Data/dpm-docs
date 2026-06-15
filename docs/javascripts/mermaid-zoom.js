@@ -102,23 +102,31 @@
     });
   }
 
-  function watch() {
-    var tries = 0;
-    var timer = setInterval(function () {
-      bind();
-      if (++tries > 24) clearInterval(timer); // ~6s of retries, then stop
-    }, 250);
+  // Mermaid renders each diagram asynchronously (and Material can render them
+  // late, or lazily on scroll), so a fixed polling window misses the slow ones.
+  // Instead, watch the DOM continuously and bind every diagram the moment its
+  // <svg> appears. bind() is idempotent (guarded by the BOUND attribute).
+  var scanQueued = false;
+  function queueScan() {
+    if (scanQueued) return;
+    scanQueued = true;
+    setTimeout(function () { scanQueued = false; bind(); }, 80);
   }
 
-  // Material re-emits document$ on every instant-navigation page change, so
-  // subscribe to handle navigations. But a late subscriber can miss the
-  // initial emission on a fresh page load, so also run once directly now.
+  function start() {
+    bind(); // catch anything already rendered
+    var observer = new MutationObserver(queueScan);
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
+  // Material re-emits document$ on every instant-navigation page change; the
+  // observer on document.body already survives those, but re-scan to be safe.
   if (typeof document$ !== "undefined") {
-    document$.subscribe(watch);
+    document$.subscribe(bind);
   }
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", watch);
+    document.addEventListener("DOMContentLoaded", start);
   } else {
-    watch();
+    start();
   }
 })();

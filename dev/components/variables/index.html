@@ -1,0 +1,1287 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).">
+      
+      
+      
+        <link rel="canonical" href="https://meaningful-data.github.io/dpm-docs/dev/components/variables/">
+      
+      
+        <link rel="prev" href="../rendering-packaging/">
+      
+      
+        <link rel="next" href="../operations/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>5.3 Identification and description of reported values - DPM 2.0 — Metamodel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#53-identification-and-description-of-each-reported-value" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-header__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DPM 2.0 — Metamodel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5.3 Identification and description of reported values
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dpm-refit-project/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DPM Refit project
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../metamodel-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Metamodel overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ownership-documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Metamodel, ownership and supportive documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Metamodel components
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proposals/extensibility/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Proposals
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-nav__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DPM 2.0 — Metamodel Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-refit-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metamodel-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Metamodel overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ownership-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Metamodel components
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Metamodel components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rendering-packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#531-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 Variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#532-variable-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Variable Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#533-variableversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 VariableVersions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#534-compoundkey-and-its-keycomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.4 CompoundKey and its KeyComposition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#535-variables-definition-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.5 Variables' definition process
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proposals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proposals/extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#531-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 Variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#532-variable-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Variable Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#533-variableversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 VariableVersions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#534-compoundkey-and-its-keycomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.4 CompoundKey and its KeyComposition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#535-variables-definition-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.5 Variables' definition process
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="53-identification-and-description-of-each-reported-value">5.3 Identification and description of each reported value<a class="headerlink" href="#53-identification-and-description-of-each-reported-value" title="Permanent link">&para;</a></h1>
+<p>Unique identification and description of each reportable value is required to explicitly explain what is
+expected to be exchanged and enable tracking changes in modelling of each submitted value.</p>
+<h2 id="531-variable">5.3.1 Variable<a class="headerlink" href="#531-variable" title="Permanent link">&para;</a></h2>
+<p>Each distinct quantitative or qualitative reportable value (regardless of its occurrence in rendering) is
+represented in the DPM as Variable. Next sections of this chapter discuss types and versioning of
+Variables. Entities and relations of this component of metamodel and their relations to other
+components are presented on Figure 33.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Variable {
+    ID VariableID PK
+    string Type
+    GUID RowGUID FK
+  }
+  VariableVersion {
+    ID VariableVID PK
+    ID VariableID FK
+    ID PropertyID FK
+    ID SubCategoryVID FK
+    ID ContextID FK
+    ID KeyID FK
+    bool IsMultiValued
+    string Code
+    string Name
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  Property {
+    ID PropertyID PK,FK
+    bool IsMetric
+    ID DataTypeID FK
+  }
+  SubCategoryVersion {
+    ID SubCategoryVID PK
+    ID SubCategoryID FK
+  }
+  Context {
+    ID ContextID PK
+  }
+  CompoundKey {
+    ID KeyID PK
+  }
+  KeyComposition {
+    ID KeyID PK,FK
+    ID VariableVID PK,FK
+  }
+  ModuleParameters {
+    ID ModuleVID PK,FK
+    ID VariableVID PK,FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID GlobalKeyID FK
+  }
+  TableVersionCell {
+    ID TableVID PK,FK
+    ID CellID PK,FK
+    ID VariableVID FK
+  }
+  HeaderVersion {
+    ID HeaderVID PK
+    ID KeyVariableVID FK
+  }
+  Variable ||--o{ VariableVersion : "VariableID"
+  Property ||--o{ VariableVersion : "PropertyID"
+  SubCategoryVersion |o--o{ VariableVersion : "SubCategoryVID"
+  Context |o--o{ VariableVersion : "ContextID"
+  CompoundKey |o--o{ VariableVersion : "KeyID"
+  CompoundKey ||--o{ KeyComposition : "KeyID"
+  VariableVersion ||--o{ KeyComposition : "VariableVID"
+  ModuleVersion ||--o{ ModuleParameters : "ModuleVID"
+  VariableVersion ||--o{ ModuleParameters : "VariableVID"
+  VariableVersion ||--o{ TableVersionCell : "VariableVID"
+  VariableVersion |o--o{ HeaderVersion : "KeyVariableVID"</code></pre>
+
+<figcaption>Figure 33. Variables component entities and relations.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only primary and foreign keys are listed in this overview; the full attribute set of the
+related entities is given in their dedicated figures. Relationships <strong>between</strong> Variables (Fact
+↔ Key via "factVariable_keyVariable", Variable ↔ Attribute via "variable_attribute", and
+"equivalent_concept" / "version_fix" / "version_new") are modelled through <code>ConceptRelation</code> /
+<code>RelatedConcept</code> — see <a href="../../ownership-documentation/#414-concept-relation">Figure 11</a>.</p>
+</div>
+<h2 id="532-variable-types">5.3.2 Variable Types<a class="headerlink" href="#532-variable-types" title="Permanent link">&para;</a></h2>
+<p>There are four Types of Variables:</p>
+<ul>
+<li><strong>Fact Variable</strong>, which represents reported observation, typically a monetary amount, other
+  numeric data, a text, a date or an enumeration. Fact Variable may refer to one or more Key
+  Variables and/or Attribute Variables that are needed to complement understanding of the piece of
+  data carried by Fact Variable;</li>
+<li><strong>Key Variable</strong> may be needed by some Fact Variables in order to explicitly and uniquely identify
+  exchanged observation; this identification can be Module wide (e.g., reporting entity and period)
+  or apply to individual Fact Variables (e.g. appearing in an Open Table -
+  <a href="../rendering-packaging/#5211-table-and-tableversion">5.2.1.1</a> - where key column(s) identify
+  non-key columns in each row or key sheet(s) identify all cells in that sheet of a Table);</li>
+<li><strong>Attribute Variable</strong> provides information about some properties of exchanged observation such
+  as its unit of measure, accuracy or a comment expected to be associated to it by a reporting entity
+  in their report; Attribute Variable typically applies to Fact Variables but if needed can be applied
+  also to Key Variables;</li>
+<li><strong>Filing Indicator Variable</strong> which corresponds to each reporting unit (e.g. TableGroup or Table)
+  that is used by Operations to determine if Operations shall be executed provided that a reporting
+  unit is declared as present or not in a submitted report. In case of the EBA and EIOPA models,
+  Filing Indicator Variables result from dedicated Content Tables, that list all reportable units for
+  each Module. For modelling purposes, Headers and Variables of this Table apply a dedicated
+  Property and Items of FilingIndicators Category (Table 8).</li>
+</ul>
+<p>Variables can be related to one another by means of Concept Relation
+(<a href="../../ownership-documentation/#414-concept-relation">4.1.4</a>). The following ConceptRelation Types are
+dedicated to connecting Variables:</p>
+<ul>
+<li>"factVariable_keyVariable" – links Fact Variable (at the source of Relation) to Key Variable (at
+  the target of Relation) that is needed to identify this Fact Variable,</li>
+<li>"variable_attribute" links Fact Variable or Key Variable (at the source of Relation) to its
+  Attribute Variable (at the target of Relation).</li>
+</ul>
+<p>Other Relation Types that can be used on Variables are "equivalent_concept" that connects two or
+more Variables (Fact, Key, Attribute or mix of any of these) whose meaning is the same but
+representation in modelling is different and "version_fix"/"version_new" to support historization by
+means of Releases.</p>
+<h2 id="533-variableversions">5.3.3 VariableVersions<a class="headerlink" href="#533-variableversions" title="Permanent link">&para;</a></h2>
+<p>Modelling of Variable may change in time. For this reason, VariableVersion represents Variable for a
+given Release (<a href="../../ownership-documentation/#421-releases">4.2.1</a>).</p>
+<p>Each VariableVersion must indicate Property (<a href="../glossary/#514-property">5.1.4</a>).</p>
+<p>Additionally as explained in
+<a href="../glossary/#518-application-of-glossary-terms-to-other-components-of-the-metamodel">5.1.8</a>,
+enumerated Variable indicates SubCategory (<a href="../glossary/#513-subcategory">5.1.3</a>) listing and
+constraining Items (<a href="../glossary/#512-item">5.1.2</a>) that are selectable options for this VariableVersion.
+VariableVersion.IsMultiValued set to TRUE indicates that observation corresponding to such
+enumerated Variable can be reported with two or more Items from the indicated SubCategory. When
+VariableVersion.IsMultiValued is set to FALSE entities can report only one Item per observation (from
+the indicated SubCategory).</p>
+<p>Fact Variable may refer to Context (<a href="../glossary/#515-context-and-contextcomposition">5.1.5</a>) if Property
+assigned to it is insufficient to fully describe the meaning of that Fact Variable.</p>
+<p>Fact Variable that requires Key Variables to be identified, links to CompoundKey
+(<a href="#534-compoundkey-and-its-keycomposition">5.3.4</a>) gathering (via KeyComposition) all Key Variables
+applicable to this Fact Variable.</p>
+<p>VariableVersion can be identified by its Code and its description can be included in Name attribute
+(which is translatable, <a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<p>Variable and VariableVersions are Concepts and therefore have Owner (which VariableVersion inherits
+from Variable) and can have references
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>).</p>
+<h2 id="534-compoundkey-and-its-keycomposition">5.3.4 CompoundKey and its KeyComposition<a class="headerlink" href="#534-compoundkey-and-its-keycomposition" title="Permanent link">&para;</a></h2>
+<p>Open Tables (<a href="../rendering-packaging/#5211-table-and-tableversion">5.2.1.1</a>) contain one or more Key
+Headers (<a href="../rendering-packaging/#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>). Each
+Key Header results in Key Variable (<a href="#532-variable-types">5.3.2</a>). As presented on Figure 34, all Key
+Variables of any TableVersion are gathered through KeyCompositon to one CompoundKey. This
+CompoundKey is referred:</p>
+<ul>
+<li>from TableVersion and all Fact Variables of this TableVersion and/or</li>
+<li>by ModuleVersion (<a href="../rendering-packaging/#5222-module">5.2.2.2</a>) in which case it implicitly
+  applies to all Fact Variables of all Tables in this ModuleVersion (unless overridden).</li>
+</ul>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  CompoundKey {
+    ID KeyID PK
+    string Signature UK
+    GUID RowGUID FK
+  }
+  KeyComposition {
+    ID KeyID PK,FK
+    ID VariableVID PK,FK
+    GUID RowGUID
+  }
+  VariableVersion {
+    ID VariableVID PK
+    ID VariableID FK
+    ID PropertyID FK
+    ID KeyID FK
+    string Code
+    string Name
+    GUID RowGUID FK
+  }
+  TableVersion {
+    ID TableVID PK
+    ID TableID FK
+    ID KeyID FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID ModuleID FK
+    ID GlobalKeyID FK
+  }
+  CompoundKey ||--o{ KeyComposition : "KeyID"
+  VariableVersion ||--o{ KeyComposition : "VariableVID"
+  CompoundKey |o--o{ TableVersion : "KeyID"
+  CompoundKey |o--o{ ModuleVersion : "GlobalKeyID"</code></pre>
+
+<figcaption>Figure 34. CompoundKey and KeyComposition application to TableVersion and ModuleVersion.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>KeyComposition</code> gathers the Key <code>VariableVersion</code>s of a <code>CompoundKey</code>. The same <code>CompoundKey</code>
+is referred from <code>TableVersion</code> (<code>KeyID</code>) — applying to all Fact Variables of that
+TableVersion — and/or from <code>ModuleVersion</code> (<code>GlobalKeyID</code>) — applying to all Fact Variables of
+all Tables in that ModuleVersion (unless overridden).</p>
+</div>
+<h2 id="535-variables-definition-process">5.3.5 Variables' definition process<a class="headerlink" href="#535-variables-definition-process" title="Permanent link">&para;</a></h2>
+<p>Although Variables (<a href="#531-variable">5.3.1</a>) can be defined irrespective of the rendering, in the typicall
+modelling process they result from Tables (<a href="../rendering-packaging/#5211-table-and-tableversion">5.2.1.1</a>).</p>
+<p>Fact Variables (<a href="#532-variable-types">5.3.2</a>) are derived from Cells
+(<a href="../rendering-packaging/#5213-cell-and-tableversioncell">5.2.1.3</a>), where Table level Glossary terms
+contribute to definition of Headers (in which case Glossary terms are inherited, unless overridden,
+from upper-level Headers - <a href="../rendering-packaging/#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>)
+and is propagated to Cells on intersection of these Headers.</p>
+<p>Key Variables are linked from Key Headers which have no Cells attached. This is to ensure that open
+(or semi-open, i.e. enumerated and constrained by means of SubCategory -
+<a href="../glossary/#513-subcategory">5.1.3</a>) Sheets, Columns or Rows are modelled in the same way
+regardless of their graphical orientation (as ultimately it is a matter of subjective decision of a
+Modeller to display these in certain direction).</p>
+<p>Global Attribute and Key Variables are identified during definition of Modules
+(<a href="../rendering-packaging/#5222-module">5.2.2.2</a>) they refer to.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

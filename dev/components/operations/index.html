@@ -1,0 +1,1234 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).">
+      
+      
+      
+        <link rel="canonical" href="https://meaningful-data.github.io/dpm-docs/dev/components/operations/">
+      
+      
+        <link rel="prev" href="../variables/">
+      
+      
+        <link rel="next" href="../../proposals/extensibility/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>5.4 Operations on data - DPM 2.0 — Metamodel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#54-operations-on-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-header__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DPM 2.0 — Metamodel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5.4 Operations on data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dpm-refit-project/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DPM Refit project
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../metamodel-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Metamodel overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ownership-documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Metamodel, ownership and supportive documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Metamodel components
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proposals/extensibility/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Proposals
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-nav__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DPM 2.0 — Metamodel Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-refit-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metamodel-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Metamodel overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ownership-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Metamodel components
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Metamodel components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rendering-packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#541-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.1 Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#542-handling-external-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.2 Handling external information
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proposals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proposals/extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#541-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.1 Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#542-handling-external-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.2 Handling external information
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="54-operations-on-data">5.4 Operations on data<a class="headerlink" href="#54-operations-on-data" title="Permanent link">&para;</a></h1>
+<p>In addition to explicit and comprehensive description and unique identification of information
+requirements, DPM enables representation of definitions of Operations on data. These could be:</p>
+<ul>
+<li>quality checks related to imposing constraints on requested data values or their formats,</li>
+<li>documentation of logical and arithmetic relations between reported data,</li>
+<li>data transformations enabling producing new data from reported observations according to
+  certain formulas.</li>
+</ul>
+<p>These definitions can be used by software applications parsing reports to execute Operations on
+reported data.</p>
+<h2 id="541-operations">5.4.1 Operations<a class="headerlink" href="#541-operations" title="Permanent link">&para;</a></h2>
+<p>As indicated on Figure 35, Operations are represented in form of Abstract Syntax Tree (AST)<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">1</a></sup>, where
+tree nodes are Operators
+(<a href="../../ownership-documentation/#4115-operator-and-operator-argument">4.1.1.5</a>) or OperandReferences
+referring to Variables (<a href="../variables/#531-variable">5.3.1</a>), Properties (<a href="../glossary/#514-property">5.1.4</a>),
+Items (<a href="../glossary/#512-item">5.1.2</a>), SubCategories (<a href="../glossary/#513-subcategory">5.1.3</a>) or – through
+OperandReferenceLocation to Cells (<a href="../rendering-packaging/#5213-cell-and-tableversioncell">5.2.1.3</a>).</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Operation {
+    ID OperationID PK
+    string Code
+    string Type
+    string Source
+    ID GroupOperationID FK
+    GUID RowGUID FK
+  }
+  OperationVersion {
+    ID OperationVID PK
+    ID OperationID FK
+    ID PreconditionOperationVID FK
+    ID SeverityOperationVID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    string Expression
+    string Description
+    GUID RowGUID FK
+  }
+  OperationScope {
+    ID OperationScopeID PK
+    ID OperationVID FK
+    bool IsActive
+    string Severity
+    date FromSubmissionDate
+    GUID RowGUID
+  }
+  OperationScopeComposition {
+    ID OperationScopeID PK,FK
+    ID ModuleVID FK
+    GUID RowGUID
+  }
+  OperationNode {
+    ID NodeID PK
+    ID OperationVID FK
+    ID ParentNodeID FK
+    ID OperatorID FK
+    ID ArgumentID FK
+    decimal AbsoluteTolerance
+    decimal RelativeTolerance
+    string FallbackValue
+    bool UseIntervalArithmetics
+    string OperandType
+    bool IsLeaf
+    string Scalar
+  }
+  OperandReference {
+    ID OperandReferenceID PK
+    ID NodeID FK
+    int x
+    int y
+    int z
+    string OperandReference
+    ID ItemID FK
+    ID PropertyID FK
+    ID VariableID FK
+    ID SubCategoryID FK
+  }
+  OperandReferenceLocation {
+    ID OperandReferenceID PK,FK
+    ID CellID FK
+    string Table
+    string Row
+    string Column
+    string Sheet
+  }
+  Operator {
+    ID OperatorID PK
+    string Name
+    string Symbol
+    string Type
+  }
+  OperatorArgument {
+    ID ArgumentID PK
+    ID OperatorID FK
+    int Order
+    bool IsMandatory
+    string Name
+  }
+  VariableCalculation {
+    ID ModuleID PK,FK
+    ID VariableID PK,FK
+    ID OperationVID PK,FK
+    date FromReferenceDate
+    date ToReferenceDate
+    GUID RowGUID
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+  }
+  Cell {
+    ID CellID PK
+  }
+  Variable {
+    ID VariableID PK
+  }
+  Property {
+    ID PropertyID PK
+  }
+  Item {
+    ID ItemID PK
+  }
+  SubCategory {
+    ID SubCategoryID PK
+  }
+  Operation |o--o{ Operation : "Grouping (GroupOperationID)"
+  Operation ||--o{ OperationVersion : "OperationID"
+  OperationVersion |o--o{ OperationVersion : "PreconditionOperationVID"
+  OperationVersion |o--o{ OperationVersion : "SeverityOperationVID"
+  OperationVersion ||--o{ OperationScope : "OperationVID"
+  OperationScope ||--o{ OperationScopeComposition : "OperationScopeID"
+  ModuleVersion ||--o{ OperationScopeComposition : "ModuleVID"
+  OperationVersion ||--o{ OperationNode : "OperationVID"
+  OperationNode |o--o{ OperationNode : "ParentNodeID"
+  Operator ||--o{ OperationNode : "OperatorID"
+  OperatorArgument ||--o{ OperationNode : "ArgumentID"
+  OperationNode |o--o| OperandReference : "NodeID"
+  OperandReference |o--o| OperandReferenceLocation : "OperandReferenceID"
+  Cell ||--o{ OperandReferenceLocation : "CellID"
+  Variable |o--o{ OperandReference : "VariableID"
+  Property |o--o{ OperandReference : "PropertyID"
+  Item |o--o{ OperandReference : "ItemID"
+  SubCategory |o--o{ OperandReference : "SubCategoryID"
+  ModuleVersion ||--o{ VariableCalculation : "ModuleID"
+  Variable ||--o{ VariableCalculation : "VariableID"
+  OperationVersion ||--o{ VariableCalculation : "OperationVID"</code></pre>
+
+<figcaption>Figure 35. Entities and relations of Operations component.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Operations are represented as Abstract Syntax Trees: each <code>OperationNode</code> links to an
+<code>Operator</code> (and an <code>OperatorArgument</code>) or, when it is a leaf, to an <code>OperandReference</code> that
+points to a <code>Variable</code>, <code>Property</code>, <code>Item</code> or <code>SubCategory</code> — or, via
+<code>OperandReferenceLocation</code>, to a <code>Cell</code>. Referenced entities (<code>Cell</code>, <code>Variable</code>, <code>Property</code>,
+<code>Item</code>, <code>SubCategory</code>, <code>ModuleVersion</code>) are shown reduced to their key; their full definitions
+are in the glossary, rendering and variables figures.</p>
+</div>
+<p>Operation Type indicates if Operation represents:</p>
+<ul>
+<li>"validation" – a quality check checking correctness and consistency of reported fata reported
+  data,</li>
+<li>"calculation" – transformation of reported data to produce new derived data, e.g. ratios,
+  aggregates, etc,</li>
+<li>"precondition" – check that determines if another related Operation should be executed,</li>
+<li>"conditional_severity" – test that determines severity of another related Operation.</li>
+</ul>
+<p>Operations can be grouped, nested and sequenced. This latter is used for Operations that serve as a
+precondition or inform how severity is determined.</p>
+<p>Operation Source indicates the origin of Operation which can be one of the following:</p>
+<ul>
+<li>"sign" – checks if a reported value is positive or negative, derived from TableVersionCell.Sign
+  (<a href="../rendering-packaging/#5213-cell-and-tableversioncell">5.2.1.3</a>),</li>
+<li>"hierarchy" – originates from one of SubCategories which structure along with ArithmeticOperators
+  and ComparisonOperators (<a href="../glossary/#513-subcategory">5.1.3</a>) were identified by Modellers as
+  applicable to verify reported data or produce new date,</li>
+<li>"existence" – checks if mandatory data was reported, derived from TableVersionCell.IsNullable
+  (<a href="../rendering-packaging/#5213-cell-and-tableversioncell">5.2.1.3</a>),</li>
+<li>"property_constraint" – ensures that Property is assigned with allowed Items (derived from
+  SubCategories applied to Variables for a given Property),</li>
+<li>"user_defined" – neither of the above, typically defined by modeller by indicating Table Headers,
+  Cells, Variables or glossary terms and applying them in test expression along with Operators and
+  scalars,</li>
+<li>"variant" – as above but defined on TableGroups whose type is "templateScope"
+  (<a href="../rendering-packaging/#5214-table-group">5.2.1.4</a>) and therefore propagated to all Tables that
+  this TableGroup or its descendants are composed of (via TableGroupComposition).</li>
+</ul>
+<p>Operation is versioned by means of OperationVersion referring to Release
+(<a href="../../ownership-documentation/#421-releases">4.2.1</a>).</p>
+<p>OperationVersion applies to data reported for Modules it is connected to. For Operations whose Type
+is "validation", this connection is made through OperationScope and OperationScopeComposition to
+enable handling situations where Operation has different severity depending on the Module or can be
+deactivated/re-activated starting from certain submission date
+(<a href="../../ownership-documentation/#423-deactivations">4.2.3</a>). Operations whose Type is "calculation" are
+additionally linked to the derived Variable through VariableCalculation.</p>
+<p>As explained above, Operations are represented as trees whose branches and leaves (OperationNodes)
+link to Operators (<a href="../../ownership-documentation/#4115-operator-and-operator-argument">4.1.1.5</a>) and
+Operands. Detailed explanation of this mechanism and description of attributes of these entities can
+be found in the DPM XL and ML documentation.</p>
+<p>Operation, OperationVersion and OperationScope are Concepts and therefore are assigned with
+Owner, where the latter two inherit the Owner of the first. All three can have references
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>).</p>
+<p>Description of OperationVersion can be translated
+(<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>) to any natural language while Expression
+can be reflected in any programming language (e.g. Java, .Net, Python, R, SQL) or other formal
+language (different syntaxes build according to specified grammar).</p>
+<h2 id="542-handling-external-information">5.4.2 Handling external information<a class="headerlink" href="#542-handling-external-information" title="Permanent link">&para;</a></h2>
+<p>Some Operations refer to external data i.e. information not belonging to any Framework
+(<a href="../rendering-packaging/#5221-framework">5.2.2.1</a> – and hence Modules
+<a href="../rendering-packaging/#5222-module">5.2.2.2</a>) and therefore not exchanged in reports. This could be
+in particular:</p>
+<ul>
+<li>master data about reporting entities (that may impact data to be disclosed in reports or determine
+  which ratios or aggregates can computed based on reported data), or</li>
+<li>reference data (e.g. registry of entities or instruments, that can be crosschecked against reported
+  information).</li>
+</ul>
+<p>Such metadata can be resembled in DPM as Properties (<a href="../glossary/#514-property">5.1.4</a>) of dedicated
+Categories (<a href="../glossary/#511-category">5.1.1</a>), and eventually as Variables (<a href="../variables/#531-variable">5.3.1</a>)
+which as Operands can be referred from Operations and treated as parameters, that during execution
+are replaced with values from this master or reference data.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:21">
+<p><a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">https://en.wikipedia.org/wiki/Abstract_syntax_tree</a>&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

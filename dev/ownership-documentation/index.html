@@ -1,0 +1,3643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).">
+      
+      
+      
+        <link rel="canonical" href="https://meaningful-data.github.io/dpm-docs/dev/ownership-documentation/">
+      
+      
+        <link rel="prev" href="../metamodel-overview/">
+      
+      
+        <link rel="next" href="../components/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>4. Metamodel, ownership and supportive documentation - DPM 2.0 — Metamodel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-metamodel-ownership-and-supportive-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DPM 2.0 — Metamodel Documentation" class="md-header__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DPM 2.0 — Metamodel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Metamodel, ownership and supportive documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../dpm-refit-project/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DPM Refit project
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../metamodel-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Metamodel overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Metamodel, ownership and supportive documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Metamodel components
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../proposals/extensibility/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Proposals
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DPM 2.0 — Metamodel Documentation" class="md-nav__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DPM 2.0 — Metamodel Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dpm-refit-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metamodel-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Metamodel overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-metamodel-metadata-ownership-and-supportive-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Metamodel metadata, ownership, and supportive documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Metamodel metadata, ownership, and supportive documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-metamodel-metadata-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 Metamodel metadata entities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.1 Metamodel metadata entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4111-dpm-class-and-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.1 DPM Class and Attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4112-data-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.2 Data Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4113-subdivision-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.3 Subdivision Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4114-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.4 Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4115-operator-and-operator-argument" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.5 Operator and Operator Argument
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-concept-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Concept and Ownership
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-supportive-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 Supportive documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.3 Supportive documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4131-translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3.1 Translations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4132-references-to-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3.2 References to documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-concept-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.4 Concept relation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-historisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Historisation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Historisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 Releases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-application-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 Application dates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-deactivations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 Deactivations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-log-of-changes-non-normative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.5 Log of changes (non-normative)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Derivation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Naming convention
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../components/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Metamodel components
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Metamodel components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/rendering-packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proposals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposals/extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-metamodel-metadata-ownership-and-supportive-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Metamodel metadata, ownership, and supportive documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Metamodel metadata, ownership, and supportive documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-metamodel-metadata-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 Metamodel metadata entities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.1 Metamodel metadata entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4111-dpm-class-and-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.1 DPM Class and Attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4112-data-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.2 Data Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4113-subdivision-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.3 Subdivision Type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4114-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.4 Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4115-operator-and-operator-argument" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1.5 Operator and Operator Argument
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-concept-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Concept and Ownership
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-supportive-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 Supportive documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1.3 Supportive documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4131-translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3.1 Translations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4132-references-to-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3.2 References to documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-concept-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.4 Concept relation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-historisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Historisation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Historisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 Releases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-application-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 Application dates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-deactivations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 Deactivations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-log-of-changes-non-normative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.5 Log of changes (non-normative)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Derivation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Naming convention
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-metamodel-ownership-and-supportive-documentation">4 Metamodel, ownership and supportive documentation<a class="headerlink" href="#4-metamodel-ownership-and-supportive-documentation" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Reading the entity-relationship diagrams</p>
+<p>The diagrams in this documentation are recreated from the source metamodel diagrams as
+Mermaid <strong>entity-relationship diagrams</strong> using crow's-foot notation:</p>
+<ul>
+<li><code>||</code> = exactly one (mandatory), <code>o|</code> = zero or one, <code>}o</code> / <code>o{</code> = zero or many,
+  <code>}|</code> / <code>|{</code> = one or many.</li>
+<li><code>PK</code> marks a primary key, <code>FK</code> marks a foreign key, <code>UK</code> marks a unique key.</li>
+<li>Entities highlighted as <strong>Concepts</strong> (see <a href="#412-concept-and-ownership">4.1.2</a>) are noted in
+  the surrounding text.</li>
+</ul>
+<p>The source diagrams list attribute <em>names</em> and their key markers; the attribute <em>type</em> tokens
+shown in the recreated diagrams (e.g. <code>ID</code>, <code>string</code>, <code>bool</code>, <code>date</code>) are indicative and added
+only to satisfy the Mermaid syntax — they are not part of the original diagrams.</p>
+</div>
+<h2 id="41-metamodel-metadata-ownership-and-supportive-documentation">4.1 Metamodel metadata, ownership, and supportive documentation<a class="headerlink" href="#41-metamodel-metadata-ownership-and-supportive-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="411-metamodel-metadata-entities">4.1.1 Metamodel metadata entities<a class="headerlink" href="#411-metamodel-metadata-entities" title="Permanent link">&para;</a></h3>
+<p>As presented on the left-hand side of Figure 1, DPM defines a few entities that provide information
+about the metamodel itself. These entities comprise of:</p>
+<ul>
+<li>DPMClass,</li>
+<li>DPMAttribute,</li>
+<li>DataType,</li>
+<li>SubdivisionType,</li>
+<li>Language,</li>
+<li>Operator,</li>
+<li>OperatorArgument</li>
+</ul>
+<p>and are presented on Figure 2.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  DPMClass {
+    ID ClassID PK
+    string Name
+    string Type
+    ID OwnerClassID FK
+    bool HasReferences
+  }
+  DPMAttribute {
+    ID AttributeID PK
+    ID ClassID FK
+    string Name
+    bool HasTranslations
+  }
+  DataType {
+    ID DataTypeID PK
+    string Code UK
+    string Name UK
+    ID ParentDataTypeID FK
+    bool IsActive
+  }
+  Language {
+    string LanguageCode PK
+    string Name
+  }
+  SubdivisionType {
+    ID SubdivisionTypeID PK
+    string Name
+    string Description
+  }
+  Operator {
+    ID OperatorID PK
+    string Name
+    string Symbol
+    string Type
+  }
+  OperatorArgument {
+    ID ArgumentID PK
+    ID OperatorID FK
+    int Order
+    bool IsMandatory
+    string Name
+  }
+
+  DPMClass ||--o{ DPMClass : "OwnerClassID (owner inheritance)"
+  DPMClass ||--o{ DPMAttribute : "ClassID"
+  DataType ||--o{ DataType : "ParentDataTypeID"
+  Operator ||--o{ OperatorArgument : "OperatorID"</code></pre>
+
+<figcaption>Figure 2. Metamodel metadata entities.</figcaption>
+</figure>
+<p>Content of the metamodel metadata entities is predefined as described in the next sections of this
+document, hence any changes can be introduced only by the DPM metamodel authors.</p>
+<p>From the Modellers' perspective these entities are fixed and must not be edited.</p>
+<h4 id="4111-dpm-class-and-attribute">4.1.1.1 DPM Class and Attribute<a class="headerlink" href="#4111-dpm-class-and-attribute" title="Permanent link">&para;</a></h4>
+<p>DPMClass metamodel metadata entity lists of all entities of the DPM metamodel.</p>
+<p>DPMClass.Name corresponds to the name of each entity in the metamodel.</p>
+<p>Some entities listed in DPMClass are Concepts (<a href="#412-concept-and-ownership">4.1.2</a>), i.e. these model
+entities that:</p>
+<ul>
+<li>can be identified with and Owner or inherit Owner from other Concepts,</li>
+<li>may have references (<a href="#4132-references-to-documentation">4.1.3.2</a>),</li>
+<li>contain attributes that are translatable (<a href="#4131-translations">4.1.3.1</a>).</li>
+</ul>
+<p>Concepts are those DPM metamodel entities that have a single Primary Key. The only exception is
+SubCategoryItem which has two keys, however it contains attributes that are translatable
+(<a href="#4131-translations">4.1.3.1</a>) and therefore can be considered as a Concept.</p>
+<p>DPMClasses whose DPMClass.HasReferences equals TRUE can be provided with references (as
+described in <a href="#4132-references-to-documentation">4.1.3.2</a>).</p>
+<p>DPMClasses which are Concepts may include DPMClass.OwnerClassID identifying another Concept
+class from which their Owner is inherited (as described in <a href="#412-concept-and-ownership">4.1.2</a>).</p>
+<p>Table 1 lists DPMClasses which are Concepts.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>OwnerClass (inherited from)</th>
+<th>HasReferences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisation</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Subcategory</td>
+<td>Attributive</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Property</td>
+<td>SubType</td>
+<td>Item</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Item</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>Attributive</td>
+<td>Framework</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ModuleVersion</td>
+<td>Attributive</td>
+<td>Module</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TableGroup</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TableVersion</td>
+<td>Attributive</td>
+<td>Table</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TableAssociation</td>
+<td>Associative</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Header</td>
+<td>Attributive</td>
+<td>Table</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>HeaderVersion</td>
+<td>Attributive</td>
+<td>Header</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Associative</td>
+<td>Table</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>VariableVersion</td>
+<td>Attributive</td>
+<td>Variable</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>CompoundKey</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OperationVersion</td>
+<td>Attributive</td>
+<td>Operation</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OperationScope</td>
+<td>Associative</td>
+<td>Operation</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>Independent</td>
+<td></td>
+<td>No</td>
+</tr>
+<tr>
+<td>DocumentVersion</td>
+<td>Attributive</td>
+<td>Document</td>
+<td>No.</td>
+</tr>
+<tr>
+<td>Subdivision</td>
+<td>Attributive</td>
+<td>DocumentVersion</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>Independent</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SubCategoryItem</td>
+<td>Associative</td>
+<td>SubCategory</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 1. List of DPMClasses that are Concepts, along with their attributes.</figcaption>
+
+<p>DPMAttribute metamodel metadata entity lists attributes of each metamodel entity from DPMClass.
+DPMAttribute.Name corresponds to the name of attribute of entity in the metamodel.</p>
+<p>The national language of the DPM models, at least for the EBA and EIOPA, applied on all entity
+attributes such as Name, Description, Label, etc. is English. Attributes whose
+DPMAttribute.HasTranslation equal TRUE (e.g. Name, Description, Label, etc.) can be provided with
+translations to other national languages (<a href="#4131-translations">4.1.3.1</a>).</p>
+<p>For representation of the OperationVersion.Expression the EBA and EIOPA use the DPM XL syntax.
+However, using the same mechanism as for national languages translations, operations can be
+represented in other syntaxes or formats (e.g. XBRL, SQL, Python).</p>
+<p>The list of translatable attributes for each DPMClass is presented in Table 2.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>DPMClass</th>
+<th>HasTranslations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Category</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Category</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>SubCategory</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>SubCategory</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Item</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Item</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>SubCategoryItem</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Framework</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Framework</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>ModuleVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>ModuleVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>TableGroup</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>TableGroup</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>TableVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>TableVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>HeaderVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>TableAssociation</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>TableAssociation</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>VariableVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>OperationVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Expression</td>
+<td>OperationVersion</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Document</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TextExcerpt</td>
+<td>Subdivision</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Organisation</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Acronym</td>
+<td>Organisation</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Release</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 2. List of translatable DPMAttributes.</figcaption>
+
+<p>Relationship between DPMClass, DPMAttribute and Concept is presented on Figure 3.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  DPMClass {
+    ID ClassID PK
+    string Name
+    string Type
+    ID OwnerClassID FK
+    bool HasReferences
+  }
+  DPMAttribute {
+    ID AttributeID PK
+    ID ClassID FK
+    string Name
+    bool HasTranslations
+  }
+  Concept {
+    GUID ConceptGUID PK
+    ID ClassID FK
+    ID OwnerID FK
+  }
+
+  DPMClass ||--o{ DPMClass : "OwnerClassID"
+  DPMClass ||--o{ DPMAttribute : "ClassID"
+  DPMClass ||--o{ Concept : "ClassID"</code></pre>
+
+<figcaption>Figure 3. Concept, DPMClass and DPMAttribute entities.</figcaption>
+</figure>
+<h4 id="4112-data-type">4.1.1.2 Data Type<a class="headerlink" href="#4112-data-type" title="Permanent link">&para;</a></h4>
+<p>DataType entity provides the list of data types that can be used on the following metamodel entities:</p>
+<ul>
+<li>Property (<a href="../components/glossary/#514-property">5.1.4</a>),</li>
+<li>OperationAttribute (Error! Reference source not found.).</li>
+</ul>
+<p>As presented on Figure 2, each DataType is identified by Code and explained by Name.</p>
+<p>The list of available data types is presented in see Table 3.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Parent Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>r</td>
+<td>decimal</td>
+<td></td>
+</tr>
+<tr>
+<td>s</td>
+<td>string (non empty)</td>
+<td></td>
+</tr>
+<tr>
+<td>b</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>t</td>
+<td>true</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>dt</td>
+<td>date time</td>
+<td></td>
+</tr>
+<tr>
+<td>d</td>
+<td>date</td>
+<td>date time</td>
+</tr>
+<tr>
+<td>e</td>
+<td>enumeration</td>
+<td>string</td>
+</tr>
+<tr>
+<td>m</td>
+<td>monetary</td>
+<td></td>
+</tr>
+<tr>
+<td>p</td>
+<td>percentage</td>
+<td></td>
+</tr>
+<tr>
+<td>u</td>
+<td>URI</td>
+<td></td>
+</tr>
+<tr>
+<td>o</td>
+<td>ordinals</td>
+<td></td>
+</tr>
+<tr>
+<td>es</td>
+<td>string (including empty string)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 3. List of data types.</figcaption>
+
+<p>Data types can be derived (by restriction) from one another. For example, True data type is a
+restriction of a Boolean data type to only one value (i.e. Boolean TRUE).</p>
+<p>DataType can be deactivated (<a href="#423-deactivations">4.2.3</a>) by setting IsActive to FALSE which indicates
+that such deactivated data type can no longer in use in modelling of metadata. Data types listed in
+Table 3 are all active at the moment of release of this documentation.</p>
+<h4 id="4113-subdivision-type">4.1.1.3 Subdivision Type<a class="headerlink" href="#4113-subdivision-type" title="Permanent link">&para;</a></h4>
+<p>SubdivisionType is used for structuring of references to documentation
+(<a href="#4132-references-to-documentation">4.1.3.2</a>) and as presented on Figure 4, is referred from
+Subdivision.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  SubdivisionType {
+    ID SubdivisionTypeID PK
+    string Name
+    string Description
+  }
+  Subdivision {
+    ID SubdivisionID PK
+    ID DocumentVID FK
+    ID SubdivisionTypeID FK
+    string Number
+    ID ParentSubdivisionID FK
+    string StructurePath
+    string TextExcerpt
+    GUID RowGUID FK
+  }
+  SubdivisionType ||--o{ Subdivision : "SubdivisionTypeID"
+  Subdivision |o--o{ Subdivision : "ParentSubdivisionID"</code></pre>
+
+<figcaption>Figure 4. SubdivisionType entity.</figcaption>
+</figure>
+<p>SubdivisionType is identified by its Name and further explained by Description. The list of
+SubdivisionTypes is presented in Table 4.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chapter</td>
+<td>For a publication that uses chapters, this part should be used to capture this information. Because chapters are not necessarily numbers, this is a string.</td>
+</tr>
+<tr>
+<td>Article</td>
+<td>Article refers to a statutory article in legal material.</td>
+</tr>
+<tr>
+<td>Section</td>
+<td>Section is used to capture information typically captured in sections of legislation or reference documents.</td>
+</tr>
+<tr>
+<td>Subsection</td>
+<td>Subsection is a subsection of the section part.</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Paragraph is used to refer to specific paragraphs in a document.</td>
+</tr>
+<tr>
+<td>Subparagraph</td>
+<td>Subparagraph of a paragraph.</td>
+</tr>
+<tr>
+<td>Clause</td>
+<td>Subcomponent of a sub paragraph.</td>
+</tr>
+<tr>
+<td>Subclause</td>
+<td>Subcomponent of a clause in a paragraph.</td>
+</tr>
+<tr>
+<td>Appendix</td>
+<td>Refers to the name of an Appendix, which could be a number or text.</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Example captures examples used in reference documentation; there is a separate element for Exhibits.</td>
+</tr>
+<tr>
+<td>Page</td>
+<td>Page number of the reference material.</td>
+</tr>
+<tr>
+<td>Exhibit</td>
+<td>Exhibit refers to exhibits in reference documentation; examples have a separate element.</td>
+</tr>
+<tr>
+<td>Footnote</td>
+<td>Footnote is used to reference footnotes that appear in reference information.</td>
+</tr>
+<tr>
+<td>Sentence</td>
+<td>In some reference material individual sentences can be referred to, and this allows them to be referenced.</td>
+</tr>
+<tr>
+<td>URI</td>
+<td>Full URI of the reference such as "http://www.fasb.org/fas133".</td>
+</tr>
+<tr>
+<td>Requirement</td>
+<td>A suggestion of a new model entry for consideration / to be addressed in the next releases.</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 4. List of subdivision types.</figcaption>
+
+<h4 id="4114-language">4.1.1.4 Language<a class="headerlink" href="#4114-language" title="Permanent link">&para;</a></h4>
+<p>Language entity enables translation to different national languages
+(<a href="#413-supportive-documentation">4.1.3</a>) and therefore its content is populated based on the ISO
+639-1 alpha-2 language codes and names.</p>
+<p>Additionally, it enables representation of Expressions of Operations
+(<a href="../components/operations/#541-operations">5.4.1</a>) in various technical implementations, e.g. SQL,
+XBRL, VTL, etc or other than DPM XL formal languages (syntaxes based on specified grammar).</p>
+<p>Language is identified by LanguageCode and its Name as presented on Figure 5.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Concept {
+    GUID ConceptGUID PK
+    ID ClassID FK
+    ID OwnerID FK
+  }
+  DPMAttribute {
+    ID AttributeID PK
+    ID ClassID FK
+    string Name
+    bool HasTranslations
+  }
+  Language {
+    string LanguageCode PK
+    string Name
+  }
+  Translation {
+    GUID ConceptGUID PK,FK
+    ID AttributeID PK,FK
+    ID TranslatorID PK,FK
+    string LanguageCode PK,FK
+    string Translation
+    GUID RowGUID
+  }
+  Concept ||--o{ Translation : "ConceptID"
+  DPMAttribute ||--o{ Translation : "AttributeID"
+  Language ||--o{ Translation : "LanguageCode"</code></pre>
+
+<figcaption>Figure 5. Language entity.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The same diagram (Concept · DPMAttribute · Language · Translation) is used to present the
+Language entity here and the translation mechanism in
+<a href="#4131-translations">Figure 9</a>. In the <code>Translation</code> associative entity the four <code>PF</code>
+attributes form a composite primary key that is also foreign-key; <code>TranslatorID</code> references the
+<code>Organisation</code> (a Concept) that provided the translation.</p>
+</div>
+<h4 id="4115-operator-and-operator-argument">4.1.1.5 Operator and Operator Argument<a class="headerlink" href="#4115-operator-and-operator-argument" title="Permanent link">&para;</a></h4>
+<p>Operators (as presented on Figure 6) can applied by:</p>
+<ul>
+<li>SubCategoryItem (to indicate arithmetic operations between Items in a SubCategory, see
+  <a href="../components/glossary/#513-subcategory">5.1.3</a>),</li>
+<li>OperationNode (in which case Operators may be more complex and include multiple
+  OperatorArguments, see <a href="../components/operations/#541-operations">5.4.1</a>).</li>
+</ul>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Operator {
+    ID OperatorID PK
+    string Name
+    string Symbol
+    string Type
+  }
+  OperatorArgument {
+    ID ArgumentID PK
+    ID OperatorID FK
+    int Order
+    bool IsMandatory
+    string Name
+  }
+  SubCategoryItem {
+    ID ItemID PK,FK
+    ID SubCategoryVID PK,FK
+    int Order
+    string Label
+    ID ParentItemID FK
+    ID ComparisonOperatorID FK
+    ID ArithmeticOperatorID FK
+    GUID RowGUID FK
+  }
+  OperationNode {
+    ID NodeID PK
+    ID OperationVID FK
+    ID ParentNodeID FK
+    ID OperatorID FK
+    ID ArgumentID FK
+    decimal AbsoluteTolerance
+    decimal RelativeTolerance
+    string FallbackValue
+    bool UseIntervalArithmetics
+    string OperandType
+    bool IsLeaf
+    string Scalar
+  }
+  Operator ||--o{ OperatorArgument : "OperatorID"
+  Operator ||--o{ SubCategoryItem : "Comparison / ArithmeticOperatorID"
+  Operator ||--o{ OperationNode : "OperatorID"
+  OperatorArgument ||--o{ OperationNode : "ArgumentID"
+  SubCategoryItem |o--o{ SubCategoryItem : "ParentItemID"
+  OperationNode |o--o{ OperationNode : "ParentNodeID"</code></pre>
+
+<figcaption>Figure 6. Operator and OperatorArgument entities.</figcaption>
+</figure>
+<p>The list of Operators is presented in Table 5.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Symbol</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unary plus</td>
+<td>+</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Addition</td>
+<td>+</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Division</td>
+<td>/</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Unary minus</td>
+<td>-</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Subtraction</td>
+<td>-</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Absolute value</td>
+<td>abs</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Numeric minimum</td>
+<td>min</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td>*</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Numeric maximum</td>
+<td>max</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Square root</td>
+<td>sqrt</td>
+<td>Numeric</td>
+</tr>
+<tr>
+<td>Aggregate maximum</td>
+<td>max_aggr</td>
+<td>Aggregate</td>
+</tr>
+<tr>
+<td>Aggregate minimum</td>
+<td>min_aggr</td>
+<td>Aggregate</td>
+</tr>
+<tr>
+<td>Equal to</td>
+<td>=</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Less than equal to</td>
+<td>&lt;=</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Greater than equal to</td>
+<td>&gt;=</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Element of</td>
+<td>in</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Is null</td>
+<td>isnull</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Greater than</td>
+<td>&gt;</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Less than</td>
+<td>&lt;</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Not equal to</td>
+<td>!=</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>Match characters</td>
+<td>match</td>
+<td>Comparison</td>
+</tr>
+<tr>
+<td>And</td>
+<td>and</td>
+<td>Logical</td>
+</tr>
+<tr>
+<td>Or</td>
+<td>or</td>
+<td>Logical</td>
+</tr>
+<tr>
+<td>Not</td>
+<td>not</td>
+<td>Logical</td>
+</tr>
+<tr>
+<td>Exclusive or</td>
+<td>xor</td>
+<td>Logical</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>sum</td>
+<td>Aggregate</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>count</td>
+<td>Aggregate</td>
+</tr>
+<tr>
+<td>Where</td>
+<td>where</td>
+<td>Clause</td>
+</tr>
+<tr>
+<td>Get</td>
+<td>get</td>
+<td>Clause</td>
+</tr>
+<tr>
+<td>If then else</td>
+<td>if-then-else</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>filter</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Time shift</td>
+<td>time_shift</td>
+<td>Time</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>rename</td>
+<td>Clause</td>
+</tr>
+<tr>
+<td>RenameNode</td>
+<td>node</td>
+<td>Clause</td>
+</tr>
+<tr>
+<td>Grouping clause</td>
+<td>group by</td>
+<td>Clause</td>
+</tr>
+<tr>
+<td>Persistent assignment</td>
+<td>&lt;-</td>
+<td>Assignment</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 5. List of Operators.</figcaption>
+
+<p>As presented on Figure 6, more complex Operators are composed of multiple arguments. The list of
+OperatorArguments is provided in Table 6.</p>
+<table>
+<thead>
+<tr>
+<th>Operator (FK)</th>
+<th>Order</th>
+<th>IsMandatory</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unary plus</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Addition</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Addition</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Division</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Division</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Unary minus</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Subtraction</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Subtraction</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Absolute value</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Numeric minimum</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Numeric maximum</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Square root</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Aggregate maximum</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Aggregate maximum</td>
+<td>2</td>
+<td>1</td>
+<td>grouping_clause</td>
+</tr>
+<tr>
+<td>Aggregate maximum</td>
+<td>3</td>
+<td>1</td>
+<td>component</td>
+</tr>
+<tr>
+<td>Aggregate minimum</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Aggregate minimum</td>
+<td>2</td>
+<td>1</td>
+<td>grouping_clause</td>
+</tr>
+<tr>
+<td>Aggregate minimum</td>
+<td>3</td>
+<td>1</td>
+<td>component</td>
+</tr>
+<tr>
+<td>Equal to</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Equal to</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Less than equal to</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Less than equal to</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Greater than equal to</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Greater than equal to</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Element of</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Element of</td>
+<td>2</td>
+<td>1</td>
+<td>set</td>
+</tr>
+<tr>
+<td>Is null</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Greater than</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Greater than</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Less than</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Less than</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Not equal to</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Not equal to</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Match characters</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Match characters</td>
+<td>2</td>
+<td>1</td>
+<td>pattern</td>
+</tr>
+<tr>
+<td>And</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>And</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Or</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Or</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Not</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Exclusive or</td>
+<td>1</td>
+<td>1</td>
+<td>left</td>
+</tr>
+<tr>
+<td>Exclusive or</td>
+<td>2</td>
+<td>1</td>
+<td>right</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>2</td>
+<td>1</td>
+<td>grouping_clause</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>3</td>
+<td>1</td>
+<td>component</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>2</td>
+<td>1</td>
+<td>grouping_clause</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>3</td>
+<td>1</td>
+<td>component</td>
+</tr>
+<tr>
+<td>Where</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Where</td>
+<td>2</td>
+<td>1</td>
+<td>condition</td>
+</tr>
+<tr>
+<td>Get</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Get</td>
+<td>2</td>
+<td>1</td>
+<td>component</td>
+</tr>
+<tr>
+<td>If then else</td>
+<td>1</td>
+<td>1</td>
+<td>condition</td>
+</tr>
+<tr>
+<td>If then else</td>
+<td>2</td>
+<td>1</td>
+<td>then</td>
+</tr>
+<tr>
+<td>If then else</td>
+<td>3</td>
+<td>1</td>
+<td>else</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>1</td>
+<td>1</td>
+<td>selection</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>2</td>
+<td>1</td>
+<td>condition</td>
+</tr>
+<tr>
+<td>Time shift</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Time shift</td>
+<td>2</td>
+<td>1</td>
+<td>period_indicator</td>
+</tr>
+<tr>
+<td>Time shift</td>
+<td>3</td>
+<td>1</td>
+<td>shift_number</td>
+</tr>
+<tr>
+<td>Time shift</td>
+<td>4</td>
+<td>1</td>
+<td>dimension</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>1</td>
+<td>1</td>
+<td>operand</td>
+</tr>
+<tr>
+<td>Rename</td>
+<td>2</td>
+<td>1</td>
+<td>node</td>
+</tr>
+<tr>
+<td>RenameNode</td>
+<td>1</td>
+<td>1</td>
+<td>old_name</td>
+</tr>
+<tr>
+<td>RenameNode</td>
+<td>2</td>
+<td>1</td>
+<td>new_name</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 6. List of OperatorArguments.</figcaption>
+
+<h3 id="412-concept-and-ownership">4.1.2 Concept and Ownership<a class="headerlink" href="#412-concept-and-ownership" title="Permanent link">&para;</a></h3>
+<p>As explained in the previous section, information requirements and hence data models are
+developed by various authorities. It is therefore necessary to identify Organisation that defined a
+given classification, business term, data set, table, etc, and is responsible for its maintenance.</p>
+<p>For this purpose, among others, DPM defines Concept entity that represents any identifiable object
+in a model (i.e. receiving Code/Name assigned by a modeller). In technical terms – all metamodel
+entities that have a single primary key are Concepts (it is important to note though, that some of
+such entities are merely versions of another object in time - <a href="#421-releases">4.2.1</a>). As Concepts are
+also prescribed by the metamodel for managing references
+(<a href="#4132-references-to-documentation">4.1.3.2</a>) and translations (<a href="#4131-translations">4.1.3.1</a>), all
+DPMClasses (<a href="#4111-dpm-class-and-attribute">4.1.1.1</a>) who have HasReferences set to TRUE or of
+which at least one attribute has HasTranslations set to TRUE, are also represented in the model as
+Concepts.</p>
+<p>All metamodel entities have RowGUID attribute<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">1</a></sup> which is globally unique. This identifier is referred
+from Concept.GUID.</p>
+<figure>
+<pre class="mermaid"><code>flowchart TB
+  Concept(["Concept"])
+
+  Framework &amp; Module &amp; ModuleVersion --- Concept
+  TableGroup &amp; TableAssociation &amp; Table &amp; TableVersion &amp; Header &amp; HeaderVersion &amp; Cell --- Concept
+  Variable &amp; VariableVersion &amp; CompoundKey &amp; Context --- Concept
+  Operation &amp; OperationVersion --- Concept
+  Document &amp; DocumentVersion &amp; Subdivision &amp; Organisation --- Concept
+  SubCategoryVersion &amp; SubCategory &amp; Property &amp; Item &amp; Category --- Concept
+  Release --- Concept
+  SubCategoryItem -. "translatable only" .- Concept
+
+  classDef pack fill:#ffe0b2,stroke:#e65100,color:#000;
+  classDef rend fill:#c8e6c9,stroke:#2e7d32,color:#000;
+  classDef doc  fill:#b2dfdb,stroke:#00695c,color:#000;
+  classDef ops  fill:#d1c4e9,stroke:#4527a0,color:#000;
+  classDef gloss fill:#bbdefb,stroke:#1565c0,color:#000;
+  classDef concept fill:#f8bbd0,stroke:#ad1457,color:#000;
+  classDef other fill:#eceff1,stroke:#607d8b,color:#000;
+
+  class Framework,Module,ModuleVersion pack;
+  class TableGroup,TableAssociation,Table,TableVersion,Header,HeaderVersion,Cell,Variable,VariableVersion,CompoundKey,Context rend;
+  class Document,DocumentVersion,Subdivision,Organisation doc;
+  class Operation,OperationVersion ops;
+  class SubCategoryVersion,SubCategory,Property,Item,Category gloss;
+  class Release,Concept concept;
+  class SubCategoryItem other;</code></pre>
+
+<figcaption>Figure 7. Concepts.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Figure 7 shows the central <code>Concept</code> entity related to every DPMClass that is a Concept (the
+classes listed in Table 1). <code>SubCategoryItem</code> is linked because — although it has a
+two-field key rather than a single primary key — it carries translatable attributes and is
+therefore treated as a Concept.</p>
+</div>
+<p>As presented on Figure 8, Concept can be assigned with an Owner indicating Organisation that has
+defined and manages it. DPM metamodel restricts each Concept to have one and only one Owner.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Organisation {
+    ID OrgID PK
+    string Name UK
+    string Acronym
+    string IDPrefix UK
+    GUID RowGUID FK
+  }
+  DPMClass {
+    ID ClassID PK
+    string Name
+    string Type
+    ID OwnerClassID FK
+    bool HasReferences
+  }
+  Concept {
+    GUID ConceptGUID PK
+    ID ClassID FK
+    ID OwnerID FK
+  }
+  DPMClass ||--o{ DPMClass : "OwnerClassID"
+  DPMClass ||--o{ Concept : "ClassID"
+  Organisation ||--o{ Concept : "OwnerID"</code></pre>
+
+<figcaption>Figure 8. Concept as DPMClass and its Owner Organisation.</figcaption>
+</figure>
+<p>For some Concepts information about Owner is inherited from other Concepts. This is identified by
+DPMClass.OwnerClassID and documented in Table 1. Modellers are therefore enabled to assign
+Owner only for Concepts not having parent class while any children of an upper-level class inherit
+this information from their parent (i.e. their Owner is the same as the Owner of their parent
+DPMClass).</p>
+<p>Owner Organisations are described by their Name and Acronym (e.g. "European Banking Authority"
+and "EBA" respectively). Organisation is a Concept itself and therefore these attributes are
+translatable (<a href="#4131-translations">4.1.3.1</a>).</p>
+<p>It is possible that one Organisation may indicate itself as Owner of Concepts that are not yet defined
+in DPM model by their legitimate Owners (for example standardisation organizations such as ISO,
+LEI, IFRS, etc). Should such Concepts be subsequently added by their rightful Owners, DPM
+metamodel enables linking such definitions to existing duplicates using ConceptRelation entity
+(<a href="#414-concept-relation">4.1.4</a>).</p>
+<p>For technical reason it is considered that all identifiers (primary key IDs of all metamodel entities) in
+the physical database implementation are unique for each Concept. This shall simplify the process of
+merging models from various databases maintained individually by different Organisations. To
+achieve this, the first three digits of any ID indicate the Owner (as prescribed by
+Organisation.IDPrefix) while the other digits ensure uniqueness for each DPMClass for that Owner
+(e.g. sequential numbers).</p>
+<p>DPM Metamodel contains predefined Organisations as illustrated in Table 7.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Acronym</th>
+<th>IDPrefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DPM Metamodel</td>
+<td>DPMM</td>
+<td>100</td>
+</tr>
+<tr>
+<td>European Banking Authority</td>
+<td>EBA</td>
+<td>101</td>
+</tr>
+<tr>
+<td>European Insurance and Occupational Pensions Authority</td>
+<td>EIOPA</td>
+<td>102</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Table 7. DPM Metamodel predefined Organisations.</figcaption>
+
+<p>DPM Metamodel Organisation host definitions of "Properties", "Not applicable" and "Templates"
+Categories (<a href="../components/glossary/#511-category">5.1.1</a>).</p>
+<h3 id="413-supportive-documentation">4.1.3 Supportive documentation<a class="headerlink" href="#413-supportive-documentation" title="Permanent link">&para;</a></h3>
+<h4 id="4131-translations">4.1.3.1 Translations<a class="headerlink" href="#4131-translations" title="Permanent link">&para;</a></h4>
+<p>The primary language of modelling, at least for the EBA and EIOPA DPM models, is English.
+Therefore, all attributes like Name, Label, Description, Value, etc across all DPM metamodel entities
+are provided in English.</p>
+<p>Attributes that are expected or enabled to be translatable are marked as
+DPMAttribute.HasTranslation equal TRUE (<a href="#4111-dpm-class-and-attribute">4.1.1.1</a>).</p>
+<p>As presented on Figure 9, Translation identifies Concept (Translation.ConceptID,
+<a href="#412-concept-and-ownership">4.1.2</a>) along with translated attribute of this Concept
+(Translation.AttributeID, <a href="#4111-dpm-class-and-attribute">4.1.1.1</a>), the national language of
+translation (Translation.LanguageCode, <a href="#4114-language">4.1.1.4</a>) and the Organisation that provided
+and manages this translation (Translation.TranslatorID, <a href="#412-concept-and-ownership">4.1.2</a>). It is
+therefore possible that an attribute of a Concept has more than one translation defined by different
+Organizations in one language.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Concept {
+    GUID ConceptGUID PK
+    ID ClassID FK
+    ID OwnerID FK
+  }
+  Organisation {
+    ID OrgID PK
+    string Name UK
+    string Acronym
+  }
+  Language {
+    string LanguageCode PK
+    string Name
+  }
+  DPMAttribute {
+    ID AttributeID PK
+    ID ClassID FK
+  }
+  Translation {
+    GUID ConceptGUID PK,FK
+    ID AttributeID PK,FK
+    ID TranslatorID PK,FK
+    string LanguageCode PK,FK
+    string Translation
+    GUID RowGUID
+  }
+  Concept ||--o{ Translation : "ConceptID"
+  DPMAttribute ||--o{ Translation : "AttributeID"
+  Language ||--o{ Translation : "LanguageCode"
+  Organisation ||--o{ Translation : "TranslatorID"</code></pre>
+
+<figcaption>Figure 9. Concepts' attributes translations.</figcaption>
+</figure>
+<h4 id="4132-references-to-documentation">4.1.3.2 References to documentation<a class="headerlink" href="#4132-references-to-documentation" title="Permanent link">&para;</a></h4>
+<p>Information requirements result from various documents: legal acts, regulations, standards, change
+requests, requirements, etc. Concepts (<a href="#412-concept-and-ownership">4.1.2</a>) belonging to DPMClasses
+whose HasReferences equals TRUE (<a href="#4111-dpm-class-and-attribute">4.1.1.1</a>) can be associated with
+references containing their definitions, guidelines, or other explanation.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Document {
+    ID DocumentID PK
+    string Name
+    string Code
+    string Type
+    ID OrgID FK
+    GUID RowGUID FK
+  }
+  DocumentVersion {
+    ID DocumentVID PK
+    ID DocumentID FK
+    string Code
+    string Version
+    date PublicationDate
+    GUID RowGUID FK
+  }
+  Subdivision {
+    ID SubdivisionID PK
+    ID DocumentVID FK
+    ID SubdivisionTypeID FK
+    string Number
+    ID ParentSubdivisionID FK
+    string StructurePath
+    string TextExcerpt
+    GUID RowGUID FK
+  }
+  SubdivisionType {
+    ID SubdivisionTypeID PK
+    string Name
+    string Description
+  }
+  Reference {
+    ID SubdivisionID PK,FK
+    GUID ConceptGUID PK,FK
+    GUID RowGUID
+  }
+  Concept {
+    GUID ConceptGUID PK
+    ID ClassID FK
+    ID OwnerID FK
+  }
+  Organisation {
+    ID OrgID PK
+    string Name UK
+    string Acronym
+    string IDPrefix UK
+    GUID RowGUID FK
+  }
+  DPMClass {
+    ID ClassID PK
+    string Name
+    string Type
+    ID OwnerClassID FK
+    bool HasReferences
+  }
+  Organisation ||--o{ Document : "OrgID"
+  Document ||--o{ DocumentVersion : "DocumentID"
+  DocumentVersion ||--o{ Subdivision : "DocumentVID"
+  SubdivisionType ||--o{ Subdivision : "SubdivisionTypeID"
+  Subdivision |o--o{ Subdivision : "ParentSubdivisionID"
+  Subdivision ||--o{ Reference : "SubdivisionID"
+  Concept ||--o{ Reference : "ConceptGUID"
+  Organisation ||--o{ Concept : "OwnerID"
+  DPMClass ||--o{ Concept : "ClassID"
+  DPMClass ||--o{ DPMClass : "OwnerClassID"</code></pre>
+
+<figcaption>Figure 10. References.</figcaption>
+</figure>
+<p>As presented on Figure 10, Document identifies a piece of legislation (e.g. EU Directive, ITS, etc) or
+other report by its Name and (optionally) Code. Type informs on the kind of the Document (e.g.
+"legal_document", "change_request"). DocumentVersion serves historization purposes and indicates
+PublicationDate and Version information of Document along with its Code which may also vary in
+time.</p>
+<p>As explained in section 4.1.1, SubdivisionType provides a list of typical parts that structure a piece of
+a legislation or other report. They are used in Subdivision to resemble arrangement and structure of
+Document by providing ability to refer to any individual Subdivision by its Number and providing
+means of nesting them in higher-level Subdivisions (hence hierarchical structure of
+Subdivision.ParentSubdivisonID). Complete address of Subdivision position in the document is also
+provided by Subdivision.StructurePath.</p>
+<p>Subdivision (typically leaf-level) may contain the actual wording of the document fragment it
+represents (Subdivision.TextExcerpt).</p>
+<p>Subdivisions are linked to Concepts via Reference (one Concept can have many References and one
+Reference can be reused across many Concepts).</p>
+<p>Document, DocumentVersion and Subdivision are Concepts and therefore can have Owner
+(DocumentVersion and Subdivision inherits Owner from Document as per Table 1) and some of their
+attributes (e.g. TextExcerpt) can have translations (see Table 2 and section
+<a href="#4131-translations">4.1.3.1</a>).</p>
+<h3 id="414-concept-relation">4.1.4 Concept relation<a class="headerlink" href="#414-concept-relation" title="Permanent link">&para;</a></h3>
+<p>DPM metamodel provides means for Concepts to be related to one another by means of
+ConceptRelation that can be referred from all RelatedConcepts as presented on Figure 11.</p>
+<p>This generic approach enables linking Concepts within and across Owners and/or representing
+various DPMClasses (<a href="#4111-dpm-class-and-attribute">4.1.1.1</a>). For example, it can be used to connect
+identical Concepts defined by different Owners, or to identify the same Concept but modelled
+differently or even at different modelling levels (e.g. in logical and physical implementation).</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  ConceptRelation {
+    ID ConceptRelationID PK
+    string Type
+    GUID RowGUID
+  }
+  RelatedConcept {
+    GUID ConceptGUID PK,FK
+    ID ConceptRelationID PK,FK
+    bool IsRelatedConcept
+    GUID RowGUID
+  }
+  Concept {
+    GUID ConceptGUID PK
+    ID ClassID FK
+    ID OwnerID FK
+  }
+  Concept ||--o{ RelatedConcept : "ConceptGUID"
+  ConceptRelation ||--o{ RelatedConcept : "ConceptRelationID"</code></pre>
+
+<figcaption>Figure 11. Concept and ConceptRelation.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>RelatedConcept</code> is the associative entity that links each <code>ConceptRelation</code> to the
+participating <code>Concept</code>s. In the source figure, example Concept classes (e.g. <code>Table</code>,
+<code>TableVersion</code>, <code>Variable</code>, <code>VariableVersion</code>, <code>Module</code>, <code>Property</code>) are shown connected to
+<code>Concept</code> to illustrate that relations can be established between any kinds of Concepts.</p>
+</div>
+<p>If a relation has a direction, RelatesConcept.IsRelatedConcept equal TRUE identifies a Concept at the
+target of this relation, otherwise it is FALSE (default value) for relation's source Concept or in case
+relation has no direction/is bidirectional.</p>
+<p>ConceptRelaton.Type identifies the type of relation. There are three generic relation types (i.e. that
+can be applied to various classes of Concepts - <a href="#4111-dpm-class-and-attribute">4.1.1.1</a>):</p>
+<ul>
+<li>"equivalent_concept" indicate that Concepts linked through such relation type (whatever
+  DPMClass they represent) are semantically the same. This relation is bidirectional hence
+  IsRelatedConcept is FALSE for all RelatedConcepts,</li>
+<li>"version_fix" and "version_new" applies typically to Versions of various Concepts (e.g.
+  ModuleVersions, TableVersions or HeaderVersions) and informs that the target of the
+  relation is created:<ul>
+<li>to correct a modelling problem ("version_fix") of the source Concept or</li>
+<li>as an evolution of the source Concept ("version_new") due to e.g. revision of
+  information requirements;</li>
+</ul>
+</li>
+</ul>
+<p>This information along with Releases (<a href="#421-releases">4.2.1</a>) is essential in determining
+  applicability of glossary (<a href="../components/glossary/">5.1</a>) Concepts in modelling of rendering
+  (<a href="../components/rendering-packaging/#521-grouping-and-rendering">5.2.1</a>) and Variables
+  (<a href="../components/variables/#531-variable">5.3.1</a>) in time.</p>
+<p>In addition to the above three generic relation types, DPM metamodel predefines also relation types
+that can be used to relate specific Concepts, i.e.:</p>
+<ul>
+<li>SubCategories – "subCategoryMaster_version" and "subCategoryRendering_version"
+  (<a href="../components/glossary/#513-subcategory">5.1.3</a>),</li>
+<li>Variables – "factVariable_keyVariable" and "variable_attributeVariable"
+  (<a href="../components/variables/#531-variable">5.3.1</a>),</li>
+<li>Tables – "table_variant" (<a href="../components/rendering-packaging/#5211-table-and-tableversion">5.2.1.1</a>).</li>
+</ul>
+<p>Detailed semantics of these relation types are explained in the referred sections.</p>
+<p>Modellers can extend ConceptRelation.Type with other options that they need or find useful.</p>
+<h2 id="42-historisation">4.2 Historisation<a class="headerlink" href="#42-historisation" title="Permanent link">&para;</a></h2>
+<p>Information requirements may change in time. Updates to the DPM models can be published by
+their authors in scheduled or ad hoc manner.</p>
+<p>Moreover, Modellers may decide to modify the way they represent glossary terms or information
+requirements e.g. due to bug fixes or to improve the model during periodic revisions. Some Concepts
+(<a href="#412-concept-and-ownership">4.1.2</a>) can therefore become obsolete in time. However, to enable
+resubmissions of data for past periods or to support time series analysis, Concepts of published
+models are never deleted as it shall always be possible by reading the model to learn the modelling
+and information requirements applicable at any moment of time.</p>
+<h3 id="421-releases">4.2.1 Releases<a class="headerlink" href="#421-releases" title="Permanent link">&para;</a></h3>
+<p>Release represents each publication of a model<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">2</a></sup>. Each Release is identified by Code and Date.</p>
+<p>As presented on Figure 12, Release is applied to metamodel entities which can be:</p>
+<ul>
+<li>versions of certain classes of Concepts, i.e:<ul>
+<li>SubCategoryVersion,</li>
+<li>TableVersion,</li>
+<li>HeaderVersion,</li>
+<li>VariableVersion,</li>
+<li>ModuleVersion,</li>
+<li>OperationVersion,</li>
+</ul>
+</li>
+<li>connections between Concepts:<ul>
+<li>ItemCategory,</li>
+<li>PropertyCategory,</li>
+<li>SuperCategoryComposition,</li>
+<li>TableGroupCompositon,</li>
+<li>CompountItemContext,</li>
+</ul>
+</li>
+<li>individual Concepts life cycle: TableGroup.</li>
+</ul>
+<p>The purpose of Release is to support documenting evolution of Concepts or their composition and to
+help identifying how a glossary term, a table content or a variable was represented at a point in
+time.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Release {
+    ID ReleaseID PK
+    string Code
+    date Date
+    string Description
+    string Status
+    bool IsCurrent
+    GUID RowGUID FK
+  }
+  ItemCategory {
+    ID ItemID PK,FK
+    ID StartReleaseID PK,FK
+    ID CategoryID FK
+    string Code
+    bool IsDefaultItem
+    string Signature
+    ID EndReleaseID FK
+  }
+  PropertyCategory {
+    ID PropertyID PK,FK
+    ID StartReleaseID PK,FK
+    ID CategoryID FK
+    ID EndReleaseID FK
+  }
+  SuperCategoryComposition {
+    ID SuperCategoryID PK,FK
+    ID CategoryID PK,FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  CompoundItemContext {
+    ID ItemID PK,FK
+    ID StartReleaseID PK,FK
+    ID ContextID FK
+    ID EndReleaseID FK
+  }
+  TableGroupComposition {
+    ID TableGroupID PK,FK
+    ID TableID PK,FK
+    int Order
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  TableGroup {
+    ID TableGroupID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  SubCategoryVersion {
+    ID SubCategoryVID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  TableVersion {
+    ID TableVID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  HeaderVersion {
+    ID HeaderVID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  VariableVersion {
+    ID VariableVID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  OperationVersion {
+    ID OperationVID PK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+  }
+  Release ||--o{ ItemCategory : "Start / EndReleaseID"
+  Release ||--o{ PropertyCategory : "Start / EndReleaseID"
+  Release ||--o{ SuperCategoryComposition : "Start / EndReleaseID"
+  Release ||--o{ CompoundItemContext : "Start / EndReleaseID"
+  Release ||--o{ TableGroupComposition : "Start / EndReleaseID"
+  Release ||--o{ TableGroup : "Start / EndReleaseID"
+  Release ||--o{ SubCategoryVersion : "Start / EndReleaseID"
+  Release ||--o{ TableVersion : "Start / EndReleaseID"
+  Release ||--o{ HeaderVersion : "Start / EndReleaseID"
+  Release ||--o{ VariableVersion : "Start / EndReleaseID"
+  Release ||--o{ ModuleVersion : "Start / EndReleaseID"
+  Release ||--o{ OperationVersion : "Start / EndReleaseID"</code></pre>
+
+<figcaption>Figure 12. Metamodel entities whose historization is supported by reference to Release.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each entity above references <code>Release</code> twice — mandatorily as <code>StartReleaseID</code> and optionally
+as <code>EndReleaseID</code>. In <code>ItemCategory</code> and <code>PropertyCategory</code> (and the other composition
+entities) <code>StartReleaseID</code> is part of the primary key. Only the keys relevant to historisation
+are shown here; the full attribute set of each versioned entity is given in its dedicated figure
+(e.g. <a href="../components/rendering-packaging/#5211-table-and-tableversion">Figure 25</a> for
+<code>TableVersion</code>, <a href="../components/rendering-packaging/#5222-module">Figure 32</a> for
+<code>ModuleVersion</code>, <a href="../components/variables/#533-variableversions">Figure 33</a> for
+<code>VariableVersion</code>, <a href="../components/operations/#541-operations">Figure 35</a> for
+<code>OperationVersion</code>).</p>
+</div>
+<p>On all entities where it applies, Release is referenced twice, mandatorily as StartRelease and
+optionally as EndRelease. Additionally, in ItemCategory and PropertyCategory, StartRelease is part of
+their primary key. In cases where StartRelease is not part of the primary key, the metamodel
+employs as Primary Key one-field ID for this specific concept version. Alternatively, this Primary Key
+could be the combination (Version_Invariant_ID, StartRelease). For example, in TableVersion the
+Primary Key is TableVID but it could also be TableID and StartReleaseID instead. To make it explicit
+on DPM Refit implementation level, one can define a Unique Index containing the alternate Primary
+Keys whenever required (note that an exception to this is StartRelease in TableGroup in which case
+StartRelease has an informational role only).</p>
+<p>As a Concept (<a href="#412-concept-and-ownership">4.1.2</a>), Release can be assigned with an Owner, and can
+be linked to Reference (<a href="#4132-references-to-documentation">4.1.3.2</a>) while its Name and Description
+attributes are translatable (<a href="#4131-translations">4.1.3.1</a>).</p>
+<p>IsCurrent flag indicates a Release that in a given publication of the model is the most recent one.</p>
+<p>DPM does not impose any specific semantic versioning approach. Instead, it shall be driven by
+individual requirements of modellers, their organisations and the life cycle of information
+requirements represented in the model. In case when subsequent Releases may introduce changes
+to past (not only the direct preceding) Releases and modellers decide to track this information
+(instead of correcting/updating these past Release), it may be necessary to employ in addition the
+"version_fix" and "version_new" Concept relationship types (<a href="#414-concept-relation">4.1.4</a>). Reference
+and submission dates (<a href="#422-application-dates">4.2.2</a>) also play an important role in determining
+Concepts' applicability.</p>
+<p>Releases, by design, do not address model administration purposes i.e. storing of creation or
+modification timestamps, reflecting a workflow or stages of the development process (internal and
+public working drafts). Neither are the Releases aimed at supporting handling of temporary
+metadata (e.g. work-in-progress modelling along with internal comments). The latter however can
+be reflected in the log of changes (<a href="#425-log-of-changes-non-normative">4.2.5</a>).</p>
+<h3 id="422-application-dates">4.2.2 Application dates<a class="headerlink" href="#422-application-dates" title="Permanent link">&para;</a></h3>
+<p>Life cycle of certain model Concepts does not necessarily follow publication timelines or dates
+indicated by Release (<a href="#421-releases">4.2.1</a>). This applies in particular to Modules
+(<a href="../components/rendering-packaging/#5222-module">5.2.2.2</a>) that may be indicated as applicable for
+reporting from a point of time in the future or until a specified date, independent from the model
+publication. For this reason, ModuleVersion definition contains FromReferenceDate attribute and
+may include ToReferenceDate attribute as presented on Figure 13.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Module {
+    ID ModuleID PK
+    ID FrameworkID FK
+    GUID RowGUID FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID ModuleID FK
+    ID GlobalKeyID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    string Code
+    string Name
+    string Description
+    string VersionNumber
+    date FromReferenceDate
+    date ToReferenceDate
+    GUID RowGUID FK
+  }
+  ModuleVersionComposition {
+    ID ModuleVID PK,FK
+    ID TableVID PK,FK
+    int Order
+    GUID RowGUID
+  }
+  TableVersion {
+    ID TableVID PK
+  }
+  Variable {
+    ID VariableID PK
+    string Type
+    GUID RowGUID FK
+  }
+  VariableCalculation {
+    ID ModuleID PK,FK
+    ID VariableID PK,FK
+    ID OperationVID PK,FK
+    date FromReferenceDate
+    date ToReferenceDate
+    GUID RowGUID
+  }
+  OperationScopeComposition {
+    ID OperationScopeID PK,FK
+    ID ModuleVID PK,FK
+    GUID RowGUID
+  }
+  OperationScope {
+    ID OperationScopeID PK
+    ID OperationVID FK
+    bool IsActive
+    string Severity
+    date FromSubmissionDate
+    GUID RowGUID
+  }
+  OperationVersion {
+    ID OperationVID PK
+    ID OperationID FK
+    ID PreconditionOperationVID FK
+    ID SeverityOperationVID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    string Expression
+    string Description
+    GUID RowGUID FK
+  }
+  Module ||--o{ ModuleVersion : "ModuleID"
+  ModuleVersion ||--o{ ModuleVersionComposition : "ModuleVID"
+  TableVersion ||--o{ ModuleVersionComposition : "TableVID"
+  Module ||--o{ VariableCalculation : "ModuleID"
+  Variable ||--o{ VariableCalculation : "VariableID"
+  OperationVersion ||--o{ VariableCalculation : "OperationVID"
+  OperationVersion ||--o{ OperationScope : "OperationVID"
+  OperationScope ||--o{ OperationScopeComposition : "OperationScopeID"
+  ModuleVersion ||--o{ OperationScopeComposition : "ModuleVID"
+  OperationVersion |o--o{ OperationVersion : "PreconditionOperationVID"
+  OperationVersion |o--o{ OperationVersion : "SeverityOperationVID"</code></pre>
+
+<figcaption>Figure 13. Metamodel entities with "from" and "to" application dates.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The application-date attributes are <code>ModuleVersion.FromReferenceDate</code> /
+<code>ModuleVersion.ToReferenceDate</code>, <code>VariableCalculation.FromReferenceDate</code> /
+<code>VariableCalculation.ToReferenceDate</code>, and <code>OperationScope.FromSubmissionDate</code>. <code>TableVersion</code>
+is shown reduced to its key here; its full definition is in
+<a href="../components/rendering-packaging/#5211-table-and-tableversion">Figure 25</a>.</p>
+</div>
+<p>Similar independence from the model publication date applies to Operations
+(<a href="../components/operations/#541-operations">5.4.1</a>). A version of a data quality check can be
+indicated as applicable for reports submitted after a certain date
+(OperationScope.FromSubmissionDate) while transformation rules execution can be constrained by
+reference dates (VariableCalculation.FromReferenceDate and VariableCalculation.ToReferenceDate).</p>
+<p>These dates support model users in understanding the scope of reportable information at any
+moment of time: any date falls in some reference period of a ModuleVersion and hence the
+applicable TableVersions and OperationVerisons are those attached to it via
+ModuleVersionComposition and OperationScopeComposition respectively. In case of the latter, users
+shall also consider the status (as the OperationVersion as it can be deactivated, see
+<a href="#423-deactivations">4.2.3</a>) and if a report is to be sent after the
+OperationScope.FromSubmissionDate.</p>
+<h3 id="423-deactivations">4.2.3 Deactivations<a class="headerlink" href="#423-deactivations" title="Permanent link">&para;</a></h3>
+<p>As presented Figure 14, the following metamodel entities: DataType, Category and Item (hence
+indirectly also Property) can be marked as deactivated by setting IsActive attribute to FALSE. This
+deactivation implies that they must not be used in modelling of any future information
+requirements.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  DataType {
+    ID DataTypeID PK
+    string Code UK
+    string Name UK
+    ID ParentDataTypeID FK
+    bool IsActive
+  }
+  Property {
+    ID PropertyID PK,FK
+    bool IsComposite
+    bool IsMetric
+    ID DataTypeID FK
+    int ValueLength
+    string PeriodType
+    GUID RowGUID FK
+  }
+  PropertyCategory {
+    ID PropertyID PK,FK
+    ID StartReleaseID PK,FK
+    ID CategoryID FK
+    ID EndReleaseID FK
+    GUID RowGUID
+  }
+  Item {
+    ID ItemID PK
+    string Name
+    string Description
+    bool IsCompound
+    bool IsProperty
+    bool IsActive
+    GUID RowGUID FK
+  }
+  ItemCategory {
+    ID ItemID PK,FK
+    ID StartReleaseID PK,FK
+    ID CategoryID FK
+    string Code
+    bool IsDefaultItem
+    string Signature
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  Category {
+    ID CategoryID PK
+    string Code UK
+    string Name UK
+    string Description
+    bool IsEnumerated
+    bool IsSuperCategory
+    bool IsActive
+    bool IsExternalRefData
+    string RefDataSource
+    GUID RowGUID FK
+  }
+  DataType |o--o{ DataType : "ParentDataTypeID"
+  DataType ||--o{ Property : "DataTypeID"
+  Property ||--o{ PropertyCategory : "PropertyID"
+  Category ||--o{ PropertyCategory : "CategoryID"
+  Item ||--o{ ItemCategory : "ItemID"
+  Category ||--o{ ItemCategory : "CategoryID"</code></pre>
+
+<figcaption>Figure 14. Metamodel metadata and glossary entities containing IsActive attribute enabling their deactivation.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>IsActive</code> attribute (the deactivation flag) is present on <code>DataType</code>, <code>Category</code> and
+<code>Item</code> — and therefore indirectly on <code>Property</code>, which in the physical implementation has a
+counterpart <code>Item</code>.</p>
+</div>
+<p>IsActive attribute is also present on OperationScope (see Figure 13) where it determines if
+OperationVersion (referred from the OperationScope) shall apply to a ModuleVersion (linked to
+OperationScope via OperationScopeComposition) for any reports sent after the
+OperationScope.FromSubmissionDate.</p>
+<p>In contrast to DataType and glossary Concepts where deactivation is final, OperationScope enables
+re-activation of OperationVersion for ModuleVersion.</p>
+<h3 id="424-dependencies">4.2.4 Dependencies<a class="headerlink" href="#424-dependencies" title="Permanent link">&para;</a></h3>
+<p>Historisation dependencies follow the dependencies between entities in the metamodel (identified
+for example by Ownership inheritance, see <a href="#4111-dpm-class-and-attribute">4.1.1.1</a>,
+<a href="#412-concept-and-ownership">4.1.2</a>). For example, deactivating of Category results in deactivation of
+all Items, SubCategories and Properties associated with it (unless they are reassigned to another
+Category). It is also expected that assigning Concept with EndRelease shall impact EndRelease of all
+dependent Concepts. For example, Property (represented as Item) with EndRelease for a given
+Category must not be used with Items of that Category on any TableVersion or HeaderVersion in any
+subsequent release. Same applies for StartRelease which indicates a first published version starting
+from which a glossary Concept can be used in description of Tables or Variables. The rule does not
+have to be obeyed for bug fixing of past versions or non-glossary Concepts. For example,
+ModuleVersion may refer to TableVersions that don't exist for a Release for which a ModuleVersion is
+defined (for example to reintroduce a Table that was replaced in some previous Release by another
+version).</p>
+<h3 id="425-log-of-changes-non-normative">4.2.5 Log of changes (non-normative)<a class="headerlink" href="#425-log-of-changes-non-normative" title="Permanent link">&para;</a></h3>
+<p>EBA and EIOPA introduced in the DPM Refit metamodel a non-normative (i.e., not aimed to become
+part of the DPM standard) component to store information about changes made in models.</p>
+<p>ChangeLog entity contains information about modifications made to the content of model entities or
+their attributes. In case it is published with a model, it may contain all alterations (including
+temporary modelling) or be limited only to final changes (e.g., difference between the published
+Releases).</p>
+<p>As presented on Figure 15, ChangeLog indicates a Timestamp for each modification made and an
+individual User who introduce this modification. This latter information is aimed at internal use only,
+not to be shared in the public releases.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  ChangeLog {
+    GUID RowGUID PK
+    ID ClassID PK,FK
+    ID AttributeID PK,FK
+    datetime Timestamp PK
+    string OldValue
+    string NewValue
+    string ChangeType
+    string Status
+    ID UserID FK
+    ID ReleaseID FK
+  }
+  User {
+    ID UserID PK
+    ID OrgID FK
+    string Name
+  }
+  UserRole {
+    ID UserID PK,FK
+    ID RoleID PK,FK
+  }
+  Role {
+    ID RoleID PK
+  }
+  DPMClass {
+    ID ClassID PK
+  }
+  DPMAttribute {
+    ID AttributeID PK
+  }
+  Release {
+    ID ReleaseID PK
+  }
+  Organisation {
+    ID OrgID PK
+  }
+  DPMClass ||--o{ ChangeLog : "ClassID"
+  DPMAttribute ||--o{ ChangeLog : "AttributeID"
+  Release ||--o{ ChangeLog : "ReleaseID"
+  User ||--o{ ChangeLog : "UserID"
+  Organisation ||--o{ User : "OrgID"
+  User ||--o{ UserRole : "UserID"
+  Role ||--o{ UserRole : "RoleID"</code></pre>
+
+<figcaption>Figure 15. Change log component (non-normative).</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>ChangeLog</code> has a composite key <code>(RowGUID, ClassID, AttributeID, Timestamp)</code>. Its <code>RowGUID</code>
+references the globally-unique <code>RowGUID</code> of whichever metamodel entity row was modified, so the
+change log can record modifications to <strong>all</strong> DPM metamodel entities (not only those
+representing Concepts) using a single identifier. <code>UserID</code> and the <code>User</code>/<code>UserRole</code>/<code>Role</code>
+entities are aimed at internal use only and are not shared in public releases.</p>
+</div>
+<p>In order for the ChangeLog to contain modifications to all DPM metamodel entities (i.e., not only to
+those representing Concepts but also those containing associations of Concepts and many-to-many
+relationships) and refer to them using a single identifier, each entity in the physical implementation
+of the metamodel contains RowGUID attribute which is a unique identifier referenced by
+ChangeLog.RowGUID.</p>
+<h2 id="43-derivation">4.3 Derivation<a class="headerlink" href="#43-derivation" title="Permanent link">&para;</a></h2>
+<p>In is assumed that majority of the metamodel entities is populated by Modellers, most likely with
+support of dedicated tooling (e.g., DPM Studio). Several entities however, depending on the
+modelling process applied, can be computed based on entries from other entities. This concerns for
+example generation (and suggestion for reuse) of Variables
+(<a href="../components/variables/#535-variables-definition-process">5.3.5</a>) for Table Headers or Cells, or
+assembling Property-Item pairs in Contexts when defining Table Headers as well as automated reuse
+of existing ContextCompositons (<a href="../components/glossary/#515-context-and-contextcomposition">5.1.5</a>)</p>
+<h2 id="44-naming-convention">4.4 Naming convention<a class="headerlink" href="#44-naming-convention" title="Permanent link">&para;</a></h2>
+<p>Majority of metamodel entities that are Concepts are identified by Modellers by their Code and
+Name.</p>
+<p>Name is a short, but at the same time meaningful and distinguishable human readable description of
+a given Concept. Name shall be unique in the context of a given DPMClass. For example, Item.Name
+shall be unique within a Category it belongs but not necessarily across all Categories to allow for
+homonyms.</p>
+<p>Codes can be meaningless and take alphanumeric sequence unless they are clearly defined in
+underlying information requirements (e.g. Table and their row/column codes) or in cases, when
+according to some convention, they can be abbreviations of Name (e.g., capitalised starting letters of
+each word of Name) or follow commonly applied codes (e.g. ISO codes for countries, currencies,
+NACE codes, etc). Codes for each DPMClass must be unique for an Owner. For example, one
+Category must not have two or more Items with the same Code, unless these Items are defined by
+different Owners.</p>
+<p>Many Concepts can be also assigned with Description which is a more verbose explanation of the
+meaning of this Concept.</p>
+<p>Specific implementations may restrict the length and format of Codes, Names and Descriptions to
+follow database type constraints or replace disallowed characters unsupported by a given
+technology (e.g., XML).</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:16">
+<p>It is also used for the log of changes (non-normative part of the model, see
+<a href="#425-log-of-changes-non-normative">4.2.5</a>).&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>This is typically an external publication i.e. in a public repository or on the website of the
+model author organisation, however it may be also used to support internal workflows and
+processes withing these organisations.&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1186 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).">
+      
+      
+      
+        <link rel="canonical" href="https://meaningful-data.github.io/dpm-docs/dev/dpm-refit-project/">
+      
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../metamodel-overview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>2. DPM Refit project - DPM 2.0 — Metamodel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-dpm-refit-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DPM 2.0 — Metamodel Documentation" class="md-header__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DPM 2.0 — Metamodel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. DPM Refit project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DPM Refit project
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../metamodel-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Metamodel overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ownership-documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Metamodel, ownership and supportive documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Metamodel components
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../proposals/extensibility/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Proposals
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DPM 2.0 — Metamodel Documentation" class="md-nav__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DPM 2.0 — Metamodel Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-goals-history-and-status-quo-of-dpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Goals, history and status quo of DPM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Goals, history and status quo of DPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges-and-limitations-of-the-current-dpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges and limitations of the current DPM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-aim-and-deliverables-of-dpm-refit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Aim and deliverables of DPM Refit
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metamodel-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Metamodel overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ownership-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../components/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Metamodel components
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Metamodel components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/rendering-packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proposals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposals/extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-goals-history-and-status-quo-of-dpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Goals, history and status quo of DPM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Goals, history and status quo of DPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges-and-limitations-of-the-current-dpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges and limitations of the current DPM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-aim-and-deliverables-of-dpm-refit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Aim and deliverables of DPM Refit
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-dpm-refit-project">2 DPM Refit project<a class="headerlink" href="#2-dpm-refit-project" title="Permanent link">&para;</a></h1>
+<h2 id="21-goals-history-and-status-quo-of-dpm">2.1 Goals, history and status quo of DPM<a class="headerlink" href="#21-goals-history-and-status-quo-of-dpm" title="Permanent link">&para;</a></h2>
+<p>The Data Point Modelling methodology and metamodel were developed with the aim to enable
+representation of information requirements by uniquely and explicitly identifying each piece of
+reportable data (so-called "data points") using consistently defined terms gathered in subsets
+sharing common semantics for their management and maintenance. The set of definitions created
+using the DPM methodology and the DPM metamodel are referred to as Data Point Model (DPM).</p>
+<p>The primary purpose of the DPM was to support the data exchange by providing means for data
+recipients (e.g. regulators) to define requested data, so that reporting entities (e.g. banks or
+insurance undertakings) understand better the requirements as was meant by the data definition
+modellers.</p>
+<p>The development of a standardized approach for metadata modelling according to a common
+metamodel started organically under the auspices of the Eurofiling in 2008, taking advantage of
+several national implementations, e.g. Matrix model<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">1</a></sup> created and used by the Banca d'Italia (BdI). It
+aimed at changing the approach to metadata modelling from form-centric (i.e. driven by data
+presentation) to data centric (i.e. focused on data definition irrespective of the way data is rendered
+to users).</p>
+<p>Another important goal was to shift the data definition exercise from IT specialists to business
+domain experts. The first models that followed this approach, back then referred as Data Point
+Structures, were developed in 2009 and proved its usability in the context of the development of
+FINREP. Several European regulators involved in the Eurofiling initiative started research as a follow-
+up to these developments to confirm applicability of the methodology and metamodel in their
+specific use cases, including prudential reporting, statistics, credit register, etc. Data Point Models
+have been developed at European level by the EBA (CRDIV), EIOPA (Solvency II, Pension Funds, etc.)
+as well as by various national competent authorities that extend EBA/EIOPA deliverables or build
+their models from scratch, not only in Europe but across the world.</p>
+<p>The methodology and metamodel was finally called Data Point Modelling and documented in detail
+in the "European Data Point Methodology for Supervisory Reporting"<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">2</a></sup> for the European Committee
+for Standardization (CEN). In this form it has been also recently adopted as standard 5116<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">3</a></sup> of the
+International Organization for Standardisation (ISO).</p>
+<p>Since 2013, EBA and EIOPA have been storing the result of the data definitions of their regulatory
+reporting frameworks in a DPM database following their similar specific metamodel structures.</p>
+<h3 id="challenges-and-limitations-of-the-current-dpm">Challenges and limitations of the current DPM<a class="headerlink" href="#challenges-and-limitations-of-the-current-dpm" title="Permanent link">&para;</a></h3>
+<p>With increasing number, variety, and size of implementations, DPM has faced several challenges and
+a few shortcomings gained importance.</p>
+<p>The following is a not-exhausting list of observed challenges for the new DPM.</p>
+<ul>
+<li>The recent trends and changes related to so-called RegTech and SupTech show increasing
+  needs of regulators in more precise data definitions (i.e. detailed of definitions) and on
+  describing deeper the information need in the infrastructures of the data submitters. At the
+  same time, there is a higher stress on boosting more powerful analytical usage of this
+  information in Business Intelligence solutions and in particularly on the use of Artificial
+  Intelligence and Machine Learning techniques. Therefore, the potential application and
+  utility of the reporting chain based on DPM is much wider than initially targeted.</li>
+<li>The DPM versioning and historization mechanisms have been an important feature which
+  can be improved. This is a core aspect for Regulators as regulatory reporting not only needs
+  to evolve easily across time but also to be able to track back each piece of information for
+  analytical purposes.</li>
+<li>Defining and maintaining data quality checks (data validations) and data derivations
+  (calculation or transformations) can be improved in order to share uniform formats
+  implementations and less resource-consuming task for both regulators and reporting
+  entities.</li>
+<li>DPM is technology-neutral and should be unbiased by any technical implementation. The
+  extensible Business Reporting Language (XBRL) standard that has been used in the majority
+  of DPM implementations on a technical level do not need to include structures and
+  properties that are required for its subsequent use in serialization as XBRL taxonomies. XBRL
+  is currently going through phases of technological evolutions aimed at decoupling semantics
+  from syntax. This initiative called Open Information Model (OIM) already delivered
+  specifications for data exchange using JSON and CSV (in addition to XBRL-XML) and works
+  are planned to do the same for XBRL taxonomies. Moreover, it is expected and desired that
+  a modelling methodology, such as the DPM, shall support various other formats commonly
+  used for financial data exchange, for example SDMX.</li>
+<li>The implementations of DPM are not unified. Heterogeneous solutions have been
+  developed in terms of models, processes, formats, and software solutions. Even for
+  applications that commenced approximately at the same time and were carried by two
+  sister organizations - EBA and EIOPA – their DPM models have no harmonised components
+  at the moment, and each has specific flavours. This resulted from various factors, including
+  but not limited to, 1) the nature of requested data, which is more granular in Solvency II
+  compared to Capital Requirements Directive (CRD) IV, with many "open" tables; and 2) the
+  fact that CRD / Capital Requirements Regulation (CRR) is comprised of less homogenous
+  frameworks (Common Reporting (COREP), Financial Reporting (FINREP), etc.) which in
+  Solvency II instead were consolidated under a single framework, enabling a more
+  predictable scheduling of releases and life cycles. These above resulted in entirely
+  independent developments and models not only not sharing common definitions but also
+  differing significantly in some of the basic modelling approaches (e.g. the construction of
+  metrics), publication formats, etc.</li>
+<li>There is a number of features that were not known/required to be address when creating
+  DPM and that gained on importance during its use in production. These include the DPM
+  model relate to the need of defining relationships between normalized open tables or
+  linking table variants, the ability to define terms whose definition comprises of a few other
+  terms (so called compound terms), defining relations between data points, modelling of
+  value restrictions, etc.</li>
+</ul>
+<p>As a result of the above challenges and taking advantage of other important developments and
+revamps conduced or planned (e.g. European Centralized Infrastructure for Supervisory Data
+(EUCLID)<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">4</a></sup>, Solvency 2020 review<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">5</a></sup>, XBRL Open Information Model (OIM) specifications<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">6</a></sup>), EBA and
+EIOPA decided to commence works on the DPM Refit initiative to further facilitate understanding
+and exchange of data in financial sector.</p>
+<h2 id="22-aim-and-deliverables-of-dpm-refit">2.2 Aim and deliverables of DPM Refit<a class="headerlink" href="#22-aim-and-deliverables-of-dpm-refit" title="Permanent link">&para;</a></h2>
+<p>The DPM Refit project is aimed at enhancing DPM to continue successfully serving its role as a
+methodology and metamodel for metadata modelling while overcoming some of its known
+limitation and addressing missing functionalities.</p>
+<p>In addition to redesigning the DPM metamodel to cope with its known shortcomings and
+foreseeable challenges, DPM after refit shall:</p>
+<ul>
+<li>provide means for creation of a unified metamodel that is independent of the purpose,
+  characteristics or scope of data (e.g. prudential, statistical, transactional, reference and
+  master), covering from highly aggregated data points up to very granular data sets,</li>
+<li>support various data exchange standards (as a result of being defined in technology agnostic
+  manner); in particular XBRL and SDMX,</li>
+<li>better support the whole reporting lifecycle, from data definition and metadata
+  management, to data collection, exploration, derivation, and dissemination. These are the
+  core components of metadata-driven reporting platforms, providing foundations for the
+  development of solutions for the definition and application of DPM models,</li>
+<li>enable consistent modelling of EBA and EIOPA reporting requirements and thus a
+  convergence of methods, models, processes and tools used for the development of data
+  dictionaries and related regulatory products.</li>
+<li>Enable consistent modelling of other regulatory frameworks that need to be integrated
+  assuring non redundancy, efficient use of ressources and better availability of data</li>
+</ul>
+<p>Discussions about the DPM Refit were initiated by the EBA and EIOPA in the fall 2019 and continue
+with the active participation of delegates, of the ECB and, since the DPM Refit workshop held in
+December 2021, with inputs from NCAs.</p>
+<p>The year 2020 was focussed on the definition of requirements and discussions about the metamodel
+of DPM Refit, addressing core content, i.e., the identification of information requirements using
+glossary terms and arranged in tables. In 2021 the metamodel was enhanced with the definition of
+an approach for metadata historization and the inclusion of operations that are relevant for data
+quality checks and data derivation rules). These developments were announced to the NCAs in a
+workshop in March 2022 and publicly during Eurofiling Online Session in June 2022<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">7</a></sup>. Further works
+in the summer of 2022 resulted in the finalization of the approach as regards the ownership of
+definitions, translations and assigning concepts with references (e.g., to legislation or other
+underlying documentation). The resulting DPM Refit metamodel diagrams are described in this
+documentation.</p>
+<p>At the moment of the preparation of this documentation, the DPM Refit metamodel has been also
+undergoing severe testing using a set of use cases and through migrating of existing DPM models to
+the DPM Refit structures (and vice versa to ensure parallel support during transition period).</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:9">
+<p>See <a href="https://www.bancaditalia.it/statistiche/raccolta-dati/sistema-informativo-statistico/modellazione/matrixmod.pdf">https://www.bancaditalia.it/statistiche/raccolta-dati/sistema-informativo-statistico/modellazione/matrixmod.pdf</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="http://cen.eurofiling.info/">http://cen.eurofiling.info/</a> : <a href="http://cen.eurofiling.info/wp-content/upLoads/data/CWA_XBRL_WI001-1-E.pdf">http://cen.eurofiling.info/wp-content/upLoads/data/CWA_XBRL_WI001-1-E.pdf</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="https://www.iso.org/standard/80873.html">https://www.iso.org/standard/80873.html</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://www.eba.europa.eu/sites/default/documents/files/document_library/News%20and%20Press/Communication%20materials/Factsheets/1025098/Factsheet%20on%20EUCLID.pdf">https://www.eba.europa.eu/sites/default/documents/files/document_library/News%20and%20Press/Communication%20materials/Factsheets/1025098/Factsheet%20on%20EUCLID.pdf</a>&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p><a href="https://www.eiopa.europa.eu/browse/solvency-ii/2020-review-of-solvency-ii_en">https://www.eiopa.europa.eu/browse/solvency-ii/2020-review-of-solvency-ii_en</a>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p><a href="https://www.xbrl.org/the-standard/what/introducing-the-oim/">https://www.xbrl.org/the-standard/what/introducing-the-oim/</a>&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p><a href="https://2022.eurofiling.info/">https://2022.eurofiling.info/</a>&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

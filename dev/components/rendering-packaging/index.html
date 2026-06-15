@@ -1,0 +1,2241 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).">
+      
+      
+      
+        <link rel="canonical" href="https://meaningful-data.github.io/dpm-docs/dev/components/rendering-packaging/">
+      
+      
+        <link rel="prev" href="../glossary/">
+      
+      
+        <link rel="next" href="../variables/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>5.2 Grouping, rendering and packaging - DPM 2.0 — Metamodel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#52-grouping-rendering-and-packaging-of-information-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-header__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DPM 2.0 — Metamodel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5.2 Grouping, rendering and packaging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dpm-refit-project/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DPM Refit project
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../metamodel-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Metamodel overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ownership-documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Metamodel, ownership and supportive documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Metamodel components
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../proposals/extensibility/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Proposals
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-nav__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DPM 2.0 — Metamodel Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-refit-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metamodel-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Metamodel overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ownership-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Metamodel components
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Metamodel components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#521-grouping-and-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Grouping and Rendering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.1 Grouping and Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5211-table-and-tableversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.1 Table and TableVersion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5212-header-tableversionheader-and-headerversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.2 Header, TableVersionHeader and HeaderVersion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5213-cell-and-tableversioncell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.3 Cell and TableVersionCell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5214-table-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.4 Table Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5215-table-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.5 Table Relation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5216-tableassociation-and-keymapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.6 TableAssociation and KeyMapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#522-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 Packaging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 Packaging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5221-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2.1 Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5222-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2.2 Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proposals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proposals/extensibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#521-grouping-and-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Grouping and Rendering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.1 Grouping and Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5211-table-and-tableversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.1 Table and TableVersion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5212-header-tableversionheader-and-headerversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.2 Header, TableVersionHeader and HeaderVersion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5213-cell-and-tableversioncell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.3 Cell and TableVersionCell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5214-table-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.4 Table Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5215-table-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.5 Table Relation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5216-tableassociation-and-keymapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1.6 TableAssociation and KeyMapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#522-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 Packaging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 Packaging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5221-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2.1 Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5222-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2.2 Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="52-grouping-rendering-and-packaging-of-information-requirements">5.2 Grouping, rendering, and packaging of information requirements<a class="headerlink" href="#52-grouping-rendering-and-packaging-of-information-requirements" title="Permanent link">&para;</a></h1>
+<p>Information requirements defined in regulations are typically represented in tabular format and
+grouped by subject, area or scope. Therefore, as presented on Figure 23, DPM Metamodel enables
+definition of Tables (<a href="#5211-table-and-tableversion">5.2.1.1</a>) that can be related to one another and
+gathered in TableGroups (<a href="#5214-table-group">5.2.1.4</a>).</p>
+<p>Tables can be also assembled in Modules (<a href="#5222-module">5.2.2.2</a>) in order to indicate what
+information is required to be reported by which institutions and under what circumstances for a given
+reference date.</p>
+<p>Modules are packaged thematically in Frameworks (<a href="#5221-framework">5.2.2.1</a>), where Framework
+typically represents a piece of legislation that resulted in the need for definition of a set of Tables to
+be reported for these Modules.</p>
+<p>Tables are built from Headers
+(<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) of columns and optionally rows or
+sheets, on intersection of which are Cells (<a href="#5213-cell-and-tableversioncell">5.2.1.3</a>). These Cells, but
+also Key Headers in case of open Tables, result in Variables (<a href="../variables/#531-variable">5.3.1</a>)
+representing each reportable value.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Framework {
+    ID FrameworkID PK
+  }
+  Module {
+    ID ModuleID PK
+    ID FrameworkID FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID ModuleID FK
+    ID GlobalKeyID FK
+  }
+  ModuleParameters {
+    ID ModuleVID PK,FK
+    ID VariableVID PK,FK
+  }
+  ModuleVersionComposition {
+    ID ModuleVID PK,FK
+    ID TableID PK,FK
+    ID TableVID FK
+  }
+  Variable {
+    ID VariableID PK
+    string Type
+  }
+  VariableVersion {
+    ID VariableVID PK
+    ID VariableID FK
+    ID PropertyID FK
+    ID SubCategoryVID FK
+    ID ContextID FK
+    ID KeyID FK
+  }
+  CompoundKey {
+    ID KeyID PK
+  }
+  KeyComposition {
+    ID KeyID PK,FK
+    ID VariableVID PK,FK
+  }
+  TableGroup {
+    ID TableGroupID PK
+    ID ParentTableGroupID FK
+  }
+  TableGroupComposition {
+    ID TableGroupID PK,FK
+    ID TableID PK,FK
+  }
+  Table {
+    ID TableID PK
+  }
+  TableVersion {
+    ID TableVID PK
+    ID TableID FK
+    ID AbstractTableID FK
+    ID KeyID FK
+    ID PropertyID FK
+    ID ContextID FK
+  }
+  Header {
+    ID HeaderID PK
+    ID TableID FK
+    bool IsKey
+  }
+  HeaderVersion {
+    ID HeaderVID PK
+    ID HeaderID FK
+    ID PropertyID FK
+    ID ContextID FK
+    ID SubCategoryVID FK
+    ID KeyVariableVID FK
+  }
+  TableVersionHeader {
+    ID TableVID PK,FK
+    ID HeaderID PK,FK
+    ID HeaderVID FK
+    ID ParentHeaderID FK
+  }
+  Cell {
+    ID CellID PK
+    ID TableID FK
+    ID ColumnID FK
+    ID RowID FK
+    ID SheetID FK
+  }
+  TableVersionCell {
+    ID TableVID PK,FK
+    ID CellID PK,FK
+    ID VariableVID FK
+  }
+  TableAssociation {
+    ID AssociationID PK
+    ID ChildTableVID FK
+    ID ParentTableVID FK
+  }
+  KeyHeaderMapping {
+    ID AssociationID PK,FK
+    ID ForeignKeyHeaderID PK,FK
+    ID PrimaryKeyHeaderID FK
+  }
+  Context {
+    ID ContextID PK
+  }
+  SubCategoryVersion {
+    ID SubCategoryVID PK
+  }
+  Framework ||--o{ Module : "FrameworkID"
+  Module ||--o{ ModuleVersion : "ModuleID"
+  ModuleVersion ||--o{ ModuleParameters : "ModuleVID"
+  VariableVersion ||--o{ ModuleParameters : "VariableVID"
+  ModuleVersion ||--o{ ModuleVersionComposition : "ModuleVID"
+  Table ||--o{ ModuleVersionComposition : "TableID"
+  TableVersion ||--o{ ModuleVersionComposition : "TableVID"
+  CompoundKey |o--o{ ModuleVersion : "GlobalKeyID"
+  Variable ||--o{ VariableVersion : "VariableID"
+  CompoundKey ||--o{ KeyComposition : "KeyID"
+  VariableVersion ||--o{ KeyComposition : "VariableVID"
+  CompoundKey |o--o{ TableVersion : "KeyID"
+  TableGroup |o--o{ TableGroup : "ParentTableGroupID"
+  TableGroup ||--o{ TableGroupComposition : "TableGroupID"
+  Table ||--o{ TableGroupComposition : "TableID"
+  Table ||--o{ TableVersion : "TableID"
+  Table |o--o{ TableVersion : "AbstractTableID"
+  Table ||--o{ Header : "TableID"
+  Header ||--o{ HeaderVersion : "HeaderID"
+  TableVersion ||--o{ TableVersionHeader : "TableVID"
+  Header ||--o{ TableVersionHeader : "HeaderID"
+  HeaderVersion ||--o{ TableVersionHeader : "HeaderVID"
+  Table ||--o{ Cell : "TableID"
+  Header |o--o{ Cell : "ColumnID / RowID / SheetID"
+  Cell ||--o{ TableVersionCell : "CellID"
+  TableVersion ||--o{ TableVersionCell : "TableVID"
+  VariableVersion ||--o{ TableVersionCell : "VariableVID"
+  TableVersion ||--o{ TableAssociation : "Child / ParentTableVID"
+  TableAssociation ||--o{ KeyHeaderMapping : "AssociationID"
+  Header ||--o{ KeyHeaderMapping : "ForeignKey / PrimaryKeyHeaderID"
+  Context |o--o{ TableVersion : "ContextID"
+  Context |o--o{ HeaderVersion : "ContextID"
+  Context |o--o{ VariableVersion : "ContextID"
+  SubCategoryVersion |o--o{ HeaderVersion : "SubCategoryVID"
+  SubCategoryVersion |o--o{ VariableVersion : "SubCategoryVID"</code></pre>
+
+<figcaption>Figure 23. Information requirements component entities and relations.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the master overview of the grouping, rendering and packaging component together with
+its links to Variables. Only primary and foreign keys are listed; the full attribute set of
+each entity is given in the dedicated figures of sections <a href="#521-grouping-and-rendering">5.2.1</a>
+and <a href="#522-packaging">5.2.2</a>, and in <a href="../variables/#531-variable">Figure 33</a> for Variables.</p>
+</div>
+<h2 id="521-grouping-and-rendering">5.2.1 Grouping and Rendering<a class="headerlink" href="#521-grouping-and-rendering" title="Permanent link">&para;</a></h2>
+<p>Rendering component of the metamodel serves an important role in the modelling process.</p>
+<p>Modellers define tabular views following the underlying regulations and subsequently, as presented
+on Figure 24, assign these Tables (<a href="#5211-table-and-tableversion">5.2.1.1</a>) and their Headers
+(<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) with terms from Glossary
+(<a href="../glossary/">5.1</a>) to express their meaning. Table Cells (<a href="#5213-cell-and-tableversioncell">5.2.1.3</a>)
+result from Headers.</p>
+<p>Table Headers or Cells result in Variables (<a href="../variables/#531-variable">5.3.1</a>).</p>
+<p>Tables can be grouped (<a href="#5214-table-group">5.2.1.4</a>), associated to one another in terms of
+primary/foreign keys, optionality and cardinality of relations, subtyping, etc.
+(<a href="#5215-table-relation">5.2.1.5</a>) or related to one another in other ways
+(<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>).</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  TableGroup {
+    ID TableGroupID PK
+    ID ParentTableGroupID FK
+  }
+  TableGroupComposition {
+    ID TableGroupID PK,FK
+    ID TableID PK,FK
+  }
+  Table {
+    ID TableID PK
+    bool IsAbstract
+    bool IsNormalised
+    bool IsFlat
+  }
+  TableVersion {
+    ID TableVID PK
+    ID TableID FK
+    ID AbstractTableID FK
+    ID KeyID FK
+    ID PropertyID FK
+    ID ContextID FK
+  }
+  Header {
+    ID HeaderID PK
+    ID TableID FK
+    bool IsKey
+  }
+  HeaderVersion {
+    ID HeaderVID PK
+    ID HeaderID FK
+    ID PropertyID FK
+    ID ContextID FK
+    ID SubCategoryVID FK
+    ID KeyVariableVID FK
+  }
+  TableVersionHeader {
+    ID TableVID PK,FK
+    ID HeaderID PK,FK
+    ID HeaderVID FK
+    ID ParentHeaderID FK
+  }
+  Cell {
+    ID CellID PK
+    ID TableID FK
+    ID ColumnID FK
+    ID RowID FK
+    ID SheetID FK
+  }
+  TableVersionCell {
+    ID TableVID PK,FK
+    ID CellID PK,FK
+    ID VariableVID FK
+  }
+  TableAssociation {
+    ID AssociationID PK
+    ID ChildTableVID FK
+    ID ParentTableVID FK
+    ID SubtypeDiscriminator FK
+  }
+  KeyHeaderMapping {
+    ID AssociationID PK,FK
+    ID ForeignKeyHeaderID PK,FK
+    ID PrimaryKeyHeaderID FK
+  }
+  TableGroup |o--o{ TableGroup : "ParentTableGroupID"
+  TableGroup ||--o{ TableGroupComposition : "TableGroupID"
+  Table ||--o{ TableGroupComposition : "TableID"
+  Table ||--o{ TableVersion : "TableID"
+  Table |o--o{ TableVersion : "AbstractTableID"
+  Table ||--o{ Header : "TableID"
+  Header ||--o{ HeaderVersion : "HeaderID"
+  TableVersion ||--o{ TableVersionHeader : "TableVID"
+  Header ||--o{ TableVersionHeader : "HeaderID"
+  HeaderVersion ||--o{ TableVersionHeader : "HeaderVID"
+  Header |o--o{ TableVersionHeader : "ParentHeaderID"
+  Table ||--o{ Cell : "TableID"
+  Header |o--o{ Cell : "ColumnID / RowID / SheetID"
+  Cell ||--o{ TableVersionCell : "CellID"
+  TableVersion ||--o{ TableVersionCell : "TableVID"
+  TableVersion ||--o{ TableAssociation : "Child / ParentTableVID"
+  TableAssociation ||--o{ KeyHeaderMapping : "AssociationID"
+  Header ||--o{ KeyHeaderMapping : "ForeignKey / PrimaryKeyHeaderID"</code></pre>
+
+<figcaption>Figure 24. Rendering component entities and relations.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This overview shows the entities of the rendering component and the relationships between
+them; only primary and foreign keys are listed. The full attribute set of each entity is given
+in the dedicated figures: <a href="#5211-table-and-tableversion">Figure 25</a> (Table/TableVersion),
+<a href="#5212-header-tableversionheader-and-headerversion">Figure 26</a> (Header), <a href="#5213-cell-and-tableversioncell">Figure 27</a>
+(Cell), <a href="#5214-table-group">Figure 28</a> (TableGroup), <a href="#5216-tableassociation-and-keymapping">Figure 29</a>
+(TableAssociation).</p>
+</div>
+<h3 id="5211-table-and-tableversion">5.2.1.1 Table and TableVersion<a class="headerlink" href="#5211-table-and-tableversion" title="Permanent link">&para;</a></h3>
+<p>As presented on Figure 25, Table can be flagged as abstract (Table.IsAbstract set to TRUE) or
+non-abstract (Table.IsAbstract set to FALSE). Abstract Tables are defined when a single tabular view
+defined in a regulation needs to be decomposed in more than one Table, due to for example:</p>
+<ul>
+<li>DPM modelling assumptions and constraints, disallowing for example one Property
+  (<a href="../glossary/#514-property">5.1.4</a>) to be used on a Header
+  (<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) of a row and a Header of a column
+  of one Table at the same time,</li>
+<li>normalization of tables to minimize redundancies and dependencies, in which case
+  Table.IsNormalised set to TRUE indicates that a non-abstract Table resulted from normalization
+  of an abstract Table.</li>
+</ul>
+<p>In case when there is no need to split a tabular view defined in legislation to more Tables (i.e.
+abstract and non-abstract Tables are identical), the model does not define any abstract Table for this
+tablular view and contains only one non-abstract Table.</p>
+<p>Information about relations between abstract Table and resulting decompose non-abstract Tables is
+defined on TableVersions (see below) of non-abstract Tables by indicating there the originating
+abstract Table on TableVersion.AbstractTableID.</p>
+<p>While both, abstract and non-abstract Tables can be assigned with Headers
+(<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) and Cells
+(<a href="#5213-cell-and-tableversioncell">5.2.1.3</a>), only non-abstract Tables can be modelled with glossary
+(<a href="../glossary/">5.1</a>) concepts (i.e. their Headers may refer to Properties, SubCategories, Contexts and
+link to Variables).</p>
+<p>Table.IsFlat flag set to TRUE indicates that Table modelling is done using Properties only and
+contains no Contexts which is typical case for statistical tables as defined for example in SDMX. This
+may impact the behaviour of Operations (e.g. filter function).</p>
+<p>Tables are versioned by means of TableVersion referring to a Release
+(<a href="../../ownership-documentation/#421-releases">4.2.1</a>). This enables tracking evolution of a Table in
+time for both – graphical representation of a tabular view as well as changes in its modelling (i.e.
+referenced glossary terms). "version_fix" and "version_new" Concept relations
+(<a href="../../ownership-documentation/#414-concept-relation">4.1.4</a>) may be used to support this tracing in
+more complex scenarios (e.g. when updating past versions).</p>
+<p>Modellers identify Table by Code and Name and may provide Description
+(<a href="../../ownership-documentation/#44-naming-convention">4.4</a>). These attributes are defined on
+TableVersion corresponding to that Table, to enable their change in time and recoding all
+historization.</p>
+<p>HasOpenColumns, HasOpenRows and HasOpenSheets indicate if a Table is open - i.e. contains
+Headers (<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) which are Key Variables to
+other Headers representing Fact Variables (<a href="../variables/#532-variable-types">5.3.2</a>) - and in which
+direction it is opened (as columns, rows and/or sheets - Table can be open in one, two or all three
+directions).</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Table {
+    ID TableID PK
+    bool IsAbstract
+    bool HasOpenColumns
+    bool HasOpenRows
+    bool HasOpenSheets
+    bool IsNormalised
+    bool IsFlat
+    GUID RowGUID FK
+  }
+  TableVersion {
+    ID TableVID PK
+    string Code
+    string Name
+    string Description
+    ID TableID FK
+    ID AbstractTableID FK
+    ID KeyID FK
+    ID PropertyID FK
+    ID ContextID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  Table ||--o{ TableVersion : "TableID"
+  Table |o--o{ TableVersion : "AbstractTableID"</code></pre>
+
+<figcaption>Figure 25. Table and TableVersion.</figcaption>
+</figure>
+<p>TableVersion may link to glossary terms - Properties (<a href="../glossary/#514-property">5.1.4</a>) or
+Property-Item pairs gathered in Contexts
+(<a href="../glossary/#518-application-of-glossary-terms-to-other-components-of-the-metamodel">5.1.8</a>). This
+information is applied to all Headers (<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>)
+and hence all Cells (<a href="#5213-cell-and-tableversioncell">5.2.1.3</a>) of that TableVersion.</p>
+<p>TableVersion.KeyID links to CompondKey (<a href="../variables/#534-compoundkey-and-its-keycomposition">5.3.4</a>)
+identifying Key Variables applicable to Fact Variables (<a href="../variables/#532-variable-types">5.3.2</a>) of this
+TableVersion.</p>
+<p>Table is a Concept that can be assigned with an Owner
+(<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>). TableVersion receives Owner from
+Table it corresponds to. Both Table and TableVersion can be linked to Reference
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>). TableVersion.Name and
+TableVersion.Description are translatable (<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<h3 id="5212-header-tableversionheader-and-headerversion">5.2.1.2 Header, TableVersionHeader and HeaderVersion<a class="headerlink" href="#5212-header-tableversionheader-and-headerversion" title="Permanent link">&para;</a></h3>
+<p>Header represents each "Row", "Column" or a "Sheet" as per Header.Direction.</p>
+<p>As Header description and definition may change in time (due to bug fixes, improvements to
+modelling, etc), each Header results in HeaderVersion. HeaderVersion is versioned by means of
+reference to Release (<a href="../../ownership-documentation/#421-releases">4.2.1</a>).</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  TableVersion {
+    ID TableVID PK
+    string Code
+    string Name
+    string Description
+    ID TableID FK
+    ID AbstractTableID FK
+    ID KeyID FK
+    ID PropertyID FK
+    ID ContextID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  TableVersionHeader {
+    ID TableVID PK,FK
+    ID HeaderID PK,FK
+    ID HeaderVID FK
+    ID ParentHeaderID FK
+    bool ParentFirst
+    int Order
+    bool IsAbstract
+    bool IsUnique
+    GUID RowGUID
+  }
+  Header {
+    ID HeaderID PK
+    ID TableID FK
+    string Direction
+    bool IsKey
+    GUID RowGUID FK
+  }
+  HeaderVersion {
+    ID HeaderVID PK
+    ID HeaderID FK
+    string Code
+    string Label
+    ID PropertyID FK
+    ID ContextID FK
+    ID SubCategoryVID FK
+    ID KeyVariableVID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  TableVersion ||--o{ TableVersionHeader : "TableVID"
+  Header ||--o{ TableVersionHeader : "HeaderID"
+  HeaderVersion ||--o{ TableVersionHeader : "HeaderVID"
+  Header |o--o{ TableVersionHeader : "ParentHeaderID"
+  Header ||--o{ HeaderVersion : "HeaderID"</code></pre>
+
+<figcaption>Figure 26. Header, TableVersionHeader and HeaderVersion.</figcaption>
+</figure>
+<p>As presented on Figure 26, HeaderVersion identifies Header Code and provides its Label (the latter is
+translatable, <a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<p>HeaderVersion links to glossary terms (<a href="../glossary/">5.1</a>) that provide semantics to explain the
+meaning of each header. As explained in section
+<a href="../glossary/#518-application-of-glossary-terms-to-other-components-of-the-metamodel">5.1.8</a> this is
+achieved by referring from HeaderVersion to:</p>
+<ul>
+<li>Property (<a href="../glossary/#514-property">5.1.4</a>) that is quantitative (metric) or qualitative but
+  non-enumerated or enumerated Property in which case it is required to also indicate SubCategory,</li>
+<li>Property-Item pairs gathered in Contexts (<a href="../glossary/#515-context-and-contextcomposition">5.1.5</a>).</li>
+</ul>
+<p>IsKey set to TRUE implies that Header represents a Key Variable (<a href="../variables/#532-variable-types">5.3.2</a>).
+As a result, HeaderVersion.KeyVariableVID of this Header points to VariableVersion
+(<a href="../variables/#533-variableversions">5.3.3</a>) that is a Key Variable. Such Header is not linked from any
+Cell (<a href="#5213-cell-and-tableversioncell">5.2.1.3</a>). Only headers who contribute to definition of a Fact
+Variable result in Cells.</p>
+<p>HeaderVersion refers to TableVersion (<a href="#5211-table-and-tableversion">5.2.1.1</a>) via TableVersionHeader.
+This enables reuse of Headers across TableVersions and provides information about changes in
+structure of any Table in time. As Headers' structure can be rearranged between TableVersions, the
+following attributes are applied on TableVersionHeader:</p>
+<ul>
+<li>nesting of Headers (ParentHeaderID),</li>
+<li>rendering of Parent Header before (ParentFirst set to TRUE) or after its Children,</li>
+<li>Order of presentation of Headers,</li>
+<li>marking Headers as "grouping only" – i.e. not resulting in cells (IsAbstract set to TRUE),</li>
+<li>indicating if values reported for Key Variable corresponding to this Header or Fact Variables in
+  Cells resulting from Headers must be unique (IsUnique set to TRUE).</li>
+</ul>
+<p>Owner (<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>) of Header (and hence
+HeaderVersion) must be the same as Owner of Table which this Header belongs to (Header.TableID).</p>
+<p>As Concepts, Header and HeaderVersion can be linked to Reference
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>). HeaderVersion.Label is
+translatable (<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<h3 id="5213-cell-and-tableversioncell">5.2.1.3 Cell and TableVersionCell<a class="headerlink" href="#5213-cell-and-tableversioncell" title="Permanent link">&para;</a></h3>
+<p>As presented on Figure 27, Cell must refer to at least one leaf-level Column or Row Header
+(<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) but may also point to two or maximum
+three (i.e. one for each: Column, Row and Sheet).</p>
+<p>Key Headers (<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) do not result in Cells.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Table {
+    ID TableID PK
+    bool IsAbstract
+    bool HasOpenColumns
+    bool HasOpenRows
+    bool HasOpenSheets
+    bool IsNormalised
+    bool IsFlat
+    GUID RowGUID FK
+  }
+  Header {
+    ID HeaderID PK
+    ID TableID FK
+    string Direction
+    bool IsKey
+    GUID RowGUID FK
+  }
+  Cell {
+    ID CellID PK
+    ID TableID FK
+    ID ColumnID FK
+    ID RowID FK
+    ID SheetID FK
+    GUID RowGUID FK
+  }
+  TableVersionCell {
+    ID TableVID PK,FK
+    ID CellID PK,FK
+    string CellCode
+    bool IsNullable
+    bool IsExcluded
+    bool IsVoid
+    string Sign
+    ID VariableVID FK
+    GUID RowGUID
+  }
+  TableVersion {
+    ID TableVID PK
+  }
+  VariableVersion {
+    ID VariableVID PK
+  }
+  Table ||--o{ Cell : "TableID"
+  Header |o--o{ Cell : "ColumnID"
+  Header |o--o{ Cell : "RowID"
+  Header |o--o{ Cell : "SheetID"
+  Cell ||--o{ TableVersionCell : "CellID"
+  TableVersion ||--o{ TableVersionCell : "TableVID"
+  VariableVersion ||--o{ TableVersionCell : "VariableVID"</code></pre>
+
+<figcaption>Figure 27. Cell and TableVersionCell.</figcaption>
+</figure>
+<p>As described in <a href="#5211-table-and-tableversion">5.2.1.1</a>, Tables may be modified in time by means of
+TableVersion referring to HeaderVersion
+(<a href="#5212-header-tableversionheader-and-headerversion">5.2.1.2</a>) through TableVersionHeader. As a
+result, Cells can refer to various TableVersions via TableVersionCell, while still representing the same
+Header(s).</p>
+<p>TableVersionCell indicates:</p>
+<ul>
+<li>a code of a Cell (if exists): CellCode; such information may be useful for example in mapping to
+  legislation if it contains such codes or to legacy systems or exchange formats which are forms
+  driven and therefore base on cells coordinates;</li>
+<li>if a Cell is mandatory: IsNullable set to FALSE; report must contain data for Variable
+  (<a href="../variables/#531-variable">5.3.1</a>) corresponding to this Cell (this is subject to the presence of
+  respective filing indicators);</li>
+<li>if a Cell is not reportable: IsExcluded set to TRUE; data for Variable corresponding to this Cell
+  is not requested for this Table; such Cell is typically displayed as greyed out or criss-crossed;</li>
+<li>that a Cell does not result in any Variable (<a href="../variables/#531-variable">5.3.1</a>): IsVoid is set to
+  TRUE; i.e. its definition stemming from concatenation of semantics indicated by glossary
+  (<a href="../glossary/">5.1</a>) terms applied on Headers on which intersection this Cell is defined is
+  illogical (e.g. "Equity instruments" issued by "Government" with certain "Maturity period"); note
+  that TableVersionCell whose IsVoid is set to FALSE must point to VariableVersion
+  (<a href="../variables/#533-variableversions">5.3.3</a>) resulting from/corresponding to this Cell;</li>
+<li>if a value reportable for a Cell is a "positive" or "negative" number: imposed by Sign attribute;
+  note that this and more complex constraints related to the expected value reportable for a given
+  Cell are imposed by means of Operations (<a href="../operations/#541-operations">5.4.1</a>).</li>
+</ul>
+<p>In case Cell results from Header whose TableVersionHeader.IsUnique is set to TRUE then values
+reported in each Cell across all Cells for that Header must be unique.</p>
+<p>Owner (<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>) of a Cell (and therefore
+TableVersionCell for that Cell) must be the same as Owner of Table which this Cell belongs to
+(Cell.TableID).</p>
+<p>As Concepts, Cell and TableVersoinCell can be linked to Reference
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>).</p>
+<h3 id="5214-table-group">5.2.1.4 Table Group<a class="headerlink" href="#5214-table-group" title="Permanent link">&para;</a></h3>
+<p>As presented on Figure 28, TableGroups gathers Tables (<a href="#5211-table-and-tableversion">5.2.1.1</a>) via
+TableGroupComposition. TableGroupComposition.Order informs about the sequence of Tables in
+TableGroup that shall be applied for example when displaying Tables under TableGroup in user
+interface. Composition of TableGroup in terms of Tables it gathers may change between Releases
+(<a href="../../ownership-documentation/#421-releases">4.2.1</a>).</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  TableGroup {
+    ID TableGroupID PK
+    string Code
+    string Name
+    string Description
+    string Type
+    GUID RowGUID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    ID ParentTableGroupID FK
+  }
+  TableGroupComposition {
+    ID TableGroupID PK,FK
+    ID TableID PK,FK
+    int Order
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID
+  }
+  Table {
+    ID TableID PK
+    bool IsAbstract
+    bool HasOpenColumns
+    bool HasOpenRows
+    bool HasOpenSheets
+    bool IsNormalised
+    bool IsFlat
+    GUID RowGUID FK
+  }
+  TableGroup ||--o{ TableGroupComposition : "TableGroupID"
+  Table ||--o{ TableGroupComposition : "TableID"
+  TableGroup |o--o{ TableGroup : "ParentTableGroupID"</code></pre>
+
+<figcaption>Figure 28. TableGroup and TableGroupComposition.</figcaption>
+</figure>
+<p>TableGroups are assigned with Code and Name and may also be provided with Description.</p>
+<p>TableGroups can also gather other TableGroups by being indicated as their Parent (ParentGroupID).
+This nesting can have multiple levels.</p>
+<p>TableGroups may be created for various purposes as indicated by TableGroup.Type. DPM metamodel
+envisages at least the following options (that can be further extended by metadata modellers):</p>
+<ul>
+<li>"templateGroup",</li>
+<li>"template",</li>
+<li>"templateVariant",</li>
+<li>"templateScope".</li>
+</ul>
+<p>For example, in case of EIOPA DPM models, TableGroup of Type "templateGroup" gathers
+TableGroups which are "templates", that in turn result in multiple "templateVariant" Type
+TableGroups.</p>
+<p>TableGroups of Type "templateScope" can also be nested. DPM XL syntax enables using their Codes
+in Operation.Expression instead of Table Codes. This mechanism simplifies definition of Operations
+that apply to multiple Tables belonging to such TableGroup or any of its descendant TableGroups
+whose Type is also "templateScope".<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">1</a></sup></p>
+<p>TableGroups are relatively stable metamodel Concepts. Nevertheless, their application can be
+controlled by indicating Release in which they were created or stopped being used (which can be also
+determined by calculating if there are Tables in use that are linked to TableGroup through
+TableGroupComposition).</p>
+<p>TableGroup is a Concept that can be assigned with Owner
+(<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>). It can be linked to Reference
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>) and its Name and
+Description attributes are translatable (<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<h3 id="5215-table-relation">5.2.1.5 Table Relation<a class="headerlink" href="#5215-table-relation" title="Permanent link">&para;</a></h3>
+<p>The primary relation between Tables resulting from decomposition of one Table into many (for
+various purposes) is described in section <a href="#5211-table-and-tableversion">5.2.1.1</a>.</p>
+<p>Other relations between Tables can be constructed using Concept Relation mechanism
+(<a href="../../ownership-documentation/#414-concept-relation">4.1.4</a>). DPM currently enables lining tables
+using "table_variant" ConceptRelation.Type that indicates at the target of the relation Table that is a
+variant of Table at its source. This mechanism can be used to indicate that one Table e.g., "Balance
+sheet for ring fence funds" is a variant of "Balance sheet" Table. Other relation types can be defined
+by Modellers.</p>
+<h3 id="5216-tableassociation-and-keymapping">5.2.1.6 TableAssociation and KeyMapping<a class="headerlink" href="#5216-tableassociation-and-keymapping" title="Permanent link">&para;</a></h3>
+<p>As explained in <a href="#5211-table-and-tableversion">5.2.1.1</a>, Tables can be split due to normalisation. More
+detailed information about how these decomposed Tables relate to one another or can be assembled
+back in the demoralised view, may be indicated using TableAssociation and KeyHeaderMapping as
+presented on Figure 29.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  TableVersion {
+    ID TableVID PK
+    string Code
+    string Name
+    string Description
+    ID TableID FK
+    ID AbstractTableID FK
+    ID KeyID FK
+    ID PropertyID FK
+    ID ContextID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  TableAssociation {
+    ID AssociationID PK
+    ID ChildTableVID FK
+    ID ParentTableVID FK
+    string Name
+    string Description
+    bool IsIdentifying
+    bool IsSubtype
+    ID SubtypeDiscriminator FK
+    string ParentCardinalityAndOptionality
+    string ChildCardinalityAndOptionality
+    GUID RowGUID FK
+  }
+  KeyHeaderMapping {
+    ID AssociationID PK,FK
+    ID ForeignKeyHeaderID PK,FK
+    ID PrimaryKeyHeaderID FK
+    GUID RowGUID
+  }
+  Header {
+    ID HeaderID PK
+    ID TableID FK
+    string Direction
+    bool IsKey
+    GUID RowGUID FK
+  }
+  TableVersion ||--o{ TableAssociation : "ChildTableVID"
+  TableVersion ||--o{ TableAssociation : "ParentTableVID"
+  TableAssociation ||--o{ KeyHeaderMapping : "AssociationID"
+  Header ||--o{ KeyHeaderMapping : "ForeignKeyHeaderID"
+  Header ||--o{ KeyHeaderMapping : "PrimaryKeyHeaderID"</code></pre>
+
+<figcaption>Figure 29. TableAssociation and KeyMapping.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When <code>IsSubtype</code> = TRUE, <code>SubtypeDiscriminator</code> points to a <code>Header</code> of the Parent Table whose
+values determine the target subtype(s). <code>KeyHeaderMapping</code> indicates which <code>Header</code> from the
+Parent Table is used as the Foreign Key Header in the Child Table.</p>
+</div>
+<p>TableAssociation associates Child Table with Parent Table. Definition and documentation of the
+association is contained in TableAssociation.Name and TableAssociation.Description (both of which
+are translatable - <a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>). Other attributes of
+TableAssociation describe the characteristics of the association:</p>
+<ul>
+<li>if the relationship is identifying (IsIdentifying set to TRUE) indicating that Child Table is
+  dependent on Parent Table (and cannot exists without it);</li>
+<li>if it a Child Table is a subtype of Parent Table, which in turn is a supertype (IsSubtype set to
+  TRUE); in this case SubtypeDiscriminator attribute points to Header of Parent Table whose values
+  determine the target subtype(s);</li>
+<li>cardinality and optionality of relationship defined on:<ul>
+<li>Parent end (ParentCardinalityAndOptionality): '0_1', '1', '0_m', '1_m',</li>
+<li>Child end (ChildCardinalityAndOptionality): '0_1', '1', '0_n', '1_n'.</li>
+</ul>
+</li>
+</ul>
+<p>For association between Open Tables (i.e. including one or more Key Variables), it is possible to map
+Headers of these Tables by indicating in KeyHeaderMapping entity which Header from Parent Table is
+used as Foreign Key Header in Child Table. Note that associated Headers do not need to be Key
+Headers (e.g. Header from Parent Table used as Foreign Key in Child Table does not need to be a Key
+Header in Parent Table).</p>
+<p>Owner (<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>) of TableAssociation must
+be the same as Owner of Tables which it associates.</p>
+<p>TableAssociation must have Name and may have Description (which are translatable,
+<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<p>As a Concept, TableAssociation can be linked to Reference
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>).</p>
+<h2 id="522-packaging">5.2.2 Packaging<a class="headerlink" href="#522-packaging" title="Permanent link">&para;</a></h2>
+<p>Information requirements are packaged thematically in Frameworks (<a href="#5221-framework">5.2.2.1</a>) that
+typically reflect legislation imposing certain reporting requirements. Apart from what is being
+collected, regulations determine also reporting population and reporting calendar or circumstances
+that require data to be submitted. This is managed by means of Modules (<a href="#5222-module">5.2.2.2</a>).
+Packaging component entities and their relations to rendering and Variables described in the next
+sections of this documents are presented on Figure 30.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Framework {
+    ID FrameworkID PK
+    string Code
+    string Name
+    string Description
+    GUID RowGUID FK
+  }
+  Module {
+    ID ModuleID PK
+    ID FrameworkID FK
+    GUID RowGUID FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID ModuleID FK
+    ID GlobalKeyID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    string Code
+    string Name
+    string Description
+    string VersionNumber
+    date FromReferenceDate
+    date ToReferenceDate
+    GUID RowGUID FK
+  }
+  ModuleParameters {
+    ID ModuleVID PK,FK
+    ID VariableVID PK,FK
+    GUID RowGUID
+  }
+  ModuleVersionComposition {
+    ID ModuleVID PK,FK
+    ID TableID PK,FK
+    ID TableVID FK
+    int Order
+    GUID RowGUID
+  }
+  TableGroup {
+    ID TableGroupID PK
+    string Code
+    string Name
+    string Description
+    string Type
+    GUID RowGUID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    ID ParentTableGroupID FK
+  }
+  TableGroupComposition {
+    ID TableGroupID PK,FK
+    ID TableID PK,FK
+    int Order
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID
+  }
+  Table {
+    ID TableID PK
+    bool IsAbstract
+    bool HasOpenColumns
+    bool HasOpenRows
+    bool HasOpenSheets
+    bool IsNormalised
+    bool IsFlat
+    GUID RowGUID FK
+  }
+  TableVersion {
+    ID TableVID PK
+    string Code
+    string Name
+    string Description
+    ID TableID FK
+    ID AbstractTableID FK
+    ID KeyID FK
+    ID PropertyID FK
+    ID ContextID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  CompoundKey {
+    ID KeyID PK
+    string Signature UK
+    GUID RowGUID FK
+  }
+  KeyComposition {
+    ID KeyID PK,FK
+    ID VariableVID PK,FK
+    GUID RowGUID
+  }
+  VariableVersion {
+    ID VariableVID PK
+    ID VariableID FK
+    ID PropertyID FK
+    ID SubCategoryVID FK
+    ID ContextID FK
+    ID KeyID FK
+    bool IsMultiValued
+    string Code
+    string Name
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  Framework ||--o{ Module : "FrameworkID"
+  Module ||--o{ ModuleVersion : "ModuleID"
+  ModuleVersion ||--o{ ModuleParameters : "ModuleVID"
+  VariableVersion ||--o{ ModuleParameters : "VariableVID"
+  ModuleVersion ||--o{ ModuleVersionComposition : "ModuleVID"
+  Table ||--o{ ModuleVersionComposition : "TableID"
+  TableVersion ||--o{ ModuleVersionComposition : "TableVID"
+  CompoundKey |o--o{ ModuleVersion : "GlobalKeyID"
+  CompoundKey ||--o{ KeyComposition : "KeyID"
+  VariableVersion ||--o{ KeyComposition : "VariableVID"
+  CompoundKey |o--o{ TableVersion : "KeyID"
+  TableGroup ||--o{ TableGroupComposition : "TableGroupID"
+  Table ||--o{ TableGroupComposition : "TableID"
+  Table ||--o{ TableVersion : "TableID"</code></pre>
+
+<figcaption>Figure 30. Packaging component entities and relations.</figcaption>
+</figure>
+<h3 id="5221-framework">5.2.2.1 Framework<a class="headerlink" href="#5221-framework" title="Permanent link">&para;</a></h3>
+<p>Framework is the uppermost level of grouping of information requirements. It typically corresponds to
+a piece of legislation, therefore its association to Owner
+(<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>) and Reference
+(<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>) is particularly important
+as it constitutes existence of this Framework by indicating the Organisation that issued this regulation
+and/or manages this Framework.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Framework {
+    ID FrameworkID PK
+    string Code
+    string Name
+    string Description
+    GUID RowGUID FK
+  }
+  Module {
+    ID ModuleID PK
+    ID FrameworkID FK
+    GUID RowGUID FK
+  }
+  Framework ||--o{ Module : "FrameworkID"</code></pre>
+
+<figcaption>Figure 31. Framework and Module.</figcaption>
+</figure>
+<p>As presented on Figure 31, Framework is identified by its Code. In addition, Framework must have
+Name and may be provided with Description (both are translatable,
+<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>)</p>
+<h3 id="5222-module">5.2.2.2 Module<a class="headerlink" href="#5222-module" title="Permanent link">&para;</a></h3>
+<p>Module gathers information requirements that are supposed to be reported together, i.e., in one
+report.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+  Module {
+    ID ModuleID PK
+    ID FrameworkID FK
+    GUID RowGUID FK
+  }
+  ModuleVersion {
+    ID ModuleVID PK
+    ID ModuleID FK
+    ID GlobalKeyID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    string Code
+    string Name
+    string Description
+    string VersionNumber
+    date FromReferenceDate
+    date ToReferenceDate
+    GUID RowGUID FK
+  }
+  ModuleVersionComposition {
+    ID ModuleVID PK,FK
+    ID TableID PK,FK
+    ID TableVID FK
+    int Order
+    GUID RowGUID
+  }
+  ModuleParameters {
+    ID ModuleVID PK,FK
+    ID VariableVID PK,FK
+    GUID RowGUID
+  }
+  Table {
+    ID TableID PK
+  }
+  TableVersion {
+    ID TableVID PK
+    ID TableID FK
+    ID KeyID FK
+  }
+  CompoundKey {
+    ID KeyID PK
+    string Signature UK
+    GUID RowGUID FK
+  }
+  KeyComposition {
+    ID KeyID PK,FK
+    ID VariableVID PK,FK
+    GUID RowGUID
+  }
+  VariableVersion {
+    ID VariableVID PK
+    ID VariableID FK
+    ID PropertyID FK
+    ID SubCategoryVID FK
+    ID ContextID FK
+    ID KeyID FK
+    bool IsMultiValued
+    string Code
+    string Name
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  Property {
+    ID PropertyID PK,FK
+    bool IsComposite
+    bool IsMetric
+    ID DataTypeID FK
+    int ValueLength
+    string PeriodType
+    GUID RowGUID FK
+  }
+  Item {
+    ID ItemID PK
+    string Name
+    string Description
+    bool IsCompound
+    bool IsProperty
+    bool IsActive
+    GUID RowGUID FK
+  }
+  SubCategory {
+    ID SubCategoryID PK
+    ID CategoryID FK
+    string Code
+    string Name
+    string Description
+    GUID RowGUID FK
+  }
+  SubCategoryVersion {
+    ID SubCategoryVID PK
+    ID SubCategoryID FK
+    ID StartReleaseID FK
+    ID EndReleaseID FK
+    GUID RowGUID FK
+  }
+  SubCategoryItem {
+    ID ItemID PK,FK
+    ID SubCategoryVID PK,FK
+    int Order
+    string Label
+    ID ParentItemID FK
+    GUID RowGUID FK
+  }
+  Module ||--o{ ModuleVersion : "ModuleID"
+  ModuleVersion ||--o{ ModuleVersionComposition : "ModuleVID"
+  Table ||--o{ ModuleVersionComposition : "TableID"
+  TableVersion ||--o{ ModuleVersionComposition : "TableVID"
+  ModuleVersion ||--o{ ModuleParameters : "ModuleVID"
+  VariableVersion ||--o{ ModuleParameters : "VariableVID"
+  CompoundKey |o--o{ ModuleVersion : "GlobalKeyID"
+  CompoundKey ||--o{ KeyComposition : "KeyID"
+  VariableVersion ||--o{ KeyComposition : "VariableVID"
+  Property ||--o{ VariableVersion : "PropertyID"
+  SubCategoryVersion ||--o{ VariableVersion : "SubCategoryVID"
+  SubCategory ||--o{ SubCategoryVersion : "SubCategoryID"
+  SubCategoryVersion ||--o{ SubCategoryItem : "SubCategoryVID"
+  Item ||--o{ SubCategoryItem : "ItemID"
+  Item ||--o| Property : "PropertyID = ItemID"</code></pre>
+
+<figcaption>Figure 32. Module, its Composition and Parameters.</figcaption>
+</figure>
+<p>As a result of bug fixes or modifications to the underlying regulations, composition of information
+requirements for Module may change in time. Therefore, Module is versioned by means of
+ModuleVersion that refers to Release (<a href="../../ownership-documentation/#421-releases">4.2.1</a>). More
+importantly, ModuleVersion definition includes FromReferenceDate and (optional) ToReferenceDate
+attributes that identify its application dates (<a href="../../ownership-documentation/#422-application-dates">4.2.2</a>).
+This enables determining which ModuleVersion shall be used for reporting of data for a given
+reference date (for a given Module there must be only one Version applicable for one reference date).</p>
+<p>ModuleVersion is identified by Code and Name and may be provided with Description.</p>
+<p>As presented on Figure 32, information requirements to be reported for ModuleVersion are defined by
+indication of applicable Tables and their Versions (<a href="#5211-table-and-tableversion">5.2.1.1</a>) assigned to
+this ModuleVersion through the ModuleVersionComposition. This indirectly identifies all Variables
+(<a href="../variables/#531-variable">5.3.1</a>) to be reported for ModuleVersion (which results from Key Headers
+and Cells of all linked TableVersions).</p>
+<p>Each Module covers one reporting scenario, usually applicable to specific type of reporting entities,
+with observations measured is specified manner for a given period or at a moment in time, in a
+particular currency applicable to all monetary amounts. Such global parameters applicable to all Fact
+Variables (<a href="../variables/#532-variable-types">5.3.2</a>) in ModuleVersion can be expressed by Key Variables
+composed in CompoundKey (<a href="../variables/#534-compoundkey-and-its-keycomposition">5.3.4</a>) associated
+to ModuleVersion or by Attribute Variables linked to ModuleVersion via ModuleParameters. The latter
+are typically constructed as Variables indicating Property and SubCategoryVersion that consist of only
+one Item.</p>
+<p>Module level parameters and Keys do not need to be repeated on (i.e. directly assigned to) every Fact
+Variable belonging to this Module. They can be however overridden by another value, if explicitly
+attached to Fact Variable or its Key Variable for a given Property represented by Key or Attribute
+Variable applied on Module level.</p>
+<p>Module and ModuleVersion are Concepts. They inherit Owner from Framework. Both may have
+references (<a href="../../ownership-documentation/#4132-references-to-documentation">4.1.3.2</a>). ModuleVersion
+Name and Description are translatable (<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>).</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:20">
+<p>Application of this mechanism requires consistent assignment of Header Codes in Tables under
+such TableGroup.&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

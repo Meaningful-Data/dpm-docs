@@ -1,0 +1,1963 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Faithful Markdown rendering of the DPM 2.0 Refit project Metamodel Documentation (Metamodel version 2.0.0-PWD7, document version 0.7, Public Working Draft, 22/05/2023).">
+      
+      
+      
+        <link rel="canonical" href="https://meaningful-data.github.io/dpm-docs/dev/proposals/extensibility/">
+      
+      
+        <link rel="prev" href="../../components/operations/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Extensibility and cross-owner reuse - DPM 2.0 — Metamodel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposal-extensibility-and-cross-owner-reuse-in-dpm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-header__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DPM 2.0 — Metamodel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extensibility and cross-owner reuse
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dpm-refit-project/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DPM Refit project
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../metamodel-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Metamodel overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ownership-documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Metamodel, ownership and supportive documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../components/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Metamodel components
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Proposals
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DPM 2.0 — Metamodel Documentation" class="md-nav__button md-logo" aria-label="DPM 2.0 — Metamodel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DPM 2.0 — Metamodel Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dpm-refit-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DPM Refit project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metamodel-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Metamodel overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ownership-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Metamodel, ownership and supportive documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../components/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Metamodel components
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Metamodel components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/rendering-packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Grouping, rendering and packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Identification and description of reported values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Operations on data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proposals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extensibility and cross-owner reuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Purpose and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-the-metamodel-already-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 What the metamodel already provides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-candidate-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Candidate approaches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Candidate approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-the-scoped-resolution-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 The scoped-resolution rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-general-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 General principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-exhaustive-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Exhaustive classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Exhaustive classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-metamodel-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Metamodel metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-administration-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Administration and documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Glossary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-rendering-and-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Rendering and packaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-summary-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 Summary matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-recommended-patterns-worked-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Recommended patterns (worked examples)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-required-metamodel-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Required metamodel adjustments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 Open questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Purpose and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-the-metamodel-already-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 What the metamodel already provides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-candidate-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Candidate approaches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Candidate approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-the-scoped-resolution-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 The scoped-resolution rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-general-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 General principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-exhaustive-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Exhaustive classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Exhaustive classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-metamodel-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Metamodel metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-administration-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Administration and documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Glossary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-rendering-and-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Rendering and packaging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-summary-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 Summary matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-recommended-patterns-worked-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Recommended patterns (worked examples)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-required-metamodel-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Required metamodel adjustments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 Open questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="proposal-extensibility-and-cross-owner-reuse-in-dpm">Proposal — Extensibility and cross-owner reuse in DPM<a class="headerlink" href="#proposal-extensibility-and-cross-owner-reuse-in-dpm" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Status: draft proposal for discussion</p>
+<p>This document is a working proposal, not part of the published DPM 2.0 metamodel
+documentation. It builds on the ownership model described in
+<a href="../../ownership-documentation/">Chapter 4</a>, in particular
+<a href="../../ownership-documentation/#412-concept-and-ownership">Concept and Ownership (4.1.2)</a>.</p>
+</div>
+<h2 id="1-purpose-and-scope">1 Purpose and scope<a class="headerlink" href="#1-purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>DPM models are developed and maintained by multiple Organisations (EBA, EIOPA, ECB, NCAs,
+standardisation bodies, …). Each identifiable object in a model — each <strong>Concept</strong> — has exactly
+one <strong>Owner</strong>. In practice, however, authorities build on each other's work: an NCA collects an
+EBA template plus national breakdowns; several authorities share the same code lists; a
+resolution authority applies an EBA validation rule to its own data collection.</p>
+<p>This proposal defines, exhaustively, which DPM objects can be:</p>
+<ul>
+<li><strong>Reused</strong> — referenced from artefacts of another Owner without any change to the object, and</li>
+<li><strong>Extended</strong> — enriched with new elements contributed by another Owner,</li>
+</ul>
+<p>and which can be neither, with a justification for each decision. It also identifies the minimal
+metamodel adjustments needed to support the recommended approach.</p>
+<h2 id="2-definitions">2 Definitions<a class="headerlink" href="#2-definitions" title="Permanent link">&para;</a></h2>
+<p>The three modes of cross-owner interaction must be kept strictly apart, because they carry very
+different risks:</p>
+<dl>
+<dt><strong>Modification</strong></dt>
+<dd>Changing attributes or existing relationships of a Concept (renaming an Item, re-ordering a
+SubCategory, editing an Operation expression). <em>Modification is reserved to the Owner,
+always.</em> Nothing in this proposal grants any form of cross-owner modification.</dd>
+<dt><strong>Reuse (reference)</strong></dt>
+<dd>Owner B points to a Concept owned by A from B's own artefacts: B's ModuleVersion includes
+A's TableVersion; B's Cell references A's Item; B's Operation reads A's Variable. A's
+Concept is untouched; the <em>reference</em> belongs to B.</dd>
+<dt><strong>Extension (contribution)</strong></dt>
+<dd>Owner B adds a new, separately identifiable element to a collection anchored on A's Concept:
+B adds an Item to A's Category, a CompoundItem to A's Context, a Translation to A's Concept.
+A's Concept and its existing members are untouched; the <em>added member and the membership
+link</em> belong to B.</dd>
+</dl>
+<h2 id="3-what-the-metamodel-already-provides">3 What the metamodel already provides<a class="headerlink" href="#3-what-the-metamodel-already-provides" title="Permanent link">&para;</a></h2>
+<p>The recommended approach is deliberately conservative: it generalises mechanisms that the
+metamodel already contains, rather than inventing new ones.</p>
+<ol>
+<li>
+<p><strong>Single ownership with inheritance</strong>
+   (<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>). Every Concept has exactly
+   one Owner. Table 1 of Chapter 4 specifies which classes <em>inherit</em> their Owner from a parent
+   class (e.g. TableVersion from Table, Module from Framework, Cell from Table). This inheritance
+   immediately rules out certain extensions: an object whose Owner is inherited from a parent
+   <strong>cannot</strong> be contributed by a different Owner into that parent without breaking the ownership
+   model (B cannot add a Cell to A's Table, because that Cell would be owned by A).</p>
+</li>
+<li>
+<p><strong>Owner-prefixed identifiers</strong>
+   (<a href="../../ownership-documentation/#412-concept-and-ownership">4.1.2</a>). The first digits of every
+   ID identify the Owner (<code>Organisation.IDPrefix</code>), explicitly to "simplify the process of merging
+   models from various databases maintained individually by different Organisations". Cross-owner
+   referencing is therefore a design goal of the identification scheme itself.</p>
+</li>
+<li>
+<p><strong>Code uniqueness is per Owner, not global</strong>
+   (<a href="../../ownership-documentation/#44-naming-convention">4.4</a>): "one Category must not have two or
+   more Items with the same Code, <em>unless these Items are defined by different Owners</em>". The
+   naming convention already anticipates Items from several Owners coexisting <strong>inside one
+   Category</strong> — i.e. Category extension.</p>
+</li>
+<li>
+<p><strong>Translations are already a cross-owner extension</strong>
+   (<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>). Any Organisation can attach a
+   Translation to any Concept's translatable attributes; <code>Translation.TranslatorID</code> records who
+   asserted it, and one attribute may carry competing translations from different Organisations.
+   This is exactly the pattern proposed here: <em>additive, separately-attributed assertions that
+   never alter the host Concept</em>.</p>
+</li>
+<li>
+<p><strong>ConceptRelation works across Owners by design</strong>
+   (<a href="../../ownership-documentation/#414-concept-relation">4.1.4</a>): it "enables linking Concepts
+   within and across Owners", supports <code>equivalent_concept</code> for duplicates defined by different
+   Owners, and <code>table_variant</code> for tables derived from other tables. Its <code>Type</code> list is explicitly
+   extensible by Modellers.</p>
+</li>
+<li>
+<p><strong>Releases and application dates</strong> (<a href="../../ownership-documentation/#42-historisation">4.2</a>)
+   provide the time dimension: every reuse or extension link carries StartRelease/EndRelease, so
+   cross-owner composition is always resolvable <em>as of</em> a point in time.</p>
+</li>
+</ol>
+<h2 id="4-candidate-approaches">4 Candidate approaches<a class="headerlink" href="#4-candidate-approaches" title="Permanent link">&para;</a></h2>
+<p>Three architectures were considered for extension semantics:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Approach</th>
+<th>Description</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><strong>Global in-place extension</strong></td>
+<td>B's contributions become part of A's object for <em>all</em> users of the model.</td>
+<td>Rejected. It silently changes the semantics of A's published artefacts (e.g. an open Cell over A's Property would suddenly admit B's Items in A's own reports; aggregation rules over a domain would change results). It would require A to approve every contribution, creating a governance bottleneck, and would make A's model non-reproducible from A's own database.</td>
+</tr>
+<tr>
+<td>B</td>
+<td><strong>Copy and relate</strong></td>
+<td>No extension at all: B copies A's object, adds elements, links the copy to the original via ConceptRelation (<code>equivalent_concept</code> / <code>table_variant</code>).</td>
+<td>Always available as a fallback, and the right tool for <em>closed</em> objects (see §5, P4). But as the only mechanism it duplicates content massively, breaks single-sourcing (B's copy does not follow A's corrections), and destroys comparability (the "same" Item exists twice with two identities).</td>
+</tr>
+<tr>
+<td>C</td>
+<td><strong>Owned, scoped overlay</strong> <em>(recommended)</em></td>
+<td>B's contribution is a separately-owned assertion (the added Concept <strong>and</strong> the membership link both belong to B). The host object is physically untouched. Resolution is <em>dependency-scoped</em>: B's contributions are visible only where B's model is in scope, never in A's own artefacts.</td>
+<td>Monotonic and non-invasive: A's published semantics are bit-for-bit unchanged; no approval workflow is needed; per-owner databases remain self-contained and mergeable (the overlay travels with B's model). Matches the existing Translation pattern.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation: approach C for open collections, approach B for closed ones.</strong> The rest of
+this document spells out which collections are open and which are closed.</p>
+<h3 id="41-the-scoped-resolution-rule">4.1 The scoped-resolution rule<a class="headerlink" href="#41-the-scoped-resolution-rule" title="Permanent link">&para;</a></h3>
+<p>Under approach C, the effective content of an extensible collection is computed per consuming
+context, not stored globally:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Resolution rule</p>
+<p>The <strong>effective members</strong> of an extensible Concept <em>X</em> (owned by A), as seen from a
+ModuleVersion <em>M</em> (owned by B), are the membership links whose Owner is in the <strong>dependency
+closure of M</strong> (B itself, plus the Owners of all ModuleVersions M depends on, which always
+includes A as the provider of X), restricted to the Release window applicable to M.</p>
+</div>
+<p>Consequences:</p>
+<ul>
+<li>A's own modules see only A's links: <strong>A's semantics never change</strong> because someone extended
+  A's vocabulary.</li>
+<li>B sees A's links plus B's own (plus those of any third Owner B explicitly depends on).</li>
+<li>Two extensions by unrelated Owners never interfere with each other.</li>
+<li>The rule is deterministic and computable from data already in the model (ownership of links +
+  ModuleVersion dependencies + Releases); it needs no run-time negotiation between Owners.</li>
+</ul>
+<h2 id="5-general-principles">5 General principles<a class="headerlink" href="#5-general-principles" title="Permanent link">&para;</a></h2>
+<p>The classification in §6 is generated by seven principles. When a new entity is added to the
+metamodel, applying these principles should classify it without reopening the discussion.</p>
+<p><strong>P1 — Modification is reserved to the Owner.</strong>
+No cross-owner mechanism alters attributes or existing relationships of a foreign Concept.
+Extensibility is exclusively the <em>addition</em> of new, separately-owned assertions.</p>
+<p><strong>P2 — Reuse by reference is universally permitted.</strong>
+Any Concept may be referenced from another Owner's artefacts, provided that (a) the referencing
+ModuleVersion declares a dependency on the providing Owner's model (with Release pinning), and
+(b) the referenced Concept is usable at that Release (not deactivated, within its
+StartRelease/EndRelease window — see
+<a href="../../ownership-documentation/#423-deactivations">4.2.3</a> and
+<a href="../../ownership-documentation/#424-dependencies">4.2.4</a>).</p>
+<p><strong>P3 — Versions are immutable; versioning is reserved to the Owner.</strong>
+No <code>*Version</code> class is ever extensible, and no Owner may add a Version to another Owner's
+Concept. A Version is a Release-bound snapshot whose value lies precisely in being frozen;
+the version lineage (including <code>version_fix</code> / <code>version_new</code> relations) is part of the Owner's
+maintenance responsibility. Versions are, at the same time, the natural <strong>unit of reuse</strong>.</p>
+<p><strong>P4 — Extension applies only to open collections.</strong>
+A collection is <strong>open</strong> when it is a vocabulary or domain: its meaning is "the set of defined
+terms", each member is meaningful on its own, and adding a member does not change the meaning of
+any existing member (Category, Context membership, SuperCategory). A collection is <strong>closed</strong>
+when the member list <em>is</em> the definition: removing or adding one element changes the semantics of
+the whole (SubCategory, CompoundItem values, CompoundKey, Operation expression, the cell set of a
+TableVersion, the composition of a ModuleVersion). Closed collections are never extended in
+place; the alternative is always a new, separately-owned object related to the original via
+ConceptRelation (approach B).</p>
+<p><strong>P5 — Extensions are owned and scoped.</strong>
+Both the contributed Concept and the membership link carry the extender's ownership, and
+visibility follows the scoped-resolution rule of §4.1. An extension is an overlay on the host
+model, never a change to it.</p>
+<p><strong>P6 — Publication containers are not extensible.</strong>
+Framework, Module/ModuleVersion, TableGroup, Table/TableVersion and Release represent an
+authority's official publication structure and reporting obligations. Cross-owner composition is
+achieved by <em>B referencing A's content from B's own container</em> (B's ModuleVersion includes A's
+TableVersion), never by inserting content into A's container (B cannot add a Table to A's
+TableGroup or a Module to A's Framework).</p>
+<p><strong>P7 — Ownership inheritance delimits the extension surface.</strong>
+Classes that inherit their Owner from a parent class (Table 1 of Chapter 4) cannot host foreign
+contributions <em>through that parent</em>: a contributed element would be forced to take the host's
+Owner, violating P5. Extension is therefore only possible across <strong>association entities joining
+independently-owned Concepts</strong> (ItemCategory, PropertyCategory, SuperCategoryComposition,
+CompoundItemContext, Translation, Reference, …). This gives a mechanical test: <em>if the candidate
+extension point is an owner-inheriting child relationship, the answer is no; if it is an
+association between Concepts, evaluate P4.</em></p>
+<h2 id="6-exhaustive-classification">6 Exhaustive classification<a class="headerlink" href="#6-exhaustive-classification" title="Permanent link">&para;</a></h2>
+<p>Legend — <strong>Reuse</strong>: may another Owner reference this object from their artefacts?
+<strong>Extend</strong>: may another Owner contribute elements to it? "Owner-only" means the operation
+exists but is reserved to the owning Organisation.</p>
+<h3 id="61-metamodel-metadata">6.1 Metamodel metadata<a class="headerlink" href="#61-metamodel-metadata" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Reuse</th>
+<th>Extend</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DPMClass, DPMAttribute</td>
+<td>Yes (implicit)</td>
+<td>No</td>
+<td>Fixed by the DPM metamodel authors (Owner: DPMM); Modellers must not edit (<a href="../../ownership-documentation/#411-metamodel-metadata-entities">4.1.1</a>). Changes go through metamodel governance, not through model-level extension.</td>
+</tr>
+<tr>
+<td>DataType</td>
+<td>Yes</td>
+<td>No</td>
+<td>Shared type system; uncontrolled additions would fragment interoperability of Property/Operation typing. Derivation-by-restriction exists but is metamodel-governed.</td>
+</tr>
+<tr>
+<td>Operator, OperatorArgument</td>
+<td>Yes</td>
+<td>No</td>
+<td>The operator inventory defines the executable semantics of Operations across all implementations. An Owner-specific operator would make foreign Operations non-evaluatable by other consumers. New operators require metamodel governance.</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Yes</td>
+<td>No (governed)</td>
+<td>Populated from ISO 639-1 plus registered expression syntaxes. Additions (e.g. a new Operation syntax) are administrative registrations, not model extensions.</td>
+</tr>
+<tr>
+<td>SubdivisionType</td>
+<td>Yes</td>
+<td>No</td>
+<td>Closed typology for structuring document references; stability is what makes references comparable across Owners.</td>
+</tr>
+<tr>
+<td>ConceptRelation.Type</td>
+<td>Yes</td>
+<td><strong>Yes</strong></td>
+<td>Explicitly extensible per <a href="../../ownership-documentation/#414-concept-relation">4.1.4</a>: "Modellers can extend ConceptRelation.Type with other options". Free-text typed; collisions are tolerable because relations are annotations, not executable semantics.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-administration-and-documentation">6.2 Administration and documentation<a class="headerlink" href="#62-administration-and-documentation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Reuse</th>
+<th>Extend</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisation</td>
+<td>Yes (as Owner, Translator, …)</td>
+<td>No</td>
+<td>Self-describing registry entries; each Organisation maintains its own record. Nothing to extend.</td>
+</tr>
+<tr>
+<td>Translation</td>
+<td>n/a</td>
+<td><strong>Yes — existing precedent</strong></td>
+<td>Any Organisation may attach Translations to any Concept's translatable attributes; <code>TranslatorID</code> attributes the assertion (<a href="../../ownership-documentation/#4131-translations">4.1.3.1</a>). The model even allows competing translations of one attribute in one language. This is the template for all extension in this proposal.</td>
+</tr>
+<tr>
+<td>Document / DocumentVersion / Subdivision</td>
+<td>Yes</td>
+<td>No</td>
+<td>Subdivision and DocumentVersion inherit Owner from Document (P7). Another Owner needing a different subdivision structure of the same legal act registers its own Document and links the two via <code>equivalent_concept</code>. Legal texts are external objects; duplication of the <em>registration</em> is cheap and conflict-free.</td>
+</tr>
+<tr>
+<td>Reference (Concept ↔ Subdivision)</td>
+<td>n/a</td>
+<td><strong>Yes</strong></td>
+<td>Any Owner may attach references to any Concept whose class has <code>HasReferences = TRUE</code> — annotating a foreign Concept with the legal basis <em>as B reads it</em> alters nothing for A. Requires the asserting Owner to be recorded on the Reference link (see §8).</td>
+</tr>
+<tr>
+<td>ConceptRelation</td>
+<td>n/a</td>
+<td><strong>Yes — cross-owner by design</strong></td>
+<td>Stated purpose includes "linking Concepts … across Owners" (<a href="../../ownership-documentation/#414-concept-relation">4.1.4</a>). The relation itself is owned by whoever asserts it.</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>Yes (pinning)</td>
+<td>No</td>
+<td>A Release is one Owner's act of publication; its content list is closed by definition (P4, P6). Other Owners reference foreign Releases when pinning dependencies, never contribute to them.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-glossary">6.3 Glossary<a class="headerlink" href="#63-glossary" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Reuse</th>
+<th>Extend</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Yes (as glossary root, SubCategory parent, …)</td>
+<td><strong>Yes — items, properties and hierarchy links</strong></td>
+<td>The flagship extension case. A Category is an open vocabulary (P4): B adding national Items to A's "Instrument type" Category adds terms without changing any existing term. The naming convention already legislates for it (per-Owner code uniqueness <em>within</em> a Category, <a href="../../ownership-documentation/#44-naming-convention">4.4</a>). Mechanism: B-owned Items + B-owned ItemCategory links; B may also place its Items under A's Items in the hierarchy (the ParentItem link lives in B's ItemCategory row). Scoped resolution (§4.1) guarantees A's open Cells, domains and aggregations are unaffected in A's own modules.</td>
+</tr>
+<tr>
+<td><strong>Item</strong></td>
+<td>Yes — the most reused object in DPM (Cells, SubCategories, CompoundItems, Operation scopes, multiple Categories)</td>
+<td>Hierarchy children only, via Category extension</td>
+<td>An Item itself has no owned member collection; "extending an Item" reduces to attaching child Items beneath it inside some Category, which is governed by the Category rule above. Item attributes (Name, Code, …) follow P1: owner-only.</td>
+</tr>
+<tr>
+<td><strong>Property</strong></td>
+<td><strong>Yes — primary semantic reuse</strong> (shared dimensions: Currency, Country, Sector used by all Owners)</td>
+<td>Domain only (= Category extension); definition no</td>
+<td>Reusing A's Property in B's dimensions/headers is what makes data comparable across frameworks — it should be the <em>preferred</em> practice over redefining. The Property's enumerated domain extends via the Category mechanism. Its <code>DataType</code> and meaning are its identity: owner-only (P1).</td>
+</tr>
+<tr>
+<td>PropertyCategory (link)</td>
+<td>n/a</td>
+<td><strong>Yes (scoped)</strong></td>
+<td>B asserting that A's Category uses B's Property (e.g. attaching a national classification aspect to a shared Category) is an overlay assertion: visible only in B's scope, harmless to A. Requires Owner on the link (§8).</td>
+</tr>
+<tr>
+<td><strong>SubCategory</strong></td>
+<td>Yes (in Cells, hierarchy validations, renderings)</td>
+<td><strong>No</strong></td>
+<td>The motivating counter-example. A SubCategory is a <em>closed, ordered selection</em> with arithmetic/comparison semantics on its members (SubCategoryItem operators): its member list <strong>is</strong> its definition (P4). If B could add members, every hierarchy validation ("total = sum of members") and every rendering referencing it would silently change meaning. B instead defines its own SubCategory (freely reusing A's Items, including alongside B's Items) and may relate it to A's via ConceptRelation.</td>
+</tr>
+<tr>
+<td>SubCategoryItem</td>
+<td>n/a</td>
+<td>No</td>
+<td>Part of the SubCategory definition; inherits its Owner (P7).</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td><strong>Yes — designed for reuse</strong> across glossary, rendering and Variables</td>
+<td><strong>Signature: no. Membership: yes</strong></td>
+<td>The signature (the ordered set of Properties) is the Context's identity and the contract every member and every consumer relies on — changing it is a breaking change, owner-only via a new Context. Membership is open: B may define B-owned CompoundItems against A's Context (B's combinations for B's tables). A new member is meaningful on its own and changes nothing for existing members or for A (P4 + scoped resolution). Members must conform to the signature and draw values from the signature Properties' domains <em>as visible to B</em>.</td>
+</tr>
+<tr>
+<td><strong>CompoundItem</strong></td>
+<td>Yes</td>
+<td>No</td>
+<td>Its ordered value list (one Item per signature Property) is its definition — a closed tuple (P4). A different combination is simply a new CompoundItem.</td>
+</tr>
+<tr>
+<td><strong>SuperCategory</strong></td>
+<td>Yes</td>
+<td><strong>Yes (composition)</strong></td>
+<td>SuperCategories aggregate categories for navigation and filtering <em>without</em> hierarchy or arithmetic semantics. Additions are the lowest-risk extension in the model; scoped resolution still applies so any Operation filtering through a SuperCategory is unaffected outside the extender's scope.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-rendering-and-packaging">6.4 Rendering and packaging<a class="headerlink" href="#64-rendering-and-packaging" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Reuse</th>
+<th>Extend</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework</strong></td>
+<td>Visibility only</td>
+<td><strong>No</strong></td>
+<td>Modules inherit Owner from Framework (Table 1) — P7 makes foreign Modules in A's Framework impossible without breaking ownership. Substantively, a Framework is the institutional expression of one authority's mandate (P6). Cross-authority packaging happens at Module level.</td>
+</tr>
+<tr>
+<td><strong>Module / ModuleVersion</strong></td>
+<td><strong>Yes — as dependency and import target</strong></td>
+<td>No</td>
+<td>A ModuleVersion defines a reporting obligation: its composition (TableVersions, Variables, Operations, reference-period window) is a closed, Release-bound snapshot (P3, P4, P6). B builds its own ModuleVersion that <em>imports</em>: it declares a dependency on A's ModuleVersion (pinned to A's Release) and references A's content in its own composition.</td>
+</tr>
+<tr>
+<td>ModuleVersionComposition (link)</td>
+<td>—</td>
+<td>Cross-owner <strong>references</strong> allowed</td>
+<td>The composition rows belong to the ModuleVersion's Owner (B), and may point at foreign TableVersions: this <em>is</em> the user-facing requirement "an Owner can add to a module a TableVersion defined by another Owner". It is reuse (B's row in B's container), not extension of anything of A's.</td>
+</tr>
+<tr>
+<td><strong>TableGroup</strong></td>
+<td>Yes (B may include A's Tables in <strong>B's own</strong> groups)</td>
+<td>No</td>
+<td>A TableGroup mirrors the Owner's official publication structure (e.g. the annexes of an ITS) — P6. B organises any tables, including A's, in B's own TableGroups; inserting into A's groups would let B alter how A's publication presents itself.</td>
+</tr>
+<tr>
+<td><strong>Table</strong></td>
+<td>Yes (in B's groups, associations, relations, variants)</td>
+<td>No — extend via the <strong>table-variant pattern</strong></td>
+<td>Cells and Headers inherit the Table's Owner (P7): B physically cannot own a row added to A's Table. The metamodel's intended pattern for "A's template plus B's breakdowns" is a <strong>variant</strong>: B creates its own Table/TableVersion, reuses A's HeaderVersions for the shared axes, adds B-owned Headers for the extra axis/breakdowns, and links it to A's Table via ConceptRelation <code>table_variant</code>. A's template stays intact; B's additions are cleanly attributable; variable mapping can preserve comparability cell-by-cell.</td>
+</tr>
+<tr>
+<td><strong>TableVersion</strong></td>
+<td><strong>Yes — the headline reuse case</strong></td>
+<td>No</td>
+<td>Reusable in foreign ModuleVersionCompositions so that one template is collected identically by many authorities, with a single set of cell definitions and Variables (comparability + single sourcing). Not extensible: it is an immutable snapshot (P3) and its cell set defines the reportable scope and the Variables' identity — a closed collection (P4).</td>
+</tr>
+<tr>
+<td>Header / HeaderVersion</td>
+<td><strong>Yes, across Owners</strong></td>
+<td>No</td>
+<td>Reusing A's HeaderVersion (e.g. standard maturity bands) in B's TableVersion maximises structural consistency at zero risk — the reference belongs to B's TableVersionHeader row. Not extensible: a HeaderVersion's cell tree is its definition (P3, P4); Header inherits Owner from Table (P7).</td>
+</tr>
+<tr>
+<td>Cell</td>
+<td>Indirectly (through TableVersion reuse; referenceable from Operations)</td>
+<td>No — except through <strong>owner-defined open points</strong></td>
+<td>Cells inherit the Table's Owner (P7). The metamodel already gives the <em>Owner</em> controlled extension points — open cells over a Property and open tables/axes — and those resolve against Property domains, where Category extension (6.3) re-enters with proper scoping. Third parties never add cells; they use variants.</td>
+</tr>
+<tr>
+<td>TableAssociation / TableRelation / KeyMapping</td>
+<td><strong>Yes</strong></td>
+<td>n/a (B creates its own)</td>
+<td>These are themselves Concepts owned by whoever asserts them. B may freely create associations, relations and key mappings that link A's tables (to each other or to B's): pure annotation/wiring, nothing of A's changes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="65-variables">6.5 Variables<a class="headerlink" href="#65-variables" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Reuse</th>
+<th>Extend</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variable / VariableVersion</strong></td>
+<td><strong>Yes — and mandatory when reusing rendering</strong></td>
+<td>No</td>
+<td>When B's ModuleVersion includes A's TableVersion, B must collect against <strong>A's Variables</strong>, not re-derive its own: one data point = one identity, otherwise cross-framework comparability and lineage break and validations stop being shareable. B's Operations may freely reference A's Variables. Not extensible: a Variable's dimensional composition <em>is</em> its identity — a closed tuple (P4). A different breakdown is a new Variable (typically arising from B's variant tables, owned by B).</td>
+</tr>
+<tr>
+<td>CompoundKey / KeyComposition</td>
+<td>Yes</td>
+<td>No</td>
+<td>Key structure defines record identity for open tables; closed by nature (P4). Reuse of A's CompoundKey in B's variants keeps record matching possible across owners (supported by KeyMapping).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="66-operations">6.6 Operations<a class="headerlink" href="#66-operations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Reuse</th>
+<th>Extend</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operation / OperationVersion</strong></td>
+<td><strong>Yes — reference and re-scope</strong></td>
+<td>No</td>
+<td>The expression tree (OperationNodes) is the rule: a closed definition (P4); versions are owner-only (P3). But <em>application</em> of a rule is separable from its definition: B should be able to apply A's OperationVersion to B's own modules (see OperationScope below) and to reference A's OperationVersions as preconditions. This realises "common EBA validation applied to a national collection" without copying rules.</td>
+</tr>
+<tr>
+<td><strong>OperationScope</strong></td>
+<td>—</td>
+<td><strong>Yes, with a metamodel change</strong></td>
+<td>The scope says <em>where</em> a rule applies — asserting "A's rule applies to B's module" modifies nothing of A's. Today OperationScope inherits Owner from Operation (Table 1), which blocks this. Recommendation: make OperationScope independently ownable (Owner = the Organisation asserting applicability), keeping A's own scopes untouched. The existing re-activation semantics of OperationScope (<code>IsActive</code>, <a href="../../ownership-documentation/#423-deactivations">4.2.3</a>) then work per-asserting-owner. Fallback without the change: B wraps A's rule in a B-owned Operation — works, but pollutes the rule inventory and obscures provenance.</td>
+</tr>
+<tr>
+<td>OperationScopeComposition</td>
+<td>—</td>
+<td>Follows its OperationScope</td>
+<td>Owned with the scope row; B's compositions target B's ModuleVersions and may filter on any Items visible in B's scope.</td>
+</tr>
+<tr>
+<td>VariableCalculation</td>
+<td>Yes</td>
+<td>No</td>
+<td>A calculation binding is part of the defining Owner's derivation semantics for its Variables; B derives its own Variables with its own calculations, which may <em>read</em> A's Variables (P2).</td>
+</tr>
+<tr>
+<td>OperationNode</td>
+<td>—</td>
+<td>No</td>
+<td>Internal structure of an OperationVersion (P7; part of a closed definition).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="67-summary-matrix">6.7 Summary matrix<a class="headerlink" href="#67-summary-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Reusable by reference</th>
+<th>Extensible (scoped overlay)</th>
+<th>Closed — copy &amp; relate instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Glossary</strong></td>
+<td>Category, Item, Property, SubCategory, Context, CompoundItem, SuperCategory</td>
+<td>Category (items/properties/hierarchy), Context (membership), SuperCategory (composition)</td>
+<td>SubCategory, CompoundItem (values), Context (signature)</td>
+</tr>
+<tr>
+<td><strong>Rendering / packaging</strong></td>
+<td>TableVersion, HeaderVersion, Table, TableGroup (content into B's groups), Module (as dependency)</td>
+<td>— <em>(use the table-variant pattern)</em></td>
+<td>TableVersion, HeaderVersion, Table cells, TableGroup, Module composition, Framework, Release</td>
+</tr>
+<tr>
+<td><strong>Variables</strong></td>
+<td>Variable (mandatory with rendering reuse), CompoundKey</td>
+<td>—</td>
+<td>Variable signature, CompoundKey</td>
+</tr>
+<tr>
+<td><strong>Operations</strong></td>
+<td>OperationVersion (reference, precondition, re-scoping)</td>
+<td>OperationScope (apply foreign rules to own modules)</td>
+<td>Expression / OperationNodes</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>Document, Subdivision</td>
+<td>Translation, Reference, ConceptRelation (incl. Type)</td>
+<td>Document structure</td>
+</tr>
+<tr>
+<td><strong>Metamodel metadata</strong></td>
+<td>all</td>
+<td>ConceptRelation.Type only</td>
+<td>DataType, Operator, Language, SubdivisionType (governance-reserved)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-recommended-patterns-worked-examples">7 Recommended patterns (worked examples)<a class="headerlink" href="#7-recommended-patterns-worked-examples" title="Permanent link">&para;</a></h2>
+<p><strong>Reusing a template (the ModuleVersion ← TableVersion case).</strong>
+An NCA collects EBA's FINREP table plus national tables in one national module:
+the NCA's ModuleVersion declares a dependency on the EBA ModuleVersion at a pinned EBA Release,
+its ModuleVersionComposition references the EBA TableVersion directly, data is collected against
+EBA's Variables, and EBA's validations are attached via NCA-owned OperationScopes. No EBA object
+is touched; the NCA module remains reproducible from the two databases.</p>
+<p><strong>Extending a vocabulary (the Category case).</strong>
+The NCA needs three national portfolio types in addition to EBA's "Accounting portfolio" Items:
+it defines three NCA-owned Items and three NCA-owned ItemCategory links into EBA's Category
+(optionally parented under an EBA Item). In EBA modules nothing changes; in NCA modules the
+domain resolves to EBA's Items plus the NCA's three.</p>
+<p><strong>"Extending" a closed selection (the SubCategory case).</strong>
+The NCA wants EBA's "Total assets breakdown" SubCategory plus one national member. Extension is
+refused (the member list is the definition); instead the NCA creates its own SubCategory listing
+EBA's Items plus the national Item — Items are reused, only the selection is duplicated — and
+links it to EBA's SubCategory via ConceptRelation for traceability.</p>
+<p><strong>Extending a template (the table-variant case).</strong>
+The NCA wants EBA's template with an extra national column: it creates an NCA-owned Table and
+TableVersion, reuses EBA's HeaderVersion on the unchanged axis, defines an NCA HeaderVersion for
+the extended axis (reusing EBA cells/Items plus the national column), relates the Tables via
+<code>table_variant</code>, and maps shared cells to EBA's Variables so that the common content stays
+comparable.</p>
+<h2 id="8-required-metamodel-adjustments">8 Required metamodel adjustments<a class="headerlink" href="#8-required-metamodel-adjustments" title="Permanent link">&para;</a></h2>
+<p>The recommended approach needs four targeted changes, all additive:</p>
+<ol>
+<li>
+<p><strong>Owner on extensible association entities.</strong> ItemCategory, PropertyCategory,
+   SuperCategoryComposition, CompoundItemContext and Reference need an explicit <code>OwnerID</code>
+   (today only Concepts — single-PK entities — carry an Owner; Translation already has its
+   <code>TranslatorID</code>). Without it, B's contributions into A's collections cannot be attributed,
+   scoped, or carved out when merging/distributing per-owner databases. Default value: the Owner
+   of the surrounding Concept, so existing content is unaffected.</p>
+</li>
+<li>
+<p><strong>Independently ownable OperationScope</strong> (drop the Owner inheritance from Operation in
+   Table 1 for this class), enabling cross-owner application of validation rules (§6.6).</p>
+</li>
+<li>
+<p><strong>Normative scoped-resolution rule</strong> (§4.1) added to the Historisation/Dependencies text of
+   Chapter 4, defining "effective members as seen from a ModuleVersion" in terms of the
+   dependency closure and Release windows.</p>
+</li>
+<li>
+<p><strong>Dependency pinning made explicit.</strong> Cross-owner references and extensions are only valid if
+   the consuming ModuleVersion declares a dependency on the providing Owner's ModuleVersion or
+   Release; the lifecycle rules of
+   <a href="../../ownership-documentation/#424-dependencies">4.2.4</a> (no new use of ended/deactivated
+   Concepts) apply across Owners exactly as within one Owner.</p>
+</li>
+</ol>
+<h2 id="9-open-questions">9 Open questions<a class="headerlink" href="#9-open-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Adoption/promotion.</strong> Should a host Owner be able to "adopt" a foreign extension (e.g. EBA
+   takes over an NCA Item for general use)? Proposed answer: the host defines its own Item and
+   links the two via <code>equivalent_concept</code> — no transfer-of-ownership mechanism needed — but a
+   lighter convention may be worth discussing.</li>
+<li><strong>Constraint validation across Owners.</strong> Who validates that B's CompoundItems conform to A's
+   Context signature, or that B's Items respect constraints A attached to a Category? Proposal:
+   tooling-level validation at import time (when B pins A's Release), since A cannot be expected
+   to validate content it never sees.</li>
+<li><strong>Discovery.</strong> Scoped overlays mean "what is in Category X?" has no global answer. Tooling
+   (e.g. DPM Studio) should display extensions per scope, and the exchange format should carry
+   overlays as clearly separated per-owner layers.</li>
+<li><strong>Translations/References governance.</strong> These are deliberately unrestricted today; whether
+   publication channels should filter third-party annotations (e.g. show only translations from
+   "trusted" Organisations) is a portal/tooling concern, not a metamodel one.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

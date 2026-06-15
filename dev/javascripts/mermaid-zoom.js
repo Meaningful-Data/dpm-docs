@@ -11,6 +11,25 @@
 (function () {
   "use strict";
 
+  // Material attaches a CLOSED shadow root to each diagram container
+  // (`attachShadow({mode:"closed"})`), which makes `container.shadowRoot`
+  // return null — so the rendered <svg> is unreachable from outside. We run
+  // before Material renders (it loads Mermaid from a CDN first, then renders),
+  // so patch attachShadow to force "open" mode, keeping the shadow root
+  // accessible. Material still works with an open root.
+  if (Element.prototype.attachShadow && !Element.prototype.__zoomPatched) {
+    var nativeAttachShadow = Element.prototype.attachShadow;
+    Element.prototype.attachShadow = function (init) {
+      var opts = init || {};
+      if (opts.mode === "closed") {
+        opts = { mode: "open" };
+        for (var k in init) { if (k !== "mode") opts[k] = init[k]; }
+      }
+      return nativeAttachShadow.call(this, opts);
+    };
+    Element.prototype.__zoomPatched = true;
+  }
+
   var BOUND = "data-zoom-bound";
 
   function serializeSvg(svg) {

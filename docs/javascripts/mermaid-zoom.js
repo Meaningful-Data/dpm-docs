@@ -32,17 +32,135 @@
 
   var BOUND = "data-zoom-bound";
 
-  function serializeSvg(svg) {
+  // Intrinsic pixel size of a rendered diagram (viewBox first, then layout box).
+  function svgSize(svg) {
+    var vb = svg.viewBox && svg.viewBox.baseVal;
+    var r = svg.getBoundingClientRect();
+    return {
+      w: Math.ceil((vb && vb.width) || r.width || 800),
+      h: Math.ceil((vb && vb.height) || r.height || 600)
+    };
+  }
+
+  var SVG_NS = "http://www.w3.org/2000/svg";
+
+  // Replace Mermaid's HTML <foreignObject> labels with native SVG <text> in the
+  // clone, reading font/colour from the corresponding LIVE element. Canvas
+  // rasterisation taints (and then refuses to export) any SVG containing a
+  // foreignObject, so this is required to produce a downloadable PNG. Labels
+  // are single-line (white-space:nowrap), so one <text> per label is faithful.
+  function flattenForeignObjects(liveSvg, cloneSvg) {
+    var live = liveSvg.querySelectorAll("foreignObject");
+    var clones = cloneSvg.querySelectorAll("foreignObject");
+    for (var i = 0; i < clones.length; i++) {
+      var fo = clones[i];
+      var text = (fo.textContent || "").replace(/\s+/g, " ").trim();
+      if (!text) { if (fo.parentNode) fo.parentNode.removeChild(fo); continue; }
+      var w = parseFloat(fo.getAttribute("width")) || 0;
+      var h = parseFloat(fo.getAttribute("height")) || 0;
+      var liveInner = (live[i] && (live[i].querySelector("span, p, div") || live[i]));
+      var cs = liveInner ? getComputedStyle(liveInner) : null;
+      var t = document.createElementNS(SVG_NS, "text");
+      t.setAttribute("x", w / 2);
+      t.setAttribute("y", h / 2);
+      t.setAttribute("text-anchor", "middle");
+      t.setAttribute("dominant-baseline", "central");
+      t.setAttribute("style",
+        "font-family:" + (cs ? cs.fontFamily : "sans-serif") + ";" +
+        "font-size:" + (cs ? cs.fontSize : "16px") + ";" +
+        "fill:" + (cs ? cs.color : "#000") + ";");
+      t.textContent = text;
+      fo.parentNode.replaceChild(t, fo);
+    }
+  }
+
+  // Produce a self-contained SVG element: Mermaid's styles reference CSS custom
+  // properties (--md-mermaid-*) defined on :root, which are absent once the SVG
+  // is taken out of the page (new tab / canvas). Resolve every var() it uses
+  // from the document root and pin them onto the clone so it renders correctly
+  // standalone. Also give it explicit pixel dimensions for rasterisation.
+  // When `flatten` is set, convert foreignObject labels to <text> (for PNG).
+  function standaloneSvg(svg, flatten) {
     var clone = svg.cloneNode(true);
-    clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    clone.removeAttribute("style");
+    clone.setAttribute("xmlns", SVG_NS);
+    var size = svgSize(svg);
+    clone.setAttribute("width", size.w);
+    clone.setAttribute("height", size.h);
+    if (flatten) flattenForeignObjects(svg, clone);
+
+    var used = {}, m, re = /var\((--[\w-]+)/g, html = clone.outerHTML;
+    while ((m = re.exec(html))) used[m[1]] = true;
+    // Resolve from the LIVE svg: Material's --md-mermaid-* vars are in scope
+    // there (inherited from body), but NOT on documentElement.
+    var root = getComputedStyle(svg);
+    var decls = "";
+    Object.keys(used).forEach(function (name) {
+      var val = root.getPropertyValue(name).trim();
+      if (val) decls += name + ":" + val + ";";
+    });
+    if (decls) clone.setAttribute("style", (clone.getAttribute("style") || "") + decls);
+    return { node: clone, size: size };
+  }
+
+  function serializeSvg(svg) {
     return '<?xml version="1.0" encoding="UTF-8"?>\n' +
-      new XMLSerializer().serializeToString(clone);
+      new XMLSerializer().serializeToString(standaloneSvg(svg).node);
   }
 
   function openInNewTab(svg) {
     var blob = new Blob([serializeSvg(svg)], { type: "image/svg+xml" });
     window.open(URL.createObjectURL(blob), "_blank", "noopener");
+  }
+
+  function triggerDownload(blob, filename) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  // Rasterise the SVG to a PNG (2x for crispness) on a white background.
+  function downloadPng(svg, button) {
+    var built = standaloneSvg(svg, true); // flatten foreignObjects to avoid taint
+    var scale = 2;
+    var w = built.size.w, h = built.size.h;
+    var blob = new Blob(
+      ['<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(built.node)],
+      { type: "image/svg+xml;charset=utf-8" }
+    );
+    var url = URL.createObjectURL(blob);
+    var img = new Image();
+    var label = button && button.textContent;
+    function restore() { if (button && label != null) button.textContent = label; }
+    img.onload = function () {
+      try {
+        var canvas = document.createElement("canvas");
+        canvas.width = w * scale;
+        canvas.height = h * scale;
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.setTransform(scale, 0, 0, scale, 0, 0);
+        ctx.drawImage(img, 0, 0, w, h);
+        canvas.toBlob(function (png) {
+          if (png) triggerDownload(png, "diagram.png");
+          else fallback();
+          restore();
+        }, "image/png");
+      } catch (e) { fallback(); restore(); }
+      URL.revokeObjectURL(url);
+    };
+    img.onerror = function () { URL.revokeObjectURL(url); fallback(); restore(); };
+    function fallback() {
+      // If rasterisation is blocked (e.g. tainted canvas), fall back to the SVG.
+      triggerDownload(new Blob([serializeSvg(svg)], { type: "image/svg+xml" }), "diagram.svg");
+    }
+    if (button) button.textContent = "Rendering…";
+    img.src = url;
   }
 
   function openModal(svg) {
@@ -51,6 +169,12 @@
 
     var toolbar = document.createElement("div");
     toolbar.className = "mermaid-modal__toolbar";
+
+    var pngBtn = document.createElement("button");
+    pngBtn.type = "button";
+    pngBtn.className = "mermaid-modal__btn";
+    pngBtn.textContent = "Download PNG";
+    pngBtn.addEventListener("click", function () { downloadPng(svg, pngBtn); });
 
     var openBtn = document.createElement("button");
     openBtn.type = "button";
@@ -64,6 +188,7 @@
     closeBtn.setAttribute("aria-label", "Close");
     closeBtn.textContent = "✕"; // ✕
 
+    toolbar.appendChild(pngBtn);
     toolbar.appendChild(openBtn);
     toolbar.appendChild(closeBtn);
 

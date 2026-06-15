@@ -1,9 +1,12 @@
 // Make rendered Mermaid diagrams clickable: open a fullscreen lightbox with
 // pan/zoom (via svg-pan-zoom) plus an "open in new tab" action.
 //
-// Mermaid renders to inline <svg> asynchronously and Material re-renders on
-// every instant-navigation page change, so we (re)bind on each document$ tick
-// and poll briefly until the SVGs exist.
+// IMPORTANT: Material for MkDocs renders each diagram into a SHADOW ROOT
+// attached to the <div class="mermaid"> container (to isolate Mermaid's CSS).
+// A normal `.mermaid svg` query cannot cross the shadow boundary, so we must
+// read the <svg> via container.shadowRoot. Rendering is async and also happens
+// on instant-navigation page changes, so we watch the DOM with a
+// MutationObserver and bind each diagram once its <svg> exists.
 
 (function () {
   "use strict";
@@ -92,13 +95,23 @@
     document.addEventListener("keydown", onKey);
   }
 
+  // The <svg> may live in the container's shadow root (Material) or directly
+  // in the light DOM (other setups); support both.
+  function getSvg(container) {
+    return (container.shadowRoot && container.shadowRoot.querySelector("svg")) ||
+      container.querySelector("svg");
+  }
+
   function bind() {
-    document.querySelectorAll(".mermaid svg").forEach(function (svg) {
-      var container = svg.closest(".mermaid");
-      if (!container || container.hasAttribute(BOUND)) return;
+    document.querySelectorAll(".mermaid").forEach(function (container) {
+      if (container.hasAttribute(BOUND)) return;
+      if (!getSvg(container)) return; // not rendered yet; retry on next mutation
       container.setAttribute(BOUND, "true");
       container.classList.add("mermaid-zoomable");
-      container.addEventListener("click", function () { openModal(svg); });
+      container.addEventListener("click", function () {
+        var svg = getSvg(container);
+        if (svg) openModal(svg);
+      });
     });
   }
 
